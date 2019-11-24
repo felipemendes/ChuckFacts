@@ -1,24 +1,21 @@
 # Chuck Norris Facts
 > iOS project app builded natively w/ Clean Architecture, MVVM and RxSwift
 
-This app provides a way to look for and share some Chuck Norris facts. Exploring the [chuckapi](chucknorris.io).
+This app provides a way to look for and share some Chuck Norris facts. Exploring the [chuck-api](https://api.chucknorris.io/).
 
-### Features
+## Features
 
-### Requirements
-
+## Requirements
 - iOS 8.0+
 - Xcode 9+
 
 ## Dependency Manager
-
 Using **Cocoapods** for manage all dependencies. You can install it with:
 ```bash
 sudo gem install cocoapods
 ```
 
-### Dependencies
-
+## Dependencies
 Installing dependencies:
 ```bash
 pod install
