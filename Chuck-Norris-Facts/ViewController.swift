@@ -9,18 +9,17 @@
 import UIKit
 
 final class ViewController: UIViewController {
-    
+
     // MARK: - LIFE CYCLE
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         layoutView()
     }
-    
+
     // MARK: - PRIVATE SETUP
-    
+
     private func layoutView() {
         view.backgroundColor = .white
     }
-    
 }
