@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		027BC1BD238A171700F9DB85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027BC1BC238A171700F9DB85 /* ViewController.swift */; };
 		027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C1238A171800F9DB85 /* Assets.xcassets */; };
 		027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */; };
+		02D0BDEA238B5527006ABDF4 /* Container+RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDE9238B5527006ABDF4 /* Container+RegisterDependencies.swift */; };
+		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
+		02D0BDF0238B56A7006ABDF4 /* HomeFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEF238B56A7006ABDF4 /* HomeFlowController.swift */; };
+		02D0BDF2238B56B7006ABDF4 /* MainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* MainFlowController.swift */; };
 		B1F951595B5AB42EE6159F22 /* Pods_Chuck_Norris_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D80357308292439947C18E /* Pods_Chuck_Norris_Facts.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +25,10 @@
 		027BC1C1238A171800F9DB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		027BC1C4238A171800F9DB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027BC1C6238A171800F9DB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02D0BDE9238B5527006ABDF4 /* Container+RegisterDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+RegisterDependencies.swift"; sourceTree = "<group>"; };
+		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		02D0BDEF238B56A7006ABDF4 /* HomeFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowController.swift; sourceTree = "<group>"; };
+		02D0BDF1238B56B7006ABDF4 /* MainFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowController.swift; sourceTree = "<group>"; };
 		A36C3C59185CDE1DEB45AC9B /* Pods-Chuck-Norris-Facts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuck-Norris-Facts.release.xcconfig"; path = "Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts.release.xcconfig"; sourceTree = "<group>"; };
 		B189FDD5EA0977300F55ECDD /* Pods-Chuck-Norris-Facts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuck-Norris-Facts.debug.xcconfig"; path = "Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts.debug.xcconfig"; sourceTree = "<group>"; };
 		B7D80357308292439947C18E /* Pods_Chuck_Norris_Facts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chuck_Norris_Facts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +67,9 @@
 		027BC1B9238A171700F9DB85 /* Chuck-Norris-Facts */ = {
 			isa = PBXGroup;
 			children = (
+				02D0BDEB238B5676006ABDF4 /* Features */,
+				02D0BDEE238B5696006ABDF4 /* FlowControllers */,
+				02D0BDE8238B5515006ABDF4 /* DependencyInjection */,
 				027BC1CC238A17C100F9DB85 /* Resource */,
 				027BC1BA238A171700F9DB85 /* AppDelegate.swift */,
 				027BC1BC238A171700F9DB85 /* ViewController.swift */,
@@ -74,6 +85,31 @@
 				027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		02D0BDE8238B5515006ABDF4 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				02D0BDE9238B5527006ABDF4 /* Container+RegisterDependencies.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		02D0BDEB238B5676006ABDF4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		02D0BDEE238B5696006ABDF4 /* FlowControllers */ = {
+			isa = PBXGroup;
+			children = (
+				02D0BDEF238B56A7006ABDF4 /* HomeFlowController.swift */,
+				02D0BDF1238B56B7006ABDF4 /* MainFlowController.swift */,
+			);
+			path = FlowControllers;
 			sourceTree = "<group>";
 		};
 		0854B1861F5AEA1F6123E6A2 /* Pods */ = {
@@ -105,6 +141,7 @@
 				027BC1B4238A171700F9DB85 /* Frameworks */,
 				027BC1B5238A171700F9DB85 /* Resources */,
 				025C290B238ADAD700C55BD8 /* Swift Lint */,
+				8CBB9BC3BB636A36A38D21E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +238,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8CBB9BC3BB636A36A38D21E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -208,8 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D0BDF2238B56B7006ABDF4 /* MainFlowController.swift in Sources */,
 				027BC1BD238A171700F9DB85 /* ViewController.swift in Sources */,
+				02D0BDEA238B5527006ABDF4 /* Container+RegisterDependencies.swift in Sources */,
 				027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */,
+				02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */,
+				02D0BDF0238B56A7006ABDF4 /* HomeFlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
