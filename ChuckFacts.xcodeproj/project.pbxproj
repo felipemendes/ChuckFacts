@@ -77,10 +77,21 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		024F7E59238CCBB200616C45 /* ChuckFactsUI */ = {
+			isa = PBXGroup;
+			children = (
+				0219953C238CA04E0034B3EE /* Factory.swift */,
+				02D0BDF1238B56B7006ABDF4 /* FlowController.swift */,
+				02D0BDEB238B5676006ABDF4 /* Features */,
+			);
+			path = ChuckFactsUI;
+			sourceTree = "<group>";
+		};
 		027BC1AE238A171700F9DB85 = {
 			isa = PBXGroup;
 			children = (
 				027BC1B9238A171700F9DB85 /* ChuckFacts */,
+				024F7E59238CCBB200616C45 /* ChuckFactsUI */,
 				024F7E53238CC7EE00616C45 /* ChuckFactsDomain */,
 				027BC1B8238A171700F9DB85 /* Products */,
 				0854B1861F5AEA1F6123E6A2 /* Pods */,
@@ -101,8 +112,6 @@
 			children = (
 				02199540238CA7510034B3EE /* App */,
 				02D0BDE8238B5515006ABDF4 /* DependencyInjection */,
-				02D0BDEE238B5696006ABDF4 /* FlowControllers */,
-				02D0BDEB238B5676006ABDF4 /* Features */,
 				027BC1CC238A17C100F9DB85 /* Resources */,
 			);
 			path = ChuckFacts;
@@ -134,15 +143,6 @@
 				02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		02D0BDEE238B5696006ABDF4 /* FlowControllers */ = {
-			isa = PBXGroup;
-			children = (
-				0219953C238CA04E0034B3EE /* Factory.swift */,
-				02D0BDF1238B56B7006ABDF4 /* FlowController.swift */,
-			);
-			path = FlowControllers;
 			sourceTree = "<group>";
 		};
 		0854B1861F5AEA1F6123E6A2 /* Pods */ = {
