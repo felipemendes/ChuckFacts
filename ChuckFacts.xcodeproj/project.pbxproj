@@ -13,6 +13,10 @@
 		0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953E238CA2F30034B3EE /* FactoryImplementation.swift */; };
 		024F7E56238CC8AF00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
 		024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
+		024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E60238CCCBB00616C45 /* BundleTests.swift */; };
+		024F7E6C238CCFD700616C45 /* fact.json in Resources */ = {isa = PBXBuildFile; fileRef = 024F7E6B238CCF2000616C45 /* fact.json */; };
+		024F7E6D238CCFD800616C45 /* fact.json in Resources */ = {isa = PBXBuildFile; fileRef = 024F7E6B238CCF2000616C45 /* fact.json */; };
+		024F7E6F238CD55E00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
 		027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027BC1BA238A171700F9DB85 /* AppDelegate.swift */; };
 		027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C1238A171800F9DB85 /* Assets.xcassets */; };
 		027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */; };
@@ -21,6 +25,16 @@
 		DC7FC1C855D882BC860BB11F /* Pods_ChuckFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBADFD4E7EF73E03F07B3786 /* Pods_ChuckFacts.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		024F7E63238CCCBB00616C45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 027BC1AF238A171700F9DB85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 027BC1B6238A171700F9DB85;
+			remoteInfo = ChuckFacts;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		02199538238C9EFE0034B3EE /* DepedencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepedencyInjection.swift; sourceTree = "<group>"; };
 		0219953A238C9FC80034B3EE /* ChuckAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckAssembly.swift; sourceTree = "<group>"; };
@@ -28,6 +42,10 @@
 		0219953E238CA2F30034B3EE /* FactoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryImplementation.swift; sourceTree = "<group>"; };
 		024F7E55238CC8AF00616C45 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		024F7E57238CCA8F00616C45 /* FactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactResponse.swift; sourceTree = "<group>"; };
+		024F7E5E238CCCBB00616C45 /* ChuckFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		024F7E60238CCCBB00616C45 /* BundleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleTests.swift; sourceTree = "<group>"; };
+		024F7E62238CCCBB00616C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		024F7E6B238CCF2000616C45 /* fact.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fact.json; sourceTree = "<group>"; };
 		027BC1B7238A171700F9DB85 /* ChuckFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027BC1BA238A171700F9DB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027BC1C1238A171800F9DB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +59,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		024F7E5B238CCCBB00616C45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		027BC1B4238A171700F9DB85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,12 +112,31 @@
 			path = ChuckFactsUI;
 			sourceTree = "<group>";
 		};
+		024F7E5F238CCCBB00616C45 /* ChuckFactsTests */ = {
+			isa = PBXGroup;
+			children = (
+				024F7E6E238CD05A00616C45 /* Resources */,
+				024F7E60238CCCBB00616C45 /* BundleTests.swift */,
+				024F7E62238CCCBB00616C45 /* Info.plist */,
+			);
+			path = ChuckFactsTests;
+			sourceTree = "<group>";
+		};
+		024F7E6E238CD05A00616C45 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				024F7E6B238CCF2000616C45 /* fact.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		027BC1AE238A171700F9DB85 = {
 			isa = PBXGroup;
 			children = (
 				027BC1B9238A171700F9DB85 /* ChuckFacts */,
 				024F7E59238CCBB200616C45 /* ChuckFactsUI */,
 				024F7E53238CC7EE00616C45 /* ChuckFactsDomain */,
+				024F7E5F238CCCBB00616C45 /* ChuckFactsTests */,
 				027BC1B8238A171700F9DB85 /* Products */,
 				0854B1861F5AEA1F6123E6A2 /* Pods */,
 				A68590F8338AEC7E5C36D8B6 /* Frameworks */,
@@ -103,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				027BC1B7238A171700F9DB85 /* ChuckFacts.app */,
+				024F7E5E238CCCBB00616C45 /* ChuckFactsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +210,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		024F7E5D238CCCBB00616C45 /* ChuckFactsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 024F7E65238CCCBB00616C45 /* Build configuration list for PBXNativeTarget "ChuckFactsTests" */;
+			buildPhases = (
+				024F7E5A238CCCBB00616C45 /* Sources */,
+				024F7E5B238CCCBB00616C45 /* Frameworks */,
+				024F7E5C238CCCBB00616C45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				024F7E64238CCCBB00616C45 /* PBXTargetDependency */,
+			);
+			name = ChuckFactsTests;
+			productName = ChuckFactsTests;
+			productReference = 024F7E5E238CCCBB00616C45 /* ChuckFactsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		027BC1B6238A171700F9DB85 /* ChuckFacts */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 027BC1C9238A171800F9DB85 /* Build configuration list for PBXNativeTarget "ChuckFacts" */;
@@ -195,6 +258,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Felipe Mendes";
 				TargetAttributes = {
+					024F7E5D238CCCBB00616C45 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 027BC1B6238A171700F9DB85;
+					};
 					027BC1B6238A171700F9DB85 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -214,16 +281,26 @@
 			projectRoot = "";
 			targets = (
 				027BC1B6238A171700F9DB85 /* ChuckFacts */,
+				024F7E5D238CCCBB00616C45 /* ChuckFactsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		024F7E5C238CCCBB00616C45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				024F7E6C238CCFD700616C45 /* fact.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		027BC1B5238A171700F9DB85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */,
+				024F7E6D238CCFD800616C45 /* fact.json in Resources */,
 				027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +368,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		024F7E5A238CCCBB00616C45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */,
+				024F7E6F238CD55E00616C45 /* Fact.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		027BC1B3238A171700F9DB85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +395,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		024F7E64238CCCBB00616C45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 027BC1B6238A171700F9DB85 /* ChuckFacts */;
+			targetProxy = 024F7E63238CCCBB00616C45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -321,6 +415,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		024F7E66238CCCBB00616C45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H3EUG783L;
+				INFOPLIST_FILE = ChuckFactsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.felipemendes.ChuckFactsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckFacts.app/ChuckFacts";
+			};
+			name = Debug;
+		};
+		024F7E67238CCCBB00616C45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H3EUG783L;
+				INFOPLIST_FILE = ChuckFactsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.felipemendes.ChuckFactsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChuckFacts.app/ChuckFacts";
+			};
+			name = Release;
+		};
 		027BC1C7238A171800F9DB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -480,6 +614,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		024F7E65238CCCBB00616C45 /* Build configuration list for PBXNativeTarget "ChuckFactsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				024F7E66238CCCBB00616C45 /* Debug */,
+				024F7E67238CCCBB00616C45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		027BC1B2238A171700F9DB85 /* Build configuration list for PBXProject "ChuckFacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
