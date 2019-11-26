@@ -11,6 +11,8 @@
 		0219953B238C9FC80034B3EE /* ChuckAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953A238C9FC80034B3EE /* ChuckAssembly.swift */; };
 		0219953D238CA04E0034B3EE /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953C238CA04E0034B3EE /* Factory.swift */; };
 		0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953E238CA2F30034B3EE /* FactoryImplementation.swift */; };
+		024F7E56238CC8AF00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
+		024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
 		027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027BC1BA238A171700F9DB85 /* AppDelegate.swift */; };
 		027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C1238A171800F9DB85 /* Assets.xcassets */; };
 		027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */; };
@@ -24,6 +26,8 @@
 		0219953A238C9FC80034B3EE /* ChuckAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckAssembly.swift; sourceTree = "<group>"; };
 		0219953C238CA04E0034B3EE /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		0219953E238CA2F30034B3EE /* FactoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryImplementation.swift; sourceTree = "<group>"; };
+		024F7E55238CC8AF00616C45 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		024F7E57238CCA8F00616C45 /* FactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactResponse.swift; sourceTree = "<group>"; };
 		027BC1B7238A171700F9DB85 /* ChuckFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027BC1BA238A171700F9DB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027BC1C1238A171800F9DB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,10 +60,28 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		024F7E53238CC7EE00616C45 /* ChuckFactsDomain */ = {
+			isa = PBXGroup;
+			children = (
+				024F7E54238CC81000616C45 /* Models */,
+			);
+			path = ChuckFactsDomain;
+			sourceTree = "<group>";
+		};
+		024F7E54238CC81000616C45 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				024F7E55238CC8AF00616C45 /* Fact.swift */,
+				024F7E57238CCA8F00616C45 /* FactResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		027BC1AE238A171700F9DB85 = {
 			isa = PBXGroup;
 			children = (
 				027BC1B9238A171700F9DB85 /* ChuckFacts */,
+				024F7E53238CC7EE00616C45 /* ChuckFactsDomain */,
 				027BC1B8238A171700F9DB85 /* Products */,
 				0854B1861F5AEA1F6123E6A2 /* Pods */,
 				A68590F8338AEC7E5C36D8B6 /* Frameworks */,
@@ -275,7 +297,9 @@
 			files = (
 				0219953D238CA04E0034B3EE /* Factory.swift in Sources */,
 				02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */,
+				024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */,
 				02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */,
+				024F7E56238CC8AF00616C45 /* Fact.swift in Sources */,
 				0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */,
 				0219953B238C9FC80034B3EE /* ChuckAssembly.swift in Sources */,
 				027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */,
