@@ -1,6 +1,6 @@
 //
 //  HomeViewController.swift
-//  Chuck-Norris-Facts
+//  ChuckFacts
 //
 //  Created by Felipe Mendes on 24/11/19.
 //  Copyright © 2019 Felipe Mendes. All rights reserved.

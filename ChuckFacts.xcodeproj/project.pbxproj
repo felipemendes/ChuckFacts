@@ -16,7 +16,7 @@
 		027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
 		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
-		B1F951595B5AB42EE6159F22 /* Pods_Chuck_Norris_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D80357308292439947C18E /* Pods_Chuck_Norris_Facts.framework */; };
+		DC7FC1C855D882BC860BB11F /* Pods_ChuckFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBADFD4E7EF73E03F07B3786 /* Pods_ChuckFacts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,16 +24,16 @@
 		0219953A238C9FC80034B3EE /* ChuckAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckAssembly.swift; sourceTree = "<group>"; };
 		0219953C238CA04E0034B3EE /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		0219953E238CA2F30034B3EE /* FactoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryImplementation.swift; sourceTree = "<group>"; };
-		027BC1B7238A171700F9DB85 /* Chuck-Norris-Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuck-Norris-Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		027BC1B7238A171700F9DB85 /* ChuckFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027BC1BA238A171700F9DB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027BC1C1238A171800F9DB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		027BC1C4238A171800F9DB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027BC1C6238A171800F9DB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
-		A36C3C59185CDE1DEB45AC9B /* Pods-Chuck-Norris-Facts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuck-Norris-Facts.release.xcconfig"; path = "Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts.release.xcconfig"; sourceTree = "<group>"; };
-		B189FDD5EA0977300F55ECDD /* Pods-Chuck-Norris-Facts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuck-Norris-Facts.debug.xcconfig"; path = "Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts.debug.xcconfig"; sourceTree = "<group>"; };
-		B7D80357308292439947C18E /* Pods_Chuck_Norris_Facts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chuck_Norris_Facts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A36C3C59185CDE1DEB45AC9B /* Pods-ChuckFacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckFacts.release.xcconfig"; path = "Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts.release.xcconfig"; sourceTree = "<group>"; };
+		B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts.debug.xcconfig"; sourceTree = "<group>"; };
+		DBADFD4E7EF73E03F07B3786 /* Pods_ChuckFacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckFacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1F951595B5AB42EE6159F22 /* Pods_Chuck_Norris_Facts.framework in Frameworks */,
+				DC7FC1C855D882BC860BB11F /* Pods_ChuckFacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 		027BC1AE238A171700F9DB85 = {
 			isa = PBXGroup;
 			children = (
-				027BC1B9238A171700F9DB85 /* Chuck-Norris-Facts */,
+				027BC1B9238A171700F9DB85 /* ChuckFacts */,
 				027BC1B8238A171700F9DB85 /* Products */,
 				0854B1861F5AEA1F6123E6A2 /* Pods */,
 				A68590F8338AEC7E5C36D8B6 /* Frameworks */,
@@ -69,31 +69,31 @@
 		027BC1B8238A171700F9DB85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				027BC1B7238A171700F9DB85 /* Chuck-Norris-Facts.app */,
+				027BC1B7238A171700F9DB85 /* ChuckFacts.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		027BC1B9238A171700F9DB85 /* Chuck-Norris-Facts */ = {
+		027BC1B9238A171700F9DB85 /* ChuckFacts */ = {
 			isa = PBXGroup;
 			children = (
 				02199540238CA7510034B3EE /* App */,
 				02D0BDE8238B5515006ABDF4 /* DependencyInjection */,
 				02D0BDEE238B5696006ABDF4 /* FlowControllers */,
 				02D0BDEB238B5676006ABDF4 /* Features */,
-				027BC1CC238A17C100F9DB85 /* Resource */,
+				027BC1CC238A17C100F9DB85 /* Resources */,
 			);
-			path = "Chuck-Norris-Facts";
+			path = ChuckFacts;
 			sourceTree = "<group>";
 		};
-		027BC1CC238A17C100F9DB85 /* Resource */ = {
+		027BC1CC238A17C100F9DB85 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				027BC1C1238A171800F9DB85 /* Assets.xcassets */,
 				027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */,
 				027BC1C6238A171800F9DB85 /* Info.plist */,
 			);
-			path = Resource;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		02D0BDE8238B5515006ABDF4 /* DependencyInjection */ = {
@@ -126,8 +126,8 @@
 		0854B1861F5AEA1F6123E6A2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B189FDD5EA0977300F55ECDD /* Pods-Chuck-Norris-Facts.debug.xcconfig */,
-				A36C3C59185CDE1DEB45AC9B /* Pods-Chuck-Norris-Facts.release.xcconfig */,
+				B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */,
+				A36C3C59185CDE1DEB45AC9B /* Pods-ChuckFacts.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -135,7 +135,7 @@
 		A68590F8338AEC7E5C36D8B6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B7D80357308292439947C18E /* Pods_Chuck_Norris_Facts.framework */,
+				DBADFD4E7EF73E03F07B3786 /* Pods_ChuckFacts.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -143,9 +143,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		027BC1B6238A171700F9DB85 /* Chuck-Norris-Facts */ = {
+		027BC1B6238A171700F9DB85 /* ChuckFacts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 027BC1C9238A171800F9DB85 /* Build configuration list for PBXNativeTarget "Chuck-Norris-Facts" */;
+			buildConfigurationList = 027BC1C9238A171800F9DB85 /* Build configuration list for PBXNativeTarget "ChuckFacts" */;
 			buildPhases = (
 				5FDC7E951E7AC56A48E3F077 /* [CP] Check Pods Manifest.lock */,
 				027BC1B3238A171700F9DB85 /* Sources */,
@@ -158,9 +158,9 @@
 			);
 			dependencies = (
 			);
-			name = "Chuck-Norris-Facts";
-			productName = "Chuck-Norris-Facts";
-			productReference = 027BC1B7238A171700F9DB85 /* Chuck-Norris-Facts.app */;
+			name = ChuckFacts;
+			productName = ChuckFacts;
+			productReference = 027BC1B7238A171700F9DB85 /* ChuckFacts.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -178,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 027BC1B2238A171700F9DB85 /* Build configuration list for PBXProject "Chuck-Norris-Facts" */;
+			buildConfigurationList = 027BC1B2238A171700F9DB85 /* Build configuration list for PBXProject "ChuckFacts" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -191,7 +191,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				027BC1B6238A171700F9DB85 /* Chuck-Norris-Facts */,
+				027BC1B6238A171700F9DB85 /* ChuckFacts */,
 			);
 		};
 /* End PBXProject section */
@@ -242,7 +242,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Chuck-Norris-Facts-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ChuckFacts-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -255,15 +255,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -417,17 +417,17 @@
 		};
 		027BC1CA238A171800F9DB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B189FDD5EA0977300F55ECDD /* Pods-Chuck-Norris-Facts.debug.xcconfig */;
+			baseConfigurationReference = B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3H3EUG783L;
-				INFOPLIST_FILE = "$(SRCROOT)/Chuck-Norris-Facts/Resource/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/ChuckFacts/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.felipemendes.Chuck-Norris-Facts";
+				PRODUCT_BUNDLE_IDENTIFIER = com.felipemendes.ChuckFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -436,17 +436,17 @@
 		};
 		027BC1CB238A171800F9DB85 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A36C3C59185CDE1DEB45AC9B /* Pods-Chuck-Norris-Facts.release.xcconfig */;
+			baseConfigurationReference = A36C3C59185CDE1DEB45AC9B /* Pods-ChuckFacts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3H3EUG783L;
-				INFOPLIST_FILE = "$(SRCROOT)/Chuck-Norris-Facts/Resource/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/ChuckFacts/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.felipemendes.Chuck-Norris-Facts";
+				PRODUCT_BUNDLE_IDENTIFIER = com.felipemendes.ChuckFacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -456,7 +456,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		027BC1B2238A171700F9DB85 /* Build configuration list for PBXProject "Chuck-Norris-Facts" */ = {
+		027BC1B2238A171700F9DB85 /* Build configuration list for PBXProject "ChuckFacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				027BC1C7238A171800F9DB85 /* Debug */,
@@ -465,7 +465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		027BC1C9238A171800F9DB85 /* Build configuration list for PBXNativeTarget "Chuck-Norris-Facts" */ = {
+		027BC1C9238A171800F9DB85 /* Build configuration list for PBXNativeTarget "ChuckFacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				027BC1CA238A171800F9DB85 /* Debug */,

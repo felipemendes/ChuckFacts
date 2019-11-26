@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Chuck-Norris-Facts
+//  ChuckFacts
 //
 //  Created by Felipe Mendes on 23/11/19.
 //  Copyright © 2019 Felipe Mendes. All rights reserved.

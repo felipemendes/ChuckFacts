@@ -20,7 +20,7 @@ Installing dependencies:
 ```bash
 pod install
 ```
-When the instalation has been finished, you can open **Chuck-Norris-Facts.xcworkspace** file and then build & run (⌘+R) the application.
+When the instalation has been finished, you can open **ChuckFacts.xcworkspace** file and then build & run (⌘+R) the application.
 
 ## Style Guide
 Using Swift style guide from [raywenderlich.com](https://github.com/raywenderlich/swift-style-guide) and also [SwiftLint](https://github.com/realm/SwiftLint) to enforce code style and best practices.
