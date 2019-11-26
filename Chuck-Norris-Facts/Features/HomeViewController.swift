@@ -8,11 +8,11 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+public class HomeViewController: UIViewController {
 
     // MARK: - LIFE CYCLE
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         layoutView()
     }
@@ -20,6 +20,6 @@ final class HomeViewController: UIViewController {
     // MARK: - PRIVATE SETUP
 
     private func layoutView() {
-        view.backgroundColor = .white
+        view.backgroundColor = .purple
     }
 }

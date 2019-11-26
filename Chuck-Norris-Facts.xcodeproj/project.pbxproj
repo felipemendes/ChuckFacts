@@ -7,28 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02199538238C9EFE0034B3EE /* DepedencyInjection.swift */; };
+		0219953B238C9FC80034B3EE /* ChuckAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953A238C9FC80034B3EE /* ChuckAssembly.swift */; };
+		0219953D238CA04E0034B3EE /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953C238CA04E0034B3EE /* Factory.swift */; };
+		0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953E238CA2F30034B3EE /* FactoryImplementation.swift */; };
 		027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027BC1BA238A171700F9DB85 /* AppDelegate.swift */; };
-		027BC1BD238A171700F9DB85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027BC1BC238A171700F9DB85 /* ViewController.swift */; };
 		027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C1238A171800F9DB85 /* Assets.xcassets */; };
 		027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */; };
-		02D0BDEA238B5527006ABDF4 /* Container+RegisterDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDE9238B5527006ABDF4 /* Container+RegisterDependencies.swift */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
-		02D0BDF0238B56A7006ABDF4 /* HomeFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEF238B56A7006ABDF4 /* HomeFlowController.swift */; };
-		02D0BDF2238B56B7006ABDF4 /* MainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* MainFlowController.swift */; };
+		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
 		B1F951595B5AB42EE6159F22 /* Pods_Chuck_Norris_Facts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D80357308292439947C18E /* Pods_Chuck_Norris_Facts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02199538238C9EFE0034B3EE /* DepedencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepedencyInjection.swift; sourceTree = "<group>"; };
+		0219953A238C9FC80034B3EE /* ChuckAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckAssembly.swift; sourceTree = "<group>"; };
+		0219953C238CA04E0034B3EE /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		0219953E238CA2F30034B3EE /* FactoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryImplementation.swift; sourceTree = "<group>"; };
 		027BC1B7238A171700F9DB85 /* Chuck-Norris-Facts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chuck-Norris-Facts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		027BC1BA238A171700F9DB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		027BC1BC238A171700F9DB85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		027BC1C1238A171800F9DB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		027BC1C4238A171800F9DB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		027BC1C6238A171800F9DB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		02D0BDE9238B5527006ABDF4 /* Container+RegisterDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+RegisterDependencies.swift"; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		02D0BDEF238B56A7006ABDF4 /* HomeFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowController.swift; sourceTree = "<group>"; };
-		02D0BDF1238B56B7006ABDF4 /* MainFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowController.swift; sourceTree = "<group>"; };
+		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		A36C3C59185CDE1DEB45AC9B /* Pods-Chuck-Norris-Facts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuck-Norris-Facts.release.xcconfig"; path = "Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts.release.xcconfig"; sourceTree = "<group>"; };
 		B189FDD5EA0977300F55ECDD /* Pods-Chuck-Norris-Facts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chuck-Norris-Facts.debug.xcconfig"; path = "Target Support Files/Pods-Chuck-Norris-Facts/Pods-Chuck-Norris-Facts.debug.xcconfig"; sourceTree = "<group>"; };
 		B7D80357308292439947C18E /* Pods_Chuck_Norris_Facts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chuck_Norris_Facts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02199540238CA7510034B3EE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				027BC1BA238A171700F9DB85 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		027BC1AE238A171700F9DB85 = {
 			isa = PBXGroup;
 			children = (
@@ -67,13 +77,11 @@
 		027BC1B9238A171700F9DB85 /* Chuck-Norris-Facts */ = {
 			isa = PBXGroup;
 			children = (
-				02D0BDEB238B5676006ABDF4 /* Features */,
-				02D0BDEE238B5696006ABDF4 /* FlowControllers */,
+				02199540238CA7510034B3EE /* App */,
 				02D0BDE8238B5515006ABDF4 /* DependencyInjection */,
+				02D0BDEE238B5696006ABDF4 /* FlowControllers */,
+				02D0BDEB238B5676006ABDF4 /* Features */,
 				027BC1CC238A17C100F9DB85 /* Resource */,
-				027BC1BA238A171700F9DB85 /* AppDelegate.swift */,
-				027BC1BC238A171700F9DB85 /* ViewController.swift */,
-				027BC1C6238A171800F9DB85 /* Info.plist */,
 			);
 			path = "Chuck-Norris-Facts";
 			sourceTree = "<group>";
@@ -83,6 +91,7 @@
 			children = (
 				027BC1C1238A171800F9DB85 /* Assets.xcassets */,
 				027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */,
+				027BC1C6238A171800F9DB85 /* Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -90,7 +99,9 @@
 		02D0BDE8238B5515006ABDF4 /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
-				02D0BDE9238B5527006ABDF4 /* Container+RegisterDependencies.swift */,
+				02199538238C9EFE0034B3EE /* DepedencyInjection.swift */,
+				0219953A238C9FC80034B3EE /* ChuckAssembly.swift */,
+				0219953E238CA2F30034B3EE /* FactoryImplementation.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -106,8 +117,8 @@
 		02D0BDEE238B5696006ABDF4 /* FlowControllers */ = {
 			isa = PBXGroup;
 			children = (
-				02D0BDEF238B56A7006ABDF4 /* HomeFlowController.swift */,
-				02D0BDF1238B56B7006ABDF4 /* MainFlowController.swift */,
+				0219953C238CA04E0034B3EE /* Factory.swift */,
+				02D0BDF1238B56B7006ABDF4 /* FlowController.swift */,
 			);
 			path = FlowControllers;
 			sourceTree = "<group>";
@@ -262,12 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D0BDF2238B56B7006ABDF4 /* MainFlowController.swift in Sources */,
-				027BC1BD238A171700F9DB85 /* ViewController.swift in Sources */,
-				02D0BDEA238B5527006ABDF4 /* Container+RegisterDependencies.swift in Sources */,
+				0219953D238CA04E0034B3EE /* Factory.swift in Sources */,
+				02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */,
+				02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */,
+				0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */,
+				0219953B238C9FC80034B3EE /* ChuckAssembly.swift in Sources */,
 				027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */,
 				02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */,
-				02D0BDF0238B56A7006ABDF4 /* HomeFlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +422,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3H3EUG783L;
-				INFOPLIST_FILE = "Chuck-Norris-Facts/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Chuck-Norris-Facts/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -429,7 +441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3H3EUG783L;
-				INFOPLIST_FILE = "Chuck-Norris-Facts/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Chuck-Norris-Facts/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
