@@ -19,4 +19,15 @@ extension Bundle {
 
         return try decoder.decode(Fact.self, from: data)
     }
+
+    func fetchFactResponseBundle(for resource: String) throws -> FactResponse? {
+        guard let url = self.url(forResource: resource, withExtension: "json") else {
+            return nil
+        }
+
+        let data = try Data(contentsOf: url)
+        let decoder = JSONDecoder()
+
+        return try decoder.decode(FactResponse.self, from: data)
+    }
 }
