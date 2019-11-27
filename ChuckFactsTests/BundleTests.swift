@@ -33,4 +33,14 @@ class BundleTests: XCTestCase {
         XCTAssert(factResponse?.result[1].identifier == "XHd6GOm_SEqKq_kNM1ZI8w")
         XCTAssert(factResponse?.result[2].identifier == "qqthrspvtqyigfwvaui2eq")
     }
+
+
+    func testFactResponseWithoutItemsFromStub() throws {
+        let bundle = Bundle(for: type(of: self))
+        let factResponse = try bundle.fetchFactResponseBundle(for: "emptyFacts")
+
+        XCTAssert(factResponse?.total == 0)
+        XCTAssert(factResponse?.result.count == 0)
+    }
+
 }
