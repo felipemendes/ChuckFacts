@@ -11,20 +11,36 @@ import XCTest
 
 class BundleTests: XCTestCase {
 
-    func testBundleFacts() throws {
+    func testFactbWithOnlyOneItemFromStub() throws {
         let bundle = Bundle(for: type(of: self))
+        let fact = try bundle.fetchFactBundle(for: "singleFact")
 
-        guard let url = bundle.url(forResource: "fact", withExtension: "json") else {
-            XCTFail("Missing file: fact.json")
-            return
-        }
+        XCTAssertNotNil(fact)
+        XCTAssert(fact?.identifier == "tnr_ylf0tciqndymlnmw5g")
+        XCTAssert(fact?.iconUrl.absoluteString == "https://assets.chucknorris.host/img/avatar/chuck-norris.png")
+        XCTAssertEqual(fact?.value, "In the Bible, Jesus turned water into wine. But then Chuck Norris turned that wine into beer.")
+        XCTAssert(fact?.url.absoluteString == "https://api.chucknorris.io/jokes/tnr_ylf0tciqndymlnmw5g")
+    }
 
-        let json = try Data(contentsOf: url)
-        let data = try JSONSerialization.data(withJSONObject: json, options: [])
-        let decoder = JSONDecoder()
-        let fact = try decoder.decode(Fact.self, from: data)
+    func testFactResponseWithResultsMultipleItemsFromStub() throws {
+        let bundle = Bundle(for: type(of: self))
+        let factResponse = try bundle.fetchFactResponseBundle(for: "multipleFacts")
 
-        XCTAssertEqual(fact.identifier, "tnr_ylf0tciqndymlnmw5g")
+        XCTAssert(factResponse?.total == 3)
+        XCTAssert(factResponse?.result.count == 3)
+
+        XCTAssert(factResponse?.result[0].identifier == "z0vjwbedqhqfph0mc88skg")
+        XCTAssert(factResponse?.result[1].identifier == "XHd6GOm_SEqKq_kNM1ZI8w")
+        XCTAssert(factResponse?.result[2].identifier == "qqthrspvtqyigfwvaui2eq")
+    }
+
+
+    func testFactResponseWithoutItemsFromStub() throws {
+        let bundle = Bundle(for: type(of: self))
+        let factResponse = try bundle.fetchFactResponseBundle(for: "emptyFacts")
+
+        XCTAssert(factResponse?.total == 0)
+        XCTAssert(factResponse?.result.count == 0)
     }
 
 }

@@ -14,14 +14,17 @@
 		024F7E56238CC8AF00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
 		024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
 		024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E60238CCCBB00616C45 /* BundleTests.swift */; };
-		024F7E6C238CCFD700616C45 /* fact.json in Resources */ = {isa = PBXBuildFile; fileRef = 024F7E6B238CCF2000616C45 /* fact.json */; };
-		024F7E6D238CCFD800616C45 /* fact.json in Resources */ = {isa = PBXBuildFile; fileRef = 024F7E6B238CCF2000616C45 /* fact.json */; };
+		024F7E6C238CCFD700616C45 /* singleFact.json in Resources */ = {isa = PBXBuildFile; fileRef = 024F7E6B238CCF2000616C45 /* singleFact.json */; };
 		024F7E6F238CD55E00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
 		027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027BC1BA238A171700F9DB85 /* AppDelegate.swift */; };
 		027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C1238A171800F9DB85 /* Assets.xcassets */; };
 		027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
 		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
+		02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */; };
+		02DA7EB5238E0FD1000BA7D7 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
+		02DA7EB7238E1176000BA7D7 /* multipleFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 02DA7EB6238E10EF000BA7D7 /* multipleFacts.json */; };
+		02DA7EB9238E12B0000BA7D7 /* emptyFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 02DA7EB8238E12B0000BA7D7 /* emptyFacts.json */; };
 		DC7FC1C855D882BC860BB11F /* Pods_ChuckFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBADFD4E7EF73E03F07B3786 /* Pods_ChuckFacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +48,7 @@
 		024F7E5E238CCCBB00616C45 /* ChuckFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		024F7E60238CCCBB00616C45 /* BundleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleTests.swift; sourceTree = "<group>"; };
 		024F7E62238CCCBB00616C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		024F7E6B238CCF2000616C45 /* fact.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fact.json; sourceTree = "<group>"; };
+		024F7E6B238CCF2000616C45 /* singleFact.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = singleFact.json; sourceTree = "<group>"; };
 		027BC1B7238A171700F9DB85 /* ChuckFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027BC1BA238A171700F9DB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027BC1C1238A171800F9DB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +56,9 @@
 		027BC1C6238A171800F9DB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		02DA7EB6238E10EF000BA7D7 /* multipleFacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = multipleFacts.json; sourceTree = "<group>"; };
+		02DA7EB8238E12B0000BA7D7 /* emptyFacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emptyFacts.json; sourceTree = "<group>"; };
 		A36C3C59185CDE1DEB45AC9B /* Pods-ChuckFacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckFacts.release.xcconfig"; path = "Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts.release.xcconfig"; sourceTree = "<group>"; };
 		B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		DBADFD4E7EF73E03F07B3786 /* Pods_ChuckFacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckFacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,19 +121,22 @@
 		024F7E5F238CCCBB00616C45 /* ChuckFactsTests */ = {
 			isa = PBXGroup;
 			children = (
-				024F7E6E238CD05A00616C45 /* Resources */,
+				02DA7EB4238E0DD9000BA7D7 /* Extensions */,
+				024F7E6E238CD05A00616C45 /* Stubs */,
 				024F7E60238CCCBB00616C45 /* BundleTests.swift */,
 				024F7E62238CCCBB00616C45 /* Info.plist */,
 			);
 			path = ChuckFactsTests;
 			sourceTree = "<group>";
 		};
-		024F7E6E238CD05A00616C45 /* Resources */ = {
+		024F7E6E238CD05A00616C45 /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
-				024F7E6B238CCF2000616C45 /* fact.json */,
+				024F7E6B238CCF2000616C45 /* singleFact.json */,
+				02DA7EB6238E10EF000BA7D7 /* multipleFacts.json */,
+				02DA7EB8238E12B0000BA7D7 /* emptyFacts.json */,
 			);
-			path = Resources;
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		027BC1AE238A171700F9DB85 = {
@@ -188,6 +197,14 @@
 				02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		02DA7EB4238E0DD9000BA7D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0854B1861F5AEA1F6123E6A2 /* Pods */ = {
@@ -291,7 +308,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				024F7E6C238CCFD700616C45 /* fact.json in Resources */,
+				02DA7EB9238E12B0000BA7D7 /* emptyFacts.json in Resources */,
+				024F7E6C238CCFD700616C45 /* singleFact.json in Resources */,
+				02DA7EB7238E1176000BA7D7 /* multipleFacts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */,
-				024F7E6D238CCFD800616C45 /* fact.json in Resources */,
 				027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +391,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */,
+				02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */,
+				02DA7EB5238E0FD1000BA7D7 /* FactResponse.swift in Sources */,
 				024F7E6F238CD55E00616C45 /* Fact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +437,7 @@
 /* Begin XCBuildConfiguration section */
 		024F7E66238CCCBB00616C45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -457,6 +478,7 @@
 		};
 		027BC1C7238A171800F9DB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
