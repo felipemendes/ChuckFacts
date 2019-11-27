@@ -1,0 +1,32 @@
+{
+    "total": 3,
+    "result": [
+        {
+            "categories": [],
+            "created_at": "2016-05-01 10:51:41.584544",
+            "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+            "id": "z0vjwbedqhqfph0mc88skg",
+            "updated_at": "2016-05-01 10:51:41.584544",
+            "url": "https://api.chucknorris.io/jokes/z0vjwbedqhqfph0mc88skg",
+            "value": "Nobody doesn't like Sara Lee. Except Chuck Norris."
+        },
+        {
+            "categories": [],
+            "created_at": "2016-05-01 10:51:41.584544",
+            "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+            "id": "XHd6GOm_SEqKq_kNM1ZI8w",
+            "updated_at": "2016-05-01 10:51:41.584544",
+            "url": "https://api.chucknorris.io/jokes/XHd6GOm_SEqKq_kNM1ZI8w",
+            "value": "Chuck Norris is not dead yet because he knows Bruce Lee is waiting for him in the after life."
+        },
+        {
+            "categories": [],
+            "created_at": "2016-05-01 10:51:41.584544",
+            "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+            "id": "qqthrspvtqyigfwvaui2eq",
+            "updated_at": "2016-05-01 10:51:41.584544",
+            "url": "https://api.chucknorris.io/jokes/qqthrspvtqyigfwvaui2eq",
+            "value": "Chuck Norris sleeps with a pillow under his gun."
+        },
+    ]
+}
