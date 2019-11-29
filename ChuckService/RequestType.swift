@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum HTTPMethod: String {
+    case get = "GET"
+}
+
 protocol RequestType {
     var baseURL: URL { get }
     var path: String { get }
