@@ -1,5 +1,5 @@
 //
-//  ServiceTests.swift
+//  ServiceEndpointTests.swift
 //  ChuckFactsTests
 //
 //  Created by Felipe Mendes on 30/11/19.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import ChuckFacts
 
-class ServiceTests: XCTestCase {
+class ServiceEndpointTests: XCTestCase {
 
     func testUrlBuildWithSingleParameter() {
         let url = URL(string: "https://api.chucknorris.io/jokes/search")!
