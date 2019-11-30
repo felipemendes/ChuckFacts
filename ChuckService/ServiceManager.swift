@@ -103,4 +103,32 @@ struct ServiceManager {
             }
         }
     }
+
+    /// Free text search.
+
+    func getSearch(from keyword: String, completion: @escaping (_ fact: FactResponse?, _ error: String?) -> Void) {
+
+        router.request(.search(keyword: keyword)) { data, response, _ in
+            guard let response = response as? HTTPURLResponse else {
+                completion(nil, RequestError.taskError.rawValue)
+                return
+            }
+
+            if response.statusCode != 200 {
+                completion(nil, RequestError.failureRequest.rawValue)
+                return
+            }
+            guard let responseData = data else {
+                completion(nil, RequestError.noData.rawValue)
+                return
+            }
+
+            do {
+                let searchResponse = try JSONDecoder().decode(FactResponse.self, from: responseData)
+                completion(searchResponse, nil)
+            } catch {
+                completion(nil, RequestError.invalidJson.rawValue)
+            }
+        }
+    }
 }
