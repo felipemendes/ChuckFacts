@@ -8,7 +8,18 @@
 
 import Foundation
 
-public struct FactResponse: Codable {
-    public let total: Int
-    public let result: [Fact]
+struct FactResponse: Codable {
+    let total: Int
+    let result: [Fact]
+
+    enum CodingKeys: String, CodingKey {
+        case total, result
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        total = try container.decode(Int.self, forKey: .total)
+        result = try container.decode([Fact].self, forKey: .result)
+    }
 }
