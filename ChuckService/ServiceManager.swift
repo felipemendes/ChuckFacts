@@ -47,6 +47,35 @@ struct ServiceManager {
         }
     }
 
+    /// Retrieve a random chuck norris joke from a given category.
+
+    func getRandomWith(category categoryName: String,
+                       completion: @escaping (_ fact: Fact?, _ error: String?) -> Void) {
+
+        router.request(.randomWithCategory(category: categoryName)) { data, response, _ in
+            guard let response = response as? HTTPURLResponse else {
+                completion(nil, RequestError.taskError.rawValue)
+                return
+            }
+
+            if response.statusCode != 200 {
+                completion(nil, RequestError.failureRequest.rawValue)
+                return
+            }
+            guard let responseData = data else {
+                completion(nil, RequestError.noData.rawValue)
+                return
+            }
+
+            do {
+                let randomResponse = try JSONDecoder().decode(Fact.self, from: responseData)
+                completion(randomResponse, nil)
+            } catch {
+                completion(nil, RequestError.invalidJson.rawValue)
+            }
+        }
+    }
+
     /// Retrieve a list of available categories.
 
     func getCategories(completion: @escaping (_ categories: [String]?, _ error: String?) -> Void) {
