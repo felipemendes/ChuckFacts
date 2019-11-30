@@ -141,8 +141,8 @@
 			children = (
 				02DA7EB4238E0DD9000BA7D7 /* Extensions */,
 				024F7E6E238CD05A00616C45 /* Stubs */,
-				024F7E60238CCCBB00616C45 /* BundleTests.swift */,
 				024F7E62238CCCBB00616C45 /* Info.plist */,
+				024F7E60238CCCBB00616C45 /* BundleTests.swift */,
 			);
 			path = ChuckFactsTests;
 			sourceTree = "<group>";

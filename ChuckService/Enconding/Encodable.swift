@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol Encodable {
-    func encode(urlRequest: inout URLRequest, with parameters: [String: Any]) throws
+    func encode(urlRequest: inout URLRequest, with parameters: [String: String]) throws
 }

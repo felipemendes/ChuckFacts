@@ -63,10 +63,10 @@ class Router<Endpoint: EndpointType>: Routable {
     /// Encoding parameters
     ///
     /// - Parameter request: A URLRequest
-    /// - Parameter parameters: A text tuple of any type
+    /// - Parameter parameters: A text tuple of String
     /// - Throws: Throws a URLParameterEncoder
     fileprivate func configureParameters(request: inout URLRequest,
-                                         parameters: [String: Any]) throws {
+                                         parameters: [String: String]) throws {
         do {
             try URLParameterEncoder().encode(urlRequest: &request, with: parameters)
         } catch {

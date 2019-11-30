@@ -21,8 +21,8 @@ public struct URLParameterEncoder: Encodable {
     /// Parameter encoder for building safe URL
     ///
     /// - Parameter urlRequest: A URLRequest
-    /// - Parameter parameters: A A text tuple of any type
-    public func encode(urlRequest: inout URLRequest, with parameters: [String: Any]) throws {
+    /// - Parameter parameters: A text tuple of String
+    public func encode(urlRequest: inout URLRequest, with parameters: [String: String]) throws {
         guard let url = urlRequest.url else {
             throw NetworkError.missingURL
         }
@@ -34,7 +34,7 @@ public struct URLParameterEncoder: Encodable {
             urlComponents.queryItems = [URLQueryItem]()
 
             _ = parameters.map {
-                let queryItem = URLQueryItem(name: $0, value: "\($1)")
+                let queryItem = URLQueryItem(name: $0, value: "\($1.lowercased())")
                 urlComponents.queryItems?.append(queryItem)
             }
 

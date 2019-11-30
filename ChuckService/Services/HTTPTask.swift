@@ -10,5 +10,5 @@ import Foundation
 
 public enum HTTPTask {
     case request
-    case requestParameters(parameters: [String: Any])
+    case requestParameters(parameters: [String: String])
 }
