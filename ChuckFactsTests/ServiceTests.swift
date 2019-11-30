@@ -11,9 +11,8 @@ import XCTest
 
 class ServiceTests: XCTestCase {
 
-    let url = URL(string: "https://api.chucknorris.io/jokes/search")!
-
     func testUrlBuildWithSingleParameter() {
+        let url = URL(string: "https://api.chucknorris.io/jokes/search")!
         var urlRequest = URLRequest(url: url)
 
         let encoder = URLParameterEncoder()
@@ -28,6 +27,7 @@ class ServiceTests: XCTestCase {
     }
 
     func testUrlBuildWithCompoundWordParameter() {
+        let url = URL(string: "https://api.chucknorris.io/jokes/search")!
         var urlRequest = URLRequest(url: url)
 
         let encoder = URLParameterEncoder()
@@ -38,6 +38,26 @@ class ServiceTests: XCTestCase {
         }
 
         let expectedURL = "https://api.chucknorris.io/jokes/search?query=bruce%20lee"
+        XCTAssertEqual(fullURL.absoluteString, expectedURL)
+    }
+
+    func testUrlBuildWithMultipleParameters() {
+        let url = URL(string: "https://sampleurl")!
+        var urlRequest = URLRequest(url: url)
+
+        let parameters: [String: String] = [
+            "param1": "sample 1",
+            "param2": "test2",
+            ]
+
+        let encoder = URLParameterEncoder()
+        try? encoder.encode(urlRequest: &urlRequest, with: parameters)
+        guard let fullURL = urlRequest.url else {
+            XCTAssertTrue(false, "Nil URL.")
+            return
+        }
+
+        let expectedURL = "https://sampleurl?param1=sample%201&param2=test2"
         XCTAssertEqual(fullURL.absoluteString, expectedURL)
     }
 
