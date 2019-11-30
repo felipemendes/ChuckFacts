@@ -34,7 +34,8 @@ public struct URLParameterEncoder: Encodable {
             urlComponents.queryItems = [URLQueryItem]()
 
             _ = parameters.map {
-                let queryItem = URLQueryItem(name: $0, value: "\($1.lowercased())")
+                let queryItem = URLQueryItem(name: $0,
+                                             value: "\($1.lowercased())")
                 urlComponents.queryItems?.append(queryItem)
             }
 
