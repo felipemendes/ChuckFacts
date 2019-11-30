@@ -31,14 +31,13 @@ enum Request: RequestType {
 
     var path: String {
         switch self {
-        case .random:
+        case .random,
+             .randomWithCategory:
             return "random"
-        case .randomWithCategory(let category):
-            return "random?category=\(category)"
         case .categories:
             return "categories"
-        case .search(let keyword):
-            return "search?query=\(keyword)"
+        case .search:
+            return "search"
         }
     }
 
@@ -47,10 +46,17 @@ enum Request: RequestType {
     }
 
     var task: HTTPTask {
-        return .request
+        switch self {
+        case .randomWithCategory(let category):
+            return .requestParameters(parameters: ["category": category])
+        case .search(let keyword):
+            return .requestParameters(parameters: ["query": keyword])
+        default:
+            return .request
+        }
     }
 
-    var headers: HTTPHeaders? {
+    var headers: [String: String]? {
         return nil
     }
 }

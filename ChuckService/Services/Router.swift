@@ -36,6 +36,26 @@ class Router<Endpoint: RequestType>: Routable {
                                  timeoutInterval: 10.0)
 
         request.httpMethod = endpoint.httpMethod.rawValue
+
+        switch endpoint.task {
+        case .request:
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        case .requestParameters(let parameters):
+            try self.configureParameters(request: &request,
+                                         parameters: parameters)
+        }
+
         return request
+    }
+
+    // MARK: - HELPERS
+
+    fileprivate func configureParameters(request: inout URLRequest,
+                                         parameters: [String: Any]) throws {
+        do {
+            try URLParameterEncoder().encode(urlRequest: &request, with: parameters)
+        } catch {
+            throw error
+        }
     }
 }
