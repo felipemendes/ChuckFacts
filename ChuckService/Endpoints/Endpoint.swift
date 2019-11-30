@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Request: RequestType {
+enum Request: EndpointType {
 
     case random
     case randomWithCategory(category: String)

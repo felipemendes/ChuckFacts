@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - ENUM
+
 enum NetworkError: String, Error {
     case parametersNil = "Parameters not found."
     case encodingFailed = "Encoding parameters failed."
@@ -16,6 +18,10 @@ enum NetworkError: String, Error {
 
 public struct URLParameterEncoder: Encodable {
 
+    /// Parameter encoder for building safe URL
+    ///
+    /// - Parameter urlRequest: A URLRequest
+    /// - Parameter parameters: A A text tuple of any type
     public func encode(urlRequest: inout URLRequest, with parameters: [String: Any]) throws {
         guard let url = urlRequest.url else {
             throw NetworkError.missingURL

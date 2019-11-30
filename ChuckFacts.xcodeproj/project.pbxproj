@@ -30,7 +30,7 @@
 		02DA7ECB23909D1F000BA7D7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ECA23909D1F000BA7D7 /* Endpoint.swift */; };
 		02DA7ED02390A3B1000BA7D7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ECF2390A3B1000BA7D7 /* Environment.swift */; };
 		02DA7ED32390AC31000BA7D7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */; };
-		02DA7ED62390AF31000BA7D7 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED52390AF31000BA7D7 /* RequestType.swift */; };
+		02DA7ED62390AF31000BA7D7 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED52390AF31000BA7D7 /* EndpointType.swift */; };
 		02DA7ED82390AF88000BA7D7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED72390AF88000BA7D7 /* Router.swift */; };
 		02DA7EDB2390B2F2000BA7D7 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */; };
 		02DA7EDD2390B8B0000BA7D7 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EDC2390B8B0000BA7D7 /* Routable.swift */; };
@@ -73,7 +73,7 @@
 		02DA7ECA23909D1F000BA7D7 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		02DA7ECF2390A3B1000BA7D7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
-		02DA7ED52390AF31000BA7D7 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		02DA7ED52390AF31000BA7D7 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
 		02DA7ED72390AF88000BA7D7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		02DA7EDC2390B8B0000BA7D7 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			children = (
 				02DA7EDC2390B8B0000BA7D7 /* Routable.swift */,
 				02DA7ED72390AF88000BA7D7 /* Router.swift */,
-				02DA7ED52390AF31000BA7D7 /* RequestType.swift */,
+				02DA7ED52390AF31000BA7D7 /* EndpointType.swift */,
 				02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */,
 			);
 			path = Services;
@@ -480,7 +480,7 @@
 				0219953D238CA04E0034B3EE /* Factory.swift in Sources */,
 				025F52FF2392C156007D3755 /* Encodable.swift in Sources */,
 				02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */,
-				02DA7ED62390AF31000BA7D7 /* RequestType.swift in Sources */,
+				02DA7ED62390AF31000BA7D7 /* EndpointType.swift in Sources */,
 				024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */,
 				02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */,
 				02DA7ECB23909D1F000BA7D7 /* Endpoint.swift in Sources */,

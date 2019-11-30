@@ -11,7 +11,7 @@ import Foundation
 public typealias RouterCompletion = (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void
 
 protocol Routable: class {
-    associatedtype Endpoint: RequestType
+    associatedtype Endpoint: EndpointType
     func request(_ route: Endpoint, completion: @escaping RouterCompletion)
     func cancel()
 }

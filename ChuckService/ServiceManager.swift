@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - ENUM
+
 enum RequestError: String {
     case taskError = "Network request failed"
     case noData = "No data on API response"
@@ -16,11 +18,17 @@ enum RequestError: String {
 }
 
 struct ServiceManager {
+
+    // MARK: - PROPERTIES
+
     static let environment: Environment = .production
     let router = Router<Request>()
 
-    /// Retrieve a random chuck joke in JSON format.
+    // MARK: - PUBLIC APIs
 
+    /// Retrieve a random chuck joke in JSON format.
+    ///
+    /// - Throws: Throws a single Fact response and a error message
     func getRandom(completion: @escaping (_ fact: Fact?, _ error: String?) -> Void) {
 
         router.request(.random) { data, response, _ in
@@ -48,7 +56,9 @@ struct ServiceManager {
     }
 
     /// Retrieve a random chuck norris joke from a given category.
-
+    ///
+    /// - Parameter category: A category text name
+    /// - Throws: Throws a single Fact response and a error message
     func getRandomWith(category categoryName: String,
                        completion: @escaping (_ fact: Fact?, _ error: String?) -> Void) {
 
@@ -77,7 +87,8 @@ struct ServiceManager {
     }
 
     /// Retrieve a list of available categories.
-
+    ///
+    /// - Throws: Throws a text collection response and a error message
     func getCategories(completion: @escaping (_ categories: [String]?, _ error: String?) -> Void) {
 
         router.request(.categories) { data, response, _ in
@@ -105,7 +116,9 @@ struct ServiceManager {
     }
 
     /// Free text search.
-
+    ///
+    /// - Parameter keyword: A text type to be searched for in facts
+    /// - Throws: Throws a single Fact response and a error message
     func getSearch(from keyword: String, completion: @escaping (_ fact: FactResponse?, _ error: String?) -> Void) {
 
         router.request(.search(keyword: keyword)) { data, response, _ in

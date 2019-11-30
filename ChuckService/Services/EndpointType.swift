@@ -12,7 +12,7 @@ enum HTTPMethod: String {
     case get = "GET"
 }
 
-protocol RequestType {
+protocol EndpointType {
     var baseURL: URL { get }
     var path: String { get }
     var httpMethod: HTTPMethod { get }

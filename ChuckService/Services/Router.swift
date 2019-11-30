@@ -8,10 +8,16 @@
 
 import Foundation
 
-class Router<Endpoint: RequestType>: Routable {
+class Router<Endpoint: EndpointType>: Routable {
+
+    // MARK: - PRIVATE PROPERTIES
 
     private var task: URLSessionTask?
 
+    /// Build a URLSession
+    ///
+    /// - Parameter route: A EndpointType
+    /// - Throws: Throws a RouterCompletion
     func request(_ route: Endpoint, completion: @escaping RouterCompletion) {
         let session = URLSession.shared
 
@@ -30,6 +36,10 @@ class Router<Endpoint: RequestType>: Routable {
         self.task?.cancel()
     }
 
+    /// Converts EndpointType to URLRequest
+    ///
+    /// - Parameter endpoint: A EndpointType
+    /// - Throws: Throws a URLRequest
     private func buildRequest(from endpoint: Endpoint) throws -> URLRequest {
         var request = URLRequest(url: endpoint.baseURL.appendingPathComponent(endpoint.path),
                                  cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
@@ -50,6 +60,11 @@ class Router<Endpoint: RequestType>: Routable {
 
     // MARK: - HELPERS
 
+    /// Encoding parameters
+    ///
+    /// - Parameter request: A URLRequest
+    /// - Parameter parameters: A text tuple of any type
+    /// - Throws: Throws a URLParameterEncoder
     fileprivate func configureParameters(request: inout URLRequest,
                                          parameters: [String: Any]) throws {
         do {
