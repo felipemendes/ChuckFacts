@@ -153,6 +153,17 @@
 			path = Stubs;
 			sourceTree = "<group>";
 		};
+		025F52FA2391F2F9007D3755 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				02DA7EDC2390B8B0000BA7D7 /* Routable.swift */,
+				02DA7ED72390AF88000BA7D7 /* Router.swift */,
+				02DA7ED52390AF31000BA7D7 /* RequestType.swift */,
+				02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		027BC1AE238A171700F9DB85 = {
 			isa = PBXGroup;
 			children = (
@@ -235,12 +246,9 @@
 		02DA7ECC23909DCE000BA7D7 /* ChuckService */ = {
 			isa = PBXGroup;
 			children = (
+				02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */,
+				025F52FA2391F2F9007D3755 /* Services */,
 				02DA7EC923909CF0000BA7D7 /* Endpoints */,
-				02DA7ED12390AC1E000BA7D7 /* Manager */,
-				02DA7EDC2390B8B0000BA7D7 /* Routable.swift */,
-				02DA7ED72390AF88000BA7D7 /* Router.swift */,
-				02DA7ED52390AF31000BA7D7 /* RequestType.swift */,
-				02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */,
 			);
 			path = ChuckService;
 			sourceTree = "<group>";
@@ -258,14 +266,6 @@
 			children = (
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		02DA7ED12390AC1E000BA7D7 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */,
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		0854B1861F5AEA1F6123E6A2 /* Pods */ = {
