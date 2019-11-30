@@ -8,12 +8,12 @@
 
 import Foundation
 
-public struct Fact: Codable {
-    public let identifier: String
-    public let iconUrl: URL
-    public let categories: [String?]
-    public let url: URL
-    public let value: String
+struct Fact: Codable {
+    let identifier: String
+    let iconUrl: URL
+    let categories: [String?]
+    let url: URL
+    let value: String
 
     enum CodingKeys: String, CodingKey {
         case identifier = "id"
@@ -21,5 +21,15 @@ public struct Fact: Codable {
         case categories = "categories"
         case url = "url"
         case value = "value"
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+
+        identifier = try container.decode(String.self, forKey: .identifier)
+        iconUrl = try container.decode(URL.self, forKey: .iconUrl)
+        categories = try container.decode([String].self, forKey: .categories)
+        url = try container.decode(URL.self, forKey: .url)
+        value = try container.decode(String.self, forKey: .value)
     }
 }

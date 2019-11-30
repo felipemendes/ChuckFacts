@@ -16,6 +16,10 @@
 		024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E60238CCCBB00616C45 /* BundleTests.swift */; };
 		024F7E6C238CCFD700616C45 /* singleFact.json in Resources */ = {isa = PBXBuildFile; fileRef = 024F7E6B238CCF2000616C45 /* singleFact.json */; };
 		024F7E6F238CD55E00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
+		025F52FF2392C156007D3755 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F52FE2392C156007D3755 /* Encodable.swift */; };
+		025F53012392C1CD007D3755 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F53002392C1CD007D3755 /* URLParameterEncoder.swift */; };
+		025F53052392DDF0007D3755 /* ServiceEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F53042392DDF0007D3755 /* ServiceEndpointTests.swift */; };
+		025F53072392E4A9007D3755 /* ServiceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F53062392E4A9007D3755 /* ServiceManagerTests.swift */; };
 		027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027BC1BA238A171700F9DB85 /* AppDelegate.swift */; };
 		027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C1238A171800F9DB85 /* Assets.xcassets */; };
 		027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027BC1C3238A171800F9DB85 /* LaunchScreen.storyboard */; };
@@ -25,6 +29,13 @@
 		02DA7EB5238E0FD1000BA7D7 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
 		02DA7EB7238E1176000BA7D7 /* multipleFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 02DA7EB6238E10EF000BA7D7 /* multipleFacts.json */; };
 		02DA7EB9238E12B0000BA7D7 /* emptyFacts.json in Resources */ = {isa = PBXBuildFile; fileRef = 02DA7EB8238E12B0000BA7D7 /* emptyFacts.json */; };
+		02DA7ECB23909D1F000BA7D7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ECA23909D1F000BA7D7 /* Endpoint.swift */; };
+		02DA7ED02390A3B1000BA7D7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ECF2390A3B1000BA7D7 /* Environment.swift */; };
+		02DA7ED32390AC31000BA7D7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */; };
+		02DA7ED62390AF31000BA7D7 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED52390AF31000BA7D7 /* EndpointType.swift */; };
+		02DA7ED82390AF88000BA7D7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED72390AF88000BA7D7 /* Router.swift */; };
+		02DA7EDB2390B2F2000BA7D7 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */; };
+		02DA7EDD2390B8B0000BA7D7 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EDC2390B8B0000BA7D7 /* Routable.swift */; };
 		DC7FC1C855D882BC860BB11F /* Pods_ChuckFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBADFD4E7EF73E03F07B3786 /* Pods_ChuckFacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +60,10 @@
 		024F7E60238CCCBB00616C45 /* BundleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleTests.swift; sourceTree = "<group>"; };
 		024F7E62238CCCBB00616C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		024F7E6B238CCF2000616C45 /* singleFact.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = singleFact.json; sourceTree = "<group>"; };
+		025F52FE2392C156007D3755 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		025F53002392C1CD007D3755 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		025F53042392DDF0007D3755 /* ServiceEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEndpointTests.swift; sourceTree = "<group>"; };
+		025F53062392E4A9007D3755 /* ServiceManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerTests.swift; sourceTree = "<group>"; };
 		027BC1B7238A171700F9DB85 /* ChuckFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027BC1BA238A171700F9DB85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027BC1C1238A171800F9DB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,8 +74,15 @@
 		02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		02DA7EB6238E10EF000BA7D7 /* multipleFacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = multipleFacts.json; sourceTree = "<group>"; };
 		02DA7EB8238E12B0000BA7D7 /* emptyFacts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = emptyFacts.json; sourceTree = "<group>"; };
+		02DA7ECA23909D1F000BA7D7 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		02DA7ECF2390A3B1000BA7D7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		02DA7ED52390AF31000BA7D7 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		02DA7ED72390AF88000BA7D7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		02DA7EDC2390B8B0000BA7D7 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		0B7332EE781FA1B0092CB499 /* Pods-ChuckFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		A36C3C59185CDE1DEB45AC9B /* Pods-ChuckFacts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckFacts.release.xcconfig"; path = "Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts.release.xcconfig"; sourceTree = "<group>"; };
-		B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		DBADFD4E7EF73E03F07B3786 /* Pods_ChuckFacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckFacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,8 +145,10 @@
 			children = (
 				02DA7EB4238E0DD9000BA7D7 /* Extensions */,
 				024F7E6E238CD05A00616C45 /* Stubs */,
-				024F7E60238CCCBB00616C45 /* BundleTests.swift */,
 				024F7E62238CCCBB00616C45 /* Info.plist */,
+				024F7E60238CCCBB00616C45 /* BundleTests.swift */,
+				025F53042392DDF0007D3755 /* ServiceEndpointTests.swift */,
+				025F53062392E4A9007D3755 /* ServiceManagerTests.swift */,
 			);
 			path = ChuckFactsTests;
 			sourceTree = "<group>";
@@ -139,12 +163,34 @@
 			path = Stubs;
 			sourceTree = "<group>";
 		};
+		025F52FA2391F2F9007D3755 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				02DA7EDC2390B8B0000BA7D7 /* Routable.swift */,
+				02DA7ED72390AF88000BA7D7 /* Router.swift */,
+				02DA7ED52390AF31000BA7D7 /* EndpointType.swift */,
+				02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		025F52FB2392C0EC007D3755 /* Enconding */ = {
+			isa = PBXGroup;
+			children = (
+				025F52FE2392C156007D3755 /* Encodable.swift */,
+				025F53002392C1CD007D3755 /* URLParameterEncoder.swift */,
+			);
+			path = Enconding;
+			sourceTree = "<group>";
+		};
 		027BC1AE238A171700F9DB85 = {
 			isa = PBXGroup;
 			children = (
 				027BC1B9238A171700F9DB85 /* ChuckFacts */,
 				024F7E59238CCBB200616C45 /* ChuckFactsUI */,
 				024F7E53238CC7EE00616C45 /* ChuckFactsDomain */,
+				02DA7ECC23909DCE000BA7D7 /* ChuckService */,
+				02DA7ECD2390A0C5000BA7D7 /* ChuckUIKit */,
 				024F7E5F238CCCBB00616C45 /* ChuckFactsTests */,
 				027BC1B8238A171700F9DB85 /* Products */,
 				0854B1861F5AEA1F6123E6A2 /* Pods */,
@@ -207,11 +253,46 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		02DA7EC923909CF0000BA7D7 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				02DA7ECA23909D1F000BA7D7 /* Endpoint.swift */,
+				02DA7ECF2390A3B1000BA7D7 /* Environment.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		02DA7ECC23909DCE000BA7D7 /* ChuckService */ = {
+			isa = PBXGroup;
+			children = (
+				02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */,
+				025F52FA2391F2F9007D3755 /* Services */,
+				02DA7EC923909CF0000BA7D7 /* Endpoints */,
+				025F52FB2392C0EC007D3755 /* Enconding */,
+			);
+			path = ChuckService;
+			sourceTree = "<group>";
+		};
+		02DA7ECD2390A0C5000BA7D7 /* ChuckUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				02DA7ECE2390A0D4000BA7D7 /* Extensions */,
+			);
+			path = ChuckUIKit;
+			sourceTree = "<group>";
+		};
+		02DA7ECE2390A0D4000BA7D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0854B1861F5AEA1F6123E6A2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */,
 				A36C3C59185CDE1DEB45AC9B /* Pods-ChuckFacts.release.xcconfig */,
+				0B7332EE781FA1B0092CB499 /* Pods-ChuckFacts.debug.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -393,7 +474,9 @@
 				024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */,
 				02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */,
 				02DA7EB5238E0FD1000BA7D7 /* FactResponse.swift in Sources */,
+				025F53072392E4A9007D3755 /* ServiceManagerTests.swift in Sources */,
 				024F7E6F238CD55E00616C45 /* Fact.swift in Sources */,
+				025F53052392DDF0007D3755 /* ServiceEndpointTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,12 +484,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025F53012392C1CD007D3755 /* URLParameterEncoder.swift in Sources */,
 				0219953D238CA04E0034B3EE /* Factory.swift in Sources */,
+				025F52FF2392C156007D3755 /* Encodable.swift in Sources */,
 				02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */,
+				02DA7ED62390AF31000BA7D7 /* EndpointType.swift in Sources */,
 				024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */,
 				02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */,
+				02DA7ECB23909D1F000BA7D7 /* Endpoint.swift in Sources */,
+				02DA7EDB2390B2F2000BA7D7 /* HTTPTask.swift in Sources */,
+				02DA7EDD2390B8B0000BA7D7 /* Routable.swift in Sources */,
 				024F7E56238CC8AF00616C45 /* Fact.swift in Sources */,
 				0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */,
+				02DA7ED32390AC31000BA7D7 /* ServiceManager.swift in Sources */,
+				02DA7ED02390A3B1000BA7D7 /* Environment.swift in Sources */,
+				02DA7ED82390AF88000BA7D7 /* Router.swift in Sources */,
 				0219953B238C9FC80034B3EE /* ChuckAssembly.swift in Sources */,
 				027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */,
 				02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */,
@@ -437,7 +529,6 @@
 /* Begin XCBuildConfiguration section */
 		024F7E66238CCCBB00616C45 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -478,7 +569,6 @@
 		};
 		027BC1C7238A171800F9DB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -597,7 +687,7 @@
 		};
 		027BC1CA238A171800F9DB85 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B189FDD5EA0977300F55ECDD /* Pods-ChuckFacts.debug.xcconfig */;
+			baseConfigurationReference = 0B7332EE781FA1B0092CB499 /* Pods-ChuckFacts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
