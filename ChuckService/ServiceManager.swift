@@ -22,24 +22,25 @@ struct ServiceManager {
 
     func getCategories(completion: @escaping (_ categories: [String]?, _ error: String?) -> Void) {
         router.request(.categories) { data, response, _ in
-
-            if let response = response as? HTTPURLResponse {
-
-                if response.statusCode == 200 {
-                    guard let responseData = data else {
-                        completion(nil, RequestError.noData.rawValue)
-                        return
-                    }
-
-                    do {
-                        let categoriesResponse = try JSONDecoder().decode([String].self, from: responseData)
-                        completion(categoriesResponse, nil)
-                    } catch {
-                        completion(nil, RequestError.invalidJson.rawValue)
-                    }
-                }
-            } else {
+            guard let response = response as? HTTPURLResponse else {
                 completion(nil, RequestError.taskError.rawValue)
+                return
+            }
+
+            if response.statusCode != 200 {
+                completion(nil, RequestError.taskError.rawValue)
+                return
+            }
+            guard let responseData = data else {
+                completion(nil, RequestError.noData.rawValue)
+                return
+            }
+
+            do {
+                let categoriesResponse = try JSONDecoder().decode([String].self, from: responseData)
+                completion(categoriesResponse, nil)
+            } catch {
+                completion(nil, RequestError.invalidJson.rawValue)
             }
         }
     }
