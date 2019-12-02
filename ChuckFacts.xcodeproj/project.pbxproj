@@ -189,8 +189,8 @@
 				027BC1B9238A171700F9DB85 /* ChuckFacts */,
 				024F7E59238CCBB200616C45 /* ChuckFactsUI */,
 				024F7E53238CC7EE00616C45 /* ChuckFactsDomain */,
-				02DA7ECC23909DCE000BA7D7 /* ChuckService */,
-				02DA7ECD2390A0C5000BA7D7 /* ChuckUIKit */,
+				02DA7ECC23909DCE000BA7D7 /* ChuckFactsService */,
+				02DA7ECD2390A0C5000BA7D7 /* ChuckFactsUIKit */,
 				024F7E5F238CCCBB00616C45 /* ChuckFactsTests */,
 				027BC1B8238A171700F9DB85 /* Products */,
 				0854B1861F5AEA1F6123E6A2 /* Pods */,
@@ -262,7 +262,7 @@
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
-		02DA7ECC23909DCE000BA7D7 /* ChuckService */ = {
+		02DA7ECC23909DCE000BA7D7 /* ChuckFactsService */ = {
 			isa = PBXGroup;
 			children = (
 				02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */,
@@ -270,15 +270,15 @@
 				02DA7EC923909CF0000BA7D7 /* Endpoints */,
 				025F52FB2392C0EC007D3755 /* Enconding */,
 			);
-			path = ChuckService;
+			path = ChuckFactsService;
 			sourceTree = "<group>";
 		};
-		02DA7ECD2390A0C5000BA7D7 /* ChuckUIKit */ = {
+		02DA7ECD2390A0C5000BA7D7 /* ChuckFactsUIKit */ = {
 			isa = PBXGroup;
 			children = (
 				02DA7ECE2390A0D4000BA7D7 /* Extensions */,
 			);
-			path = ChuckUIKit;
+			path = ChuckFactsUIKit;
 			sourceTree = "<group>";
 		};
 		02DA7ECE2390A0D4000BA7D7 /* Extensions */ = {
