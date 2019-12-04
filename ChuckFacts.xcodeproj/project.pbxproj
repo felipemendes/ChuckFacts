@@ -43,6 +43,11 @@
 		02E032E42395F88100F5915A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E032E32395F88100F5915A /* SearchViewModel.swift */; };
 		02E033012396061600F5915A /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
 		02E033022396061600F5915A /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
+		02E4DD5F239750A400A93DB0 /* FactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E4DD5E239750A400A93DB0 /* FactCell.swift */; };
+		02E4DD612397512100A93DB0 /* Guideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E4DD602397512100A93DB0 /* Guideline.swift */; };
+		02E4DD632397520000A93DB0 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E4DD622397520000A93DB0 /* UIFont+Extension.swift */; };
+		02E4DD65239753DE00A93DB0 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E4DD64239753DE00A93DB0 /* UILabel+Extension.swift */; };
+		02E4DD672397543600A93DB0 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E4DD662397543600A93DB0 /* UIButton+Extension.swift */; };
 		70395F46CDFA07A6A5F06C29 /* Pods_ChuckFactsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7499F33D24B70E08412D9C5E /* Pods_ChuckFactsTests.framework */; };
 		DC7FC1C855D882BC860BB11F /* Pods_ChuckFacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBADFD4E7EF73E03F07B3786 /* Pods_ChuckFacts.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +101,11 @@
 		02DA7EDC2390B8B0000BA7D7 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		02E032E12395DEE400F5915A /* StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
 		02E032E32395F88100F5915A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		02E4DD5E239750A400A93DB0 /* FactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCell.swift; sourceTree = "<group>"; };
+		02E4DD602397512100A93DB0 /* Guideline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guideline.swift; sourceTree = "<group>"; };
+		02E4DD622397520000A93DB0 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		02E4DD64239753DE00A93DB0 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		02E4DD662397543600A93DB0 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		0B7332EE781FA1B0092CB499 /* Pods-ChuckFacts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckFacts.debug.xcconfig"; path = "Target Support Files/Pods-ChuckFacts/Pods-ChuckFacts.debug.xcconfig"; sourceTree = "<group>"; };
 		2596EF35726A092517208CBA /* Pods-ChuckFactsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckFactsTests.debug.xcconfig"; path = "Target Support Files/Pods-ChuckFactsTests/Pods-ChuckFactsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7499F33D24B70E08412D9C5E /* Pods_ChuckFactsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChuckFactsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +271,7 @@
 		02B4B57623972C3E0093C3E0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				02E4DD5C2397508700A93DB0 /* Views */,
 				02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */,
 				02B4B57A23972C990093C3E0 /* HomeViewModel.swift */,
 			);
@@ -327,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				02DA7ECE2390A0D4000BA7D7 /* Extensions */,
+				02E4DD602397512100A93DB0 /* Guideline.swift */,
 			);
 			path = ChuckFactsUIKit;
 			sourceTree = "<group>";
@@ -334,8 +346,19 @@
 		02DA7ECE2390A0D4000BA7D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				02E4DD622397520000A93DB0 /* UIFont+Extension.swift */,
+				02E4DD64239753DE00A93DB0 /* UILabel+Extension.swift */,
+				02E4DD662397543600A93DB0 /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		02E4DD5C2397508700A93DB0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02E4DD5E239750A400A93DB0 /* FactCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0854B1861F5AEA1F6123E6A2 /* Pods */ = {
@@ -585,8 +608,11 @@
 				025F52FF2392C156007D3755 /* Encodable.swift in Sources */,
 				02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */,
 				02DA7ED62390AF31000BA7D7 /* EndpointType.swift in Sources */,
+				02E4DD632397520000A93DB0 /* UIFont+Extension.swift in Sources */,
 				024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */,
+				02E4DD5F239750A400A93DB0 /* FactCell.swift in Sources */,
 				020652352395D42D00856A39 /* Search.swift in Sources */,
+				02E4DD672397543600A93DB0 /* UIButton+Extension.swift in Sources */,
 				02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */,
 				02DA7ECB23909D1F000BA7D7 /* Endpoint.swift in Sources */,
 				02DA7EDB2390B2F2000BA7D7 /* HTTPTask.swift in Sources */,
@@ -594,12 +620,14 @@
 				026E1A1B23974718006DB7D2 /* DataModel.xcdatamodel in Sources */,
 				02B4B57923972C760093C3E0 /* SearchViewController.swift in Sources */,
 				024F7E56238CC8AF00616C45 /* Fact.swift in Sources */,
+				02E4DD612397512100A93DB0 /* Guideline.swift in Sources */,
 				0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */,
 				02DA7ED32390AC31000BA7D7 /* ServiceManager.swift in Sources */,
 				02DA7ED02390A3B1000BA7D7 /* Environment.swift in Sources */,
 				020652372395D4D000856A39 /* SearchDataAccessProvider.swift in Sources */,
 				02B4B57B23972C990093C3E0 /* HomeViewModel.swift in Sources */,
 				02DA7ED82390AF88000BA7D7 /* Router.swift in Sources */,
+				02E4DD65239753DE00A93DB0 /* UILabel+Extension.swift in Sources */,
 				0219953B238C9FC80034B3EE /* ChuckAssembly.swift in Sources */,
 				027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */,
 				02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */,

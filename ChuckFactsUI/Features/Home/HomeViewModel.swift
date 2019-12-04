@@ -6,4 +6,7 @@
 //  Copyright © 2019 Felipe Mendes. All rights reserved.
 //
 
+import RxSwift
 import Foundation
+
+public class HomeViewModel { }
