@@ -22,7 +22,7 @@ public class FactoryImplementation: Factory {
 
     // MARK: - FACTORY
 
-    public func makeHomeViewController() -> HomeViewController {
-        return resolver.resolve(HomeViewController.self)!
+    public func makeHomeViewController(keyword: String) -> HomeViewController {
+        return resolver.resolve(HomeViewController.self, argument: keyword)!
     }
 }

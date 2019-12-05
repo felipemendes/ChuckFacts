@@ -23,10 +23,22 @@ public class ChuckAssembly: Assembly {
             return FactoryImplementation(resolver: resolver)
         }
 
+        // MARK: - ServiceManager
+
+        container.register(ServiceManager.self) { _ in
+            return ServiceManager()
+        }
+
         // MARK: - HomeViewController
 
-        container.register(HomeViewController.self) { _ in
-            return HomeViewController()
+        container.register(HomeViewModel.self) { (resolver, keyword: String) in
+            let serviceManager = resolver.resolve(ServiceManager.self)!
+            return HomeViewModel(keyword: keyword, serviceManager: serviceManager)
+        }
+
+        container.register(HomeViewController.self) { (resolver, keyword: String) in
+            let viewModel = resolver.resolve(HomeViewModel.self, argument: keyword)!
+            return HomeViewController(keyword: keyword, viewModel: viewModel)
         }
     }
 }

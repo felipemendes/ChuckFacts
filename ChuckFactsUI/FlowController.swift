@@ -35,7 +35,7 @@ public class FlowController {
     }
 
     private func presentHome() {
-        let homeContainer = factory.makeHomeViewController()
+        let homeContainer = factory.makeHomeViewController(keyword: "Brazil")
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.pushViewController(homeContainer, animated: true)
     }
