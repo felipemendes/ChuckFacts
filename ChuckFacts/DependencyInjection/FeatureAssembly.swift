@@ -1,5 +1,5 @@
 //
-//  ChuckAssembly.swift
+//  FeatureAssembly.swift
 //  ChuckFacts
 //
 //  Created by Felipe Mendes on 25/11/19.
@@ -8,7 +8,7 @@
 
 import Swinject
 
-public class ChuckAssembly: Assembly {
+public class FeatureAssembly: Assembly {
 
     public func assemble(container: Container) {
         container.register(FlowController.self) { (resolver: Resolver, navigationController: UINavigationController) in
@@ -23,22 +23,16 @@ public class ChuckAssembly: Assembly {
             return FactoryImplementation(resolver: resolver)
         }
 
-        // MARK: - ServiceManager
-
-        container.register(ServiceManager.self) { _ in
-            return ServiceManager()
-        }
-
         // MARK: - HomeViewController
 
-        container.register(HomeViewModel.self) { (resolver, keyword: String) in
+        container.register(HomeViewModel.self) { resolver in
             let serviceManager = resolver.resolve(ServiceManager.self)!
-            return HomeViewModel(keyword: keyword, serviceManager: serviceManager)
+            return HomeViewModel(serviceManager: serviceManager)
         }
 
-        container.register(HomeViewController.self) { (resolver, keyword: String) in
-            let viewModel = resolver.resolve(HomeViewModel.self, argument: keyword)!
-            return HomeViewController(keyword: keyword, viewModel: viewModel)
+        container.register(HomeViewController.self) { resolver in
+            let viewModel = resolver.resolve(HomeViewModel.self)!
+            return HomeViewController(viewModel: viewModel)
         }
     }
 }

@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02018CBE23989CF8008E8F2F /* FeatureAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02018CBD23989CF8008E8F2F /* FeatureAssembly.swift */; };
+		02018CC223989D30008E8F2F /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02018CC123989D30008E8F2F /* ServiceAssembly.swift */; };
 		020652352395D42D00856A39 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020652342395D42D00856A39 /* Search.swift */; };
 		020652372395D4D000856A39 /* SearchDataAccessProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020652362395D4D000856A39 /* SearchDataAccessProvider.swift */; };
 		02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02199538238C9EFE0034B3EE /* DepedencyInjection.swift */; };
-		0219953B238C9FC80034B3EE /* ChuckAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953A238C9FC80034B3EE /* ChuckAssembly.swift */; };
 		0219953D238CA04E0034B3EE /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953C238CA04E0034B3EE /* Factory.swift */; };
 		0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953E238CA2F30034B3EE /* FactoryImplementation.swift */; };
 		024F7E56238CC8AF00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
@@ -63,10 +64,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02018CBD23989CF8008E8F2F /* FeatureAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureAssembly.swift; sourceTree = "<group>"; };
+		02018CC123989D30008E8F2F /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		020652342395D42D00856A39 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		020652362395D4D000856A39 /* SearchDataAccessProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataAccessProvider.swift; sourceTree = "<group>"; };
 		02199538238C9EFE0034B3EE /* DepedencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepedencyInjection.swift; sourceTree = "<group>"; };
-		0219953A238C9FC80034B3EE /* ChuckAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckAssembly.swift; sourceTree = "<group>"; };
 		0219953C238CA04E0034B3EE /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		0219953E238CA2F30034B3EE /* FactoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryImplementation.swift; sourceTree = "<group>"; };
 		024F7E55238CC8AF00616C45 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
@@ -291,7 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				02199538238C9EFE0034B3EE /* DepedencyInjection.swift */,
-				0219953A238C9FC80034B3EE /* ChuckAssembly.swift */,
+				02018CBD23989CF8008E8F2F /* FeatureAssembly.swift */,
+				02018CC123989D30008E8F2F /* ServiceAssembly.swift */,
 				0219953E238CA2F30034B3EE /* FactoryImplementation.swift */,
 			);
 			path = DependencyInjection;
@@ -617,6 +620,7 @@
 				02DA7ECB23909D1F000BA7D7 /* Endpoint.swift in Sources */,
 				02DA7EDB2390B2F2000BA7D7 /* HTTPTask.swift in Sources */,
 				02DA7EDD2390B8B0000BA7D7 /* Routable.swift in Sources */,
+				02018CC223989D30008E8F2F /* ServiceAssembly.swift in Sources */,
 				026E1A1B23974718006DB7D2 /* DataModel.xcdatamodel in Sources */,
 				02B4B57923972C760093C3E0 /* SearchViewController.swift in Sources */,
 				024F7E56238CC8AF00616C45 /* Fact.swift in Sources */,
@@ -625,10 +629,10 @@
 				02DA7ED32390AC31000BA7D7 /* ServiceManager.swift in Sources */,
 				02DA7ED02390A3B1000BA7D7 /* Environment.swift in Sources */,
 				020652372395D4D000856A39 /* SearchDataAccessProvider.swift in Sources */,
+				02018CBE23989CF8008E8F2F /* FeatureAssembly.swift in Sources */,
 				02B4B57B23972C990093C3E0 /* HomeViewModel.swift in Sources */,
 				02DA7ED82390AF88000BA7D7 /* Router.swift in Sources */,
 				02E4DD65239753DE00A93DB0 /* UILabel+Extension.swift in Sources */,
-				0219953B238C9FC80034B3EE /* ChuckAssembly.swift in Sources */,
 				027BC1BB238A171700F9DB85 /* AppDelegate.swift in Sources */,
 				02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */,
 			);

@@ -11,5 +11,5 @@ public protocol Factory {
     // Builds a HomeViewController
     ///
     /// - Returns: An instantiated HomeViewController
-    func makeHomeViewController(keyword: String) -> HomeViewController
+    func makeHomeViewController() -> HomeViewController
 }
