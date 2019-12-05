@@ -13,25 +13,26 @@ public class HomeViewController: UIViewController {
 
     // MARK: - CONSTANTS
 
-    private struct Metrics {
+    private struct Constants {
+        static let factReuseIdentifier = "FactCell"
         static let margin: CGFloat = 8
     }
 
     // MARK: - PROPERTIES
 
     private let disposeBag = DisposeBag()
-    private let factReuseIdentifier = "FactCell"
-    private let facts = ["Fact 1", "Fact 2", "Fact 3", "Fact 4", "Fact 5", "Fact 6"]
-
-    // MARK: - PUBLIC API
+    private let viewModel: HomeViewModel
+    private var factResponse: FactResponse?
 
     // MARK: - INITIALIZERS
 
-    public init() {
+    public init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         layoutView()
         setupUI()
         constraintUI()
+        bindObservables()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -48,7 +49,7 @@ public class HomeViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(FactCell.self, forCellReuseIdentifier: factReuseIdentifier)
+        tableView.register(FactCell.self, forCellReuseIdentifier: Constants.factReuseIdentifier)
         return tableView
     }()
 
@@ -56,6 +57,15 @@ public class HomeViewController: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.viewDidLoad()
+    }
+
+    // MARK: - BINDING
+
+    private func bindObservables() {
+        viewModel.factResponseObservable.subscribe(onNext: { factResponse in
+            self.factResponse = factResponse
+        }).disposed(by: disposeBag)
     }
 
     // MARK: - PRIVATE SETUP
@@ -67,15 +77,28 @@ public class HomeViewController: UIViewController {
 
     private func setupUI() {
         view.addSubview(tableView)
+        configureSearchBarButton()
     }
 
     private func constraintUI() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: Metrics.margin),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Metrics.margin),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Metrics.margin),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: Constants.margin),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.margin),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.margin),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+
+    private func configureSearchBarButton() {
+        let searchItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showSearchBar))
+        navigationItem.rightBarButtonItem = searchItem
+    }
+
+    // MARK: - HANDLERS
+
+    @objc func showSearchBar() {
+        viewModel.retrieveSearchFact(from: "Brazil")
+        tableView.reloadData()
     }
 }
 
@@ -83,16 +106,16 @@ public class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return facts.count
+        return factResponse?.result.count ?? 0
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FactCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.factReuseIdentifier, for: indexPath)
             as? FactCell else {
                 return UITableViewCell()
         }
 
-        cell.setup(with: facts[indexPath.row])
+        cell.setup(with: factResponse?.result[indexPath.row])
         return cell
     }
 }

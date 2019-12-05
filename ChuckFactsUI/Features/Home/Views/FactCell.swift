@@ -62,8 +62,9 @@ class FactCell: UITableViewCell {
 
     // MARK: - PUBLIC API
 
-    public func setup(with title: String) {
-        titleLabel.text = title
+    public func setup(with fact: Fact?) {
+        guard let fact = fact else { return }
+        titleLabel.text = fact.value
     }
 
     // MARK: - SETUP
