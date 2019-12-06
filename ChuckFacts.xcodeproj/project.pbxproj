@@ -14,6 +14,9 @@
 		02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02199538238C9EFE0034B3EE /* DepedencyInjection.swift */; };
 		0219953D238CA04E0034B3EE /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953C238CA04E0034B3EE /* Factory.swift */; };
 		0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0219953E238CA2F30034B3EE /* FactoryImplementation.swift */; };
+		02346EA32399EEB2006F482D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EA22399EEB2006F482D /* UIColor+Extension.swift */; };
+		02346EA52399F000006F482D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02346EA42399F000006F482D /* Colors.xcassets */; };
+		02346EA72399F381006F482D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EA62399F381006F482D /* UIView+Extension.swift */; };
 		024F7E56238CC8AF00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
 		024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
 		024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E60238CCCBB00616C45 /* BundleTests.swift */; };
@@ -36,7 +39,7 @@
 		02DA7ECB23909D1F000BA7D7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ECA23909D1F000BA7D7 /* Endpoint.swift */; };
 		02DA7ED02390A3B1000BA7D7 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ECF2390A3B1000BA7D7 /* Environment.swift */; };
 		02DA7ED32390AC31000BA7D7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */; };
-		02DA7ED62390AF31000BA7D7 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED52390AF31000BA7D7 /* EndpointType.swift */; };
+		02DA7ED62390AF31000BA7D7 /* Endpointable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED52390AF31000BA7D7 /* Endpointable.swift */; };
 		02DA7ED82390AF88000BA7D7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED72390AF88000BA7D7 /* Router.swift */; };
 		02DA7EDB2390B2F2000BA7D7 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */; };
 		02DA7EDD2390B8B0000BA7D7 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EDC2390B8B0000BA7D7 /* Routable.swift */; };
@@ -71,6 +74,9 @@
 		02199538238C9EFE0034B3EE /* DepedencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepedencyInjection.swift; sourceTree = "<group>"; };
 		0219953C238CA04E0034B3EE /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		0219953E238CA2F30034B3EE /* FactoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryImplementation.swift; sourceTree = "<group>"; };
+		02346EA22399EEB2006F482D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		02346EA42399F000006F482D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		02346EA62399F381006F482D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		024F7E55238CC8AF00616C45 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		024F7E57238CCA8F00616C45 /* FactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactResponse.swift; sourceTree = "<group>"; };
 		024F7E5E238CCCBB00616C45 /* ChuckFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +103,7 @@
 		02DA7ECA23909D1F000BA7D7 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		02DA7ECF2390A3B1000BA7D7 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
-		02DA7ED52390AF31000BA7D7 /* EndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		02DA7ED52390AF31000BA7D7 /* Endpointable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpointable.swift; sourceTree = "<group>"; };
 		02DA7ED72390AF88000BA7D7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		02DA7EDC2390B8B0000BA7D7 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
@@ -210,7 +216,7 @@
 			children = (
 				02DA7EDC2390B8B0000BA7D7 /* Routable.swift */,
 				02DA7ED72390AF88000BA7D7 /* Router.swift */,
-				02DA7ED52390AF31000BA7D7 /* EndpointType.swift */,
+				02DA7ED52390AF31000BA7D7 /* Endpointable.swift */,
 				02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */,
 			);
 			path = Services;
@@ -342,6 +348,7 @@
 			children = (
 				02DA7ECE2390A0D4000BA7D7 /* Extensions */,
 				02E4DD602397512100A93DB0 /* Guideline.swift */,
+				02346EA42399F000006F482D /* Colors.xcassets */,
 			);
 			path = ChuckFactsUIKit;
 			sourceTree = "<group>";
@@ -352,6 +359,8 @@
 				02E4DD622397520000A93DB0 /* UIFont+Extension.swift */,
 				02E4DD64239753DE00A93DB0 /* UILabel+Extension.swift */,
 				02E4DD662397543600A93DB0 /* UIButton+Extension.swift */,
+				02346EA22399EEB2006F482D /* UIColor+Extension.swift */,
+				02346EA62399F381006F482D /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -480,6 +489,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02346EA52399F000006F482D /* Colors.xcassets in Resources */,
 				027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */,
 				027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */,
 			);
@@ -610,9 +620,10 @@
 				0219953D238CA04E0034B3EE /* Factory.swift in Sources */,
 				025F52FF2392C156007D3755 /* Encodable.swift in Sources */,
 				02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */,
-				02DA7ED62390AF31000BA7D7 /* EndpointType.swift in Sources */,
+				02DA7ED62390AF31000BA7D7 /* Endpointable.swift in Sources */,
 				02E4DD632397520000A93DB0 /* UIFont+Extension.swift in Sources */,
 				024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */,
+				02346EA32399EEB2006F482D /* UIColor+Extension.swift in Sources */,
 				02E4DD5F239750A400A93DB0 /* FactCell.swift in Sources */,
 				020652352395D42D00856A39 /* Search.swift in Sources */,
 				02E4DD672397543600A93DB0 /* UIButton+Extension.swift in Sources */,
@@ -622,6 +633,7 @@
 				02DA7EDD2390B8B0000BA7D7 /* Routable.swift in Sources */,
 				02018CC223989D30008E8F2F /* ServiceAssembly.swift in Sources */,
 				026E1A1B23974718006DB7D2 /* DataModel.xcdatamodel in Sources */,
+				02346EA72399F381006F482D /* UIView+Extension.swift in Sources */,
 				02B4B57923972C760093C3E0 /* SearchViewController.swift in Sources */,
 				024F7E56238CC8AF00616C45 /* Fact.swift in Sources */,
 				02E4DD612397512100A93DB0 /* Guideline.swift in Sources */,

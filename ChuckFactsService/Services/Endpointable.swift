@@ -1,5 +1,5 @@
 //
-//  RequestType.swift
+//  Endpointable.swift
 //  ChuckFacts
 //
 //  Created by Felipe Mendes on 28/11/19.
@@ -12,7 +12,7 @@ enum HTTPMethod: String {
     case get = "GET"
 }
 
-protocol EndpointType {
+protocol Endpointable {
     var baseURL: URL { get }
     var path: String { get }
     var httpMethod: HTTPMethod { get }
