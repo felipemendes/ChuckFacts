@@ -15,7 +15,6 @@ public class HomeViewController: UIViewController {
 
     private struct Constants {
         static let factReuseIdentifier = "FactCell"
-        static let margin: CGFloat = 8
     }
 
     // MARK: - PROPERTIES
@@ -46,6 +45,7 @@ public class HomeViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .white
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.dataSource = self
         tableView.delegate = self
@@ -73,18 +73,18 @@ public class HomeViewController: UIViewController {
     private func layoutView() {
         navigationItem.title = "Chuck Facts"
         view.backgroundColor = .white
+        configureSearchBarButton()
     }
 
     private func setupUI() {
         view.addSubview(tableView)
-        configureSearchBarButton()
     }
 
     private func constraintUI() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: Constants.margin),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.margin),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.margin),
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }

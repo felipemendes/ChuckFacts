@@ -37,6 +37,10 @@ public class FlowController {
     private func presentHome() {
         let homeContainer = factory.makeHomeViewController()
         navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.tintColor = .black
+        navigationController.navigationBar.barTintColor = .white
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.setValue(true, forKey: "hidesShadow")
         navigationController.pushViewController(homeContainer, animated: true)
     }
 }
