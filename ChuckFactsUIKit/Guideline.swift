@@ -13,7 +13,7 @@ public struct Guideline {
     /// Typograph constraints
     ///
     /// - title: Size of 20 points
-    /// - body: Size of 14 points
+    /// - body: Size of 12 points
     public enum Typography {
         case title(weight: UIFont.CustomWeight)
         case body(weight: UIFont.CustomWeight)
@@ -21,7 +21,7 @@ public struct Guideline {
         public var font: UIFont {
             switch self {
             case .title(let weight): return .customFont(ofSize: 20, weight: weight)
-            case .body(let weight): return .customFont(ofSize: 16, weight: weight)
+            case .body(let weight): return .customFont(ofSize: 12, weight: weight)
             }
         }
     }
