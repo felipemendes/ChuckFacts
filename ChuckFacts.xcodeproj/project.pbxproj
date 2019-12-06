@@ -17,6 +17,8 @@
 		02346EA32399EEB2006F482D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EA22399EEB2006F482D /* UIColor+Extension.swift */; };
 		02346EA52399F000006F482D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02346EA42399F000006F482D /* Colors.xcassets */; };
 		02346EA72399F381006F482D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EA62399F381006F482D /* UIView+Extension.swift */; };
+		02346EA92399FDC0006F482D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02346EA82399FDC0006F482D /* Images.xcassets */; };
+		02346EAB2399FE61006F482D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EAA2399FE61006F482D /* UIImage+Extension.swift */; };
 		024F7E56238CC8AF00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
 		024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
 		024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E60238CCCBB00616C45 /* BundleTests.swift */; };
@@ -77,6 +79,8 @@
 		02346EA22399EEB2006F482D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		02346EA42399F000006F482D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		02346EA62399F381006F482D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		02346EA82399FDC0006F482D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		02346EAA2399FE61006F482D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		024F7E55238CC8AF00616C45 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		024F7E57238CCA8F00616C45 /* FactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactResponse.swift; sourceTree = "<group>"; };
 		024F7E5E238CCCBB00616C45 /* ChuckFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -349,6 +353,7 @@
 				02DA7ECE2390A0D4000BA7D7 /* Extensions */,
 				02E4DD602397512100A93DB0 /* Guideline.swift */,
 				02346EA42399F000006F482D /* Colors.xcassets */,
+				02346EA82399FDC0006F482D /* Images.xcassets */,
 			);
 			path = ChuckFactsUIKit;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				02E4DD662397543600A93DB0 /* UIButton+Extension.swift */,
 				02346EA22399EEB2006F482D /* UIColor+Extension.swift */,
 				02346EA62399F381006F482D /* UIView+Extension.swift */,
+				02346EAA2399FE61006F482D /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -490,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02346EA52399F000006F482D /* Colors.xcassets in Resources */,
+				02346EA92399FDC0006F482D /* Images.xcassets in Resources */,
 				027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */,
 				027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */,
 			);
@@ -624,6 +631,7 @@
 				02E4DD632397520000A93DB0 /* UIFont+Extension.swift in Sources */,
 				024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */,
 				02346EA32399EEB2006F482D /* UIColor+Extension.swift in Sources */,
+				02346EAB2399FE61006F482D /* UIImage+Extension.swift in Sources */,
 				02E4DD5F239750A400A93DB0 /* FactCell.swift in Sources */,
 				020652352395D42D00856A39 /* Search.swift in Sources */,
 				02E4DD672397543600A93DB0 /* UIButton+Extension.swift in Sources */,
