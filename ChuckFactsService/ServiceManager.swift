@@ -17,7 +17,7 @@ enum RequestError: String {
     case invalidJson = "Invalid JSON API response"
 }
 
-struct ServiceManager {
+public struct ServiceManager {
 
     // MARK: - PROPERTIES
 

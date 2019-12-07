@@ -4,4 +4,6 @@ target 'ChuckFacts' do
   use_frameworks!
   pod 'SwiftLint'
   pod 'Swinject'
+  pod 'RxSwift', '~> 4'
+  pod 'RxCocoa', '~> 4'
 end

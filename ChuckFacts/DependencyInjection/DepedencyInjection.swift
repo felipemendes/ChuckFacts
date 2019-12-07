@@ -15,7 +15,8 @@ public class DepedencyInjection {
     /// - Returns: Returns an array of assembly already registered
     public static func build() -> [Assembly] {
         return [
-            ChuckAssembly()
+            FeatureAssembly(),
+            ServiceAssembly()
         ]
     }
 }

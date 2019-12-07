@@ -1,14 +1,14 @@
 //
-//  HomeViewController.swift
+//  SearchViewController.swift
 //  ChuckFacts
 //
-//  Created by Felipe Mendes on 24/11/19.
+//  Created by Felipe Mendes on 03/12/19.
 //  Copyright © 2019 Felipe Mendes. All rights reserved.
 //
 
 import UIKit
 
-public class HomeViewController: UIViewController {
+public class SearchViewController: UIViewController {
 
     // MARK: - LIFE CYCLE
 
@@ -20,6 +20,6 @@ public class HomeViewController: UIViewController {
     // MARK: - PRIVATE SETUP
 
     private func layoutView() {
-        view.backgroundColor = .purple
+        view.backgroundColor = .red
     }
 }
