@@ -119,6 +119,8 @@ class FactCell: UITableViewCell {
 
         let categoryName = viewModel.retrieveCategoryName(for: fact)
         categoryLabel.text = categoryName
+
+        selectionStyle = .none
     }
 
     private func cardSetup() {
