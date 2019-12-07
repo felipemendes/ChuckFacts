@@ -69,7 +69,6 @@ class FactCell: UITableViewCell {
     private lazy var valueLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
-//        label.apply(typography: .title(weight: .regular), with: .black)
         label.numberOfLines = 0
         return label
     }()
