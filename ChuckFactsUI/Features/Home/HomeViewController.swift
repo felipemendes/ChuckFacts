@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-public class HomeViewController: UIViewController {
+public class HomeViewController: UIViewController, ViewLayoutable {
 
     // MARK: - CONSTANTS
 
@@ -20,6 +20,7 @@ public class HomeViewController: UIViewController {
     // MARK: - PUBLIC API
 
     weak var delegate: HomeViewControllerDelegate?
+    var placeholderView: PlaceholderView = PlaceholderView(placeholderType: .home)
 
     // MARK: - PROPERTIES
 
@@ -32,6 +33,7 @@ public class HomeViewController: UIViewController {
     public init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        constraintLayout()
         layoutView()
         setupUI()
         constraintUI()
@@ -61,6 +63,7 @@ public class HomeViewController: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+        updateView(to: .loading, above: tableView)
         viewModel.viewDidLoad()
     }
 
@@ -101,6 +104,7 @@ public class HomeViewController: UIViewController {
     // MARK: - HANDLERS
 
     @objc func showSearchBar() {
+        updateView(to: .content, above: tableView)
         viewModel.retrieveSearchFact(from: "test")
         tableView.reloadData()
     }

@@ -24,6 +24,9 @@
 		02346EB5239B30BF006F482D /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EB4239B30BF006F482D /* HomeViewModelTests.swift */; };
 		02346EB8239B3745006F482D /* singleFactWithValueLenghtBiggerThan80.json in Resources */ = {isa = PBXBuildFile; fileRef = 02346EB6239B3516006F482D /* singleFactWithValueLenghtBiggerThan80.json */; };
 		02346EB9239B3747006F482D /* singleFactWithValueLenghtSmallerThan80.json in Resources */ = {isa = PBXBuildFile; fileRef = 02346EB7239B3581006F482D /* singleFactWithValueLenghtSmallerThan80.json */; };
+		02346EBF239B44AC006F482D /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EBE239B44AC006F482D /* PlaceholderView.swift */; };
+		02346EC2239B45F8006F482D /* ViewLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EC1239B45F8006F482D /* ViewLayoutable.swift */; };
+		02346EC4239B469E006F482D /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EC3239B469E006F482D /* ViewState.swift */; };
 		024F7E56238CC8AF00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
 		024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
 		024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E60238CCCBB00616C45 /* BundleTests.swift */; };
@@ -91,6 +94,9 @@
 		02346EB4239B30BF006F482D /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		02346EB6239B3516006F482D /* singleFactWithValueLenghtBiggerThan80.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = singleFactWithValueLenghtBiggerThan80.json; sourceTree = "<group>"; };
 		02346EB7239B3581006F482D /* singleFactWithValueLenghtSmallerThan80.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = singleFactWithValueLenghtSmallerThan80.json; sourceTree = "<group>"; };
+		02346EBE239B44AC006F482D /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		02346EC1239B45F8006F482D /* ViewLayoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLayoutable.swift; sourceTree = "<group>"; };
+		02346EC3239B469E006F482D /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		024F7E55238CC8AF00616C45 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		024F7E57238CCA8F00616C45 /* FactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactResponse.swift; sourceTree = "<group>"; };
 		024F7E5E238CCCBB00616C45 /* ChuckFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +180,22 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		02346EBD239B447B006F482D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				02346EBE239B44AC006F482D /* PlaceholderView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		02346EC0239B45D6006F482D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				02346EC1239B45F8006F482D /* ViewLayoutable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		024F7E53238CC7EE00616C45 /* ChuckFactsDomain */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +209,7 @@
 			children = (
 				024F7E55238CC8AF00616C45 /* Fact.swift */,
 				024F7E57238CCA8F00616C45 /* FactResponse.swift */,
+				02346EC3239B469E006F482D /* ViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,7 +219,9 @@
 			children = (
 				0219953C238CA04E0034B3EE /* Factory.swift */,
 				02D0BDF1238B56B7006ABDF4 /* FlowController.swift */,
+				02346EC0239B45D6006F482D /* Protocols */,
 				02D0BDEB238B5676006ABDF4 /* Features */,
+				02346EBD239B447B006F482D /* Components */,
 			);
 			path = ChuckFactsUI;
 			sourceTree = "<group>";
@@ -646,7 +671,9 @@
 				025F52FF2392C156007D3755 /* Encodable.swift in Sources */,
 				02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */,
 				02DA7ED62390AF31000BA7D7 /* Endpointable.swift in Sources */,
+				02346EC2239B45F8006F482D /* ViewLayoutable.swift in Sources */,
 				02E4DD632397520000A93DB0 /* UIFont+Extension.swift in Sources */,
+				02346EC4239B469E006F482D /* ViewState.swift in Sources */,
 				024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */,
 				02346EA32399EEB2006F482D /* UIColor+Extension.swift in Sources */,
 				02346EAB2399FE61006F482D /* UIImage+Extension.swift in Sources */,
@@ -666,6 +693,7 @@
 				024F7E56238CC8AF00616C45 /* Fact.swift in Sources */,
 				02E4DD612397512100A93DB0 /* Guideline.swift in Sources */,
 				0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */,
+				02346EBF239B44AC006F482D /* PlaceholderView.swift in Sources */,
 				02DA7ED32390AC31000BA7D7 /* ServiceManager.swift in Sources */,
 				02DA7ED02390A3B1000BA7D7 /* Environment.swift in Sources */,
 				020652372395D4D000856A39 /* SearchDataAccessProvider.swift in Sources */,
