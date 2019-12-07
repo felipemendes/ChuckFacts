@@ -10,7 +10,8 @@ import UIKit
 
 protocol ViewLayoutable: class {
     var placeholderView: PlaceholderView { get }
-    func updateView(to state: ViewState)
+    func constraintLayout()
+    func updateView(to state: ViewState, above mainView: UIView)
 }
 
 // MARK: - EXTENSIONS
@@ -19,20 +20,19 @@ extension ViewLayoutable where Self: UIViewController {
 
     // MARK: - DEFAULT IMPLEMENTATIONS
 
-    func updateView(to state: ViewState) {
+    func updateView(to state: ViewState, above mainView: UIView) {
         switch state {
         case .loading:
             placeholderView.isHidden = false
-            view.isHidden = true
+            mainView.isHidden = true
         case .content:
             placeholderView.isHidden = true
-            view.isHidden = false
+            mainView.isHidden = false
         }
     }
 
-    // MARK: PRIVATE
-
-    private func constraintContainerLayout() {
+    func constraintLayout() {
+        placeholderView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(placeholderView)
 
         NSLayoutConstraint.activate([

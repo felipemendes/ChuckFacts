@@ -33,7 +33,7 @@ public class HomeViewController: UIViewController, ViewLayoutable {
     public init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        updateView(to: .loading)
+        constraintLayout()
         layoutView()
         setupUI()
         constraintUI()
@@ -63,6 +63,7 @@ public class HomeViewController: UIViewController, ViewLayoutable {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+        updateView(to: .loading, above: tableView)
         viewModel.viewDidLoad()
     }
 
@@ -103,7 +104,7 @@ public class HomeViewController: UIViewController, ViewLayoutable {
     // MARK: - HANDLERS
 
     @objc func showSearchBar() {
-        updateView(to: .content)
+        updateView(to: .content, above: tableView)
         viewModel.retrieveSearchFact(from: "test")
         tableView.reloadData()
     }

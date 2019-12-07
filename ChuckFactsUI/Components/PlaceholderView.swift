@@ -10,19 +10,22 @@ import UIKit
 
 enum PlaceholderType {
     case home
-    case search
 
     var image: UIImage {
         switch self {
         case .home:
-            return .shareIcon
-        case .search:
-            return .shareIcon
+            return .chuckNorrisNoErrors
         }
     }
 }
 
 final class PlaceholderView: UIView {
+
+    // MARK: - METRICS
+
+    private struct Metrics {
+        static let imageHeight: CGFloat = 200
+    }
 
     // MARK: - PRIVATE PROPERTIES
 
@@ -45,7 +48,7 @@ final class PlaceholderView: UIView {
     private lazy var containerView: UIView = {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         return view
     }()
 
@@ -53,6 +56,7 @@ final class PlaceholderView: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = placeholderType.image
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
@@ -64,10 +68,10 @@ final class PlaceholderView: UIView {
         containerView.addSubview(imageView)
 
         NSLayoutConstraint.activate([
-            imageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 40),
-            imageView.widthAnchor.constraint(equalToConstant: 40)
+            imageView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: Metrics.imageHeight)
         ])
     }
 }
