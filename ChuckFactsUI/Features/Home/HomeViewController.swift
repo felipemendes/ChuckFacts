@@ -101,7 +101,7 @@ public class HomeViewController: UIViewController {
     // MARK: - HANDLERS
 
     @objc func showSearchBar() {
-        viewModel.retrieveSearchFact(from: "Brazil")
+        viewModel.retrieveSearchFact(from: "test")
         tableView.reloadData()
     }
 }

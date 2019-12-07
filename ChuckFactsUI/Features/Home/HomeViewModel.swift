@@ -15,6 +15,7 @@ public class HomeViewModel {
 
     private struct Constants {
         static let maxFontSize: Int = 80
+        static let defaultCategoryName: String = "UNCATEGORIZED"
     }
 
     // MARK: - PRIVATE PROPERTIES
@@ -37,6 +38,13 @@ public class HomeViewModel {
     }
 
     // MARK: - PUBLIC
+
+    func retrieveCategoryName(for fact: Fact) -> String {
+        guard let name = fact.categories.first else {
+            return Constants.defaultCategoryName
+        }
+        return name?.uppercased() ?? Constants.defaultCategoryName
+    }
 
     func retrievePreferredTypography(for value: String) -> Guideline.Typography {
         if value.count >= Constants.maxFontSize {

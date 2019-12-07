@@ -116,8 +116,9 @@ class FactCell: UITableViewCell {
         let preferredFontSize = viewModel.retrievePreferredTypography(for: fact.value)
         valueLabel.apply(typography: preferredFontSize, with: .black)
         valueLabel.text = fact.value
-        
-        categoryLabel.text = fact.categories.first ?? "UNCATEGORIZED"
+
+        let categoryName = viewModel.retrieveCategoryName(for: fact)
+        categoryLabel.text = categoryName
     }
 
     private func cardSetup() {
