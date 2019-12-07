@@ -42,6 +42,7 @@ class FactCell: UITableViewCell {
 
     private var fact: Fact?
     public weak var delegate: FactCellDelegate?
+    public weak var viewModel: HomeViewModel?
 
     // MARK: - UI
 
@@ -68,7 +69,7 @@ class FactCell: UITableViewCell {
     private lazy var valueLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.apply(typography: .title(weight: .regular), with: .black)
+//        label.apply(typography: .title(weight: .regular), with: .black)
         label.numberOfLines = 0
         return label
     }()
@@ -110,8 +111,12 @@ class FactCell: UITableViewCell {
     // MARK: - SETUP
 
     private func setupCell() {
-        guard let fact = fact else { return }
+        guard let fact = fact, let viewModel = viewModel else { return }
+
+        let preferredFontSize = viewModel.retrievePreferredTypography(for: fact.value)
+        valueLabel.apply(typography: preferredFontSize, with: .black)
         valueLabel.text = fact.value
+        
         categoryLabel.text = fact.categories.first ?? "UNCATEGORIZED"
     }
 

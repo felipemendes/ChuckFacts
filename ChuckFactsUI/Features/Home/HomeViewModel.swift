@@ -11,6 +11,12 @@ import Foundation
 
 public class HomeViewModel {
 
+    // MARK: - CONSTANTS
+
+    private struct Constants {
+        static let maxFontSize: Int = 80
+    }
+
     // MARK: - PRIVATE PROPERTIES
 
     private let disposeBag = DisposeBag()
@@ -31,6 +37,13 @@ public class HomeViewModel {
     }
 
     // MARK: - PUBLIC
+
+    func retrievePreferredTypography(for value: String) -> Guideline.Typography {
+        if value.count >= Constants.maxFontSize {
+            return .subtitle(weight: .semibold)
+        }
+        return .title(weight: .semibold)
+    }
 
     func retrieveSearchFact(from keyword: String) {
         serviceManager.getSearch(from: keyword) { response, error in

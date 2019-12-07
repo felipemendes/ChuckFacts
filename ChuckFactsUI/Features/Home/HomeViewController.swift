@@ -119,8 +119,9 @@ extension HomeViewController: UITableViewDataSource {
                 return UITableViewCell()
         }
 
-        cell.setup(with: factResponse?.result[indexPath.row])
+        cell.viewModel = viewModel
         cell.delegate = self
+        cell.setup(with: factResponse?.result[indexPath.row])
 
         return cell
     }
