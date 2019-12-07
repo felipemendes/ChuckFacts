@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Router<Endpoint: EndpointType>: Routable {
+class Router<Endpoint: Endpointable>: Routable {
 
     // MARK: - PRIVATE PROPERTIES
 
@@ -16,7 +16,7 @@ class Router<Endpoint: EndpointType>: Routable {
 
     /// Build a URLSession
     ///
-    /// - Parameter route: A EndpointType
+    /// - Parameter route: A Endpointable
     /// - Throws: Throws a RouterCompletion
     func request(_ route: Endpoint, completion: @escaping RouterCompletion) {
         let session = URLSession.shared
@@ -36,9 +36,9 @@ class Router<Endpoint: EndpointType>: Routable {
         self.task?.cancel()
     }
 
-    /// Converts EndpointType to URLRequest
+    /// Converts Endpointable to URLRequest
     ///
-    /// - Parameter endpoint: A EndpointType
+    /// - Parameter endpoint: A Endpointable
     /// - Throws: Throws a URLRequest
     private func buildRequest(from endpoint: Endpoint) throws -> URLRequest {
         var request = URLRequest(url: endpoint.baseURL.appendingPathComponent(endpoint.path),
