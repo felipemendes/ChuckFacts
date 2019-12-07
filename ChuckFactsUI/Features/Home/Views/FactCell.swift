@@ -10,7 +10,11 @@ import UIKit
 
 class FactCell: UITableViewCell {
 
-    // MARK: - CONSTANTS
+    // MARK: - CONSTANTS AND METRICS
+
+    private struct Constants {
+        static let defaultShareMessage: String = "Check out Chuck Norris facts through this app"
+    }
 
     private struct Metrics {
         static let cornerRadius: CGFloat = 8
@@ -22,13 +26,22 @@ class FactCell: UITableViewCell {
         static let containerTrailing: CGFloat = -16
         static let containerBottom: CGFloat = -16
 
-        static let categoryTop: CGFloat = 12
-        static let categoryLeading: CGFloat = 12
-        static let categoryTrailing: CGFloat = -12
-
         static let valueTop: CGFloat = 12
-        static let valueBottom: CGFloat = -12
+        static let valueLeading: CGFloat = 12
+        static let valueTrailing: CGFloat = -12
+
+        static let categoryTop: CGFloat = 12
+        static let categoryBottom: CGFloat = -12
+
+        static let shareSize: CGFloat = 20
+        static let shareTrailing: CGFloat = -12
+        static let shareBottom: CGFloat = -12
     }
+
+    // MARK: - PROPERTIES
+
+    private var fact: Fact?
+    public weak var delegate: FactCellDelegate?
 
     // MARK: - UI
 
@@ -60,6 +73,15 @@ class FactCell: UITableViewCell {
         return label
     }()
 
+    private lazy var shareButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .clear
+        button.setImage(.shareIcon, for: .normal)
+        button.addTarget(self, action: #selector(didTapShare(_:)), for: .touchUpInside)
+        return button
+    }()
+
     // MARK: - INITIALIZERS
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -75,22 +97,22 @@ class FactCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        setupCell()
         cardSetup()
     }
 
     // MARK: - PUBLIC API
 
     public func setup(with fact: Fact?) {
-        guard let fact = fact else { return }
-        valueLabel.text = fact.value
-        categoryLabel.text = fact.categories.first ?? "UNCATEGORIZED"
+        self.fact = fact
+        setupCell()
     }
 
     // MARK: - SETUP
 
     private func setupCell() {
-        selectionStyle = .none
+        guard let fact = fact else { return }
+        valueLabel.text = fact.value
+        categoryLabel.text = fact.categories.first ?? "UNCATEGORIZED"
     }
 
     private func cardSetup() {
@@ -104,8 +126,9 @@ class FactCell: UITableViewCell {
     private func constraintUI() {
         addSubview(containerView)
         containerView.addSubview(cardView)
-        cardView.addSubview(categoryLabel)
         cardView.addSubview(valueLabel)
+        cardView.addSubview(categoryLabel)
+        cardView.addSubview(shareButton)
 
         containerView.constraintToSuperview()
 
@@ -119,17 +142,32 @@ class FactCell: UITableViewCell {
             cardView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor,
                                              constant: Metrics.containerBottom),
 
-            categoryLabel.topAnchor.constraint(equalTo: cardView.topAnchor,
-                                               constant: Metrics.categoryTop),
-            categoryLabel.leadingAnchor.constraint(equalTo: cardView.leadingAnchor,
-                                                   constant: Metrics.categoryLeading),
-            categoryLabel.trailingAnchor.constraint(equalTo: cardView.trailingAnchor,
-                                                    constant: Metrics.categoryTrailing),
+            valueLabel.topAnchor.constraint(equalTo: cardView.topAnchor,
+                                               constant: Metrics.valueTop),
+            valueLabel.leadingAnchor.constraint(equalTo: cardView.leadingAnchor,
+                                                   constant: Metrics.valueLeading),
+            valueLabel.trailingAnchor.constraint(equalTo: cardView.trailingAnchor,
+                                                    constant: Metrics.valueTrailing),
 
-            valueLabel.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor, constant: Metrics.valueTop),
-            valueLabel.leadingAnchor.constraint(equalTo: categoryLabel.leadingAnchor),
-            valueLabel.trailingAnchor.constraint(equalTo: categoryLabel.trailingAnchor),
-            valueLabel.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: Metrics.valueBottom)
-            ])
+            categoryLabel.topAnchor.constraint(equalTo: valueLabel.bottomAnchor,
+                                               constant: Metrics.categoryTop),
+            categoryLabel.leadingAnchor.constraint(equalTo: valueLabel.leadingAnchor),
+            categoryLabel.trailingAnchor.constraint(equalTo: shareButton.leadingAnchor),
+            categoryLabel.bottomAnchor.constraint(equalTo: cardView.bottomAnchor,
+                                                  constant: Metrics.containerBottom),
+
+            shareButton.trailingAnchor.constraint(equalTo: cardView.trailingAnchor,
+                                                  constant: Metrics.shareTrailing),
+            shareButton.bottomAnchor.constraint(equalTo: cardView.bottomAnchor,
+                                                constant: Metrics.shareBottom),
+            shareButton.heightAnchor.constraint(equalToConstant: Metrics.shareSize),
+            shareButton.widthAnchor.constraint(equalToConstant: Metrics.shareSize)
+        ])
+    }
+
+    // MARK: - SELECTORS
+
+    @objc private func didTapShare(_ sender: Any) {
+        delegate?.didTapShare(message: fact?.value ?? Constants.defaultShareMessage)
     }
 }

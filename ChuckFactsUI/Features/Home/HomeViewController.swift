@@ -17,6 +17,10 @@ public class HomeViewController: UIViewController {
         static let factReuseIdentifier = "FactCell"
     }
 
+    // MARK: - PUBLIC API
+
+    weak var delegate: HomeViewControllerDelegate?
+
     // MARK: - PROPERTIES
 
     private let disposeBag = DisposeBag()
@@ -102,7 +106,7 @@ public class HomeViewController: UIViewController {
     }
 }
 
-// MARK: - EXTENSIONS
+// MARK: - UITableViewDataSource
 
 extension HomeViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -116,12 +120,24 @@ extension HomeViewController: UITableViewDataSource {
         }
 
         cell.setup(with: factResponse?.result[indexPath.row])
+        cell.delegate = self
+
         return cell
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension HomeViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(#function)
+    }
+}
+
+// MARK: - FactCellDelegate
+
+extension HomeViewController: FactCellDelegate {
+    public func didTapShare(message: String) {
+        delegate?.homeViewControllerDelegate(self, didTapShare: message)
     }
 }

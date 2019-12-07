@@ -36,11 +36,25 @@ public class FlowController {
 
     private func presentHome() {
         let homeContainer = factory.makeHomeViewController()
+        homeContainer.delegate = self
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.navigationBar.tintColor = .black
         navigationController.navigationBar.barTintColor = .white
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.setValue(true, forKey: "hidesShadow")
         navigationController.pushViewController(homeContainer, animated: true)
+    }
+
+    private func presentShareSheet(with message: String) {
+        let activityViewController = UIActivityViewController(activityItems: [message], applicationActivities: nil)
+        navigationController.present(activityViewController, animated: true, completion: nil)
+    }
+}
+
+// MARK: - HomeViewControllerDelegate
+
+extension FlowController: HomeViewControllerDelegate {
+    public func homeViewControllerDelegate(_ viewController: UIViewController, didTapShare message: String) {
+        presentShareSheet(with: message)
     }
 }

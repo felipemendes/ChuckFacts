@@ -19,6 +19,8 @@
 		02346EA72399F381006F482D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EA62399F381006F482D /* UIView+Extension.swift */; };
 		02346EA92399FDC0006F482D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02346EA82399FDC0006F482D /* Images.xcassets */; };
 		02346EAB2399FE61006F482D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EAA2399FE61006F482D /* UIImage+Extension.swift */; };
+		02346EB0239B2088006F482D /* HomeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EAF239B2088006F482D /* HomeViewControllerDelegate.swift */; };
+		02346EB2239B2166006F482D /* FactCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EB1239B2166006F482D /* FactCellDelegate.swift */; };
 		024F7E56238CC8AF00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
 		024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
 		024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E60238CCCBB00616C45 /* BundleTests.swift */; };
@@ -81,6 +83,8 @@
 		02346EA62399F381006F482D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		02346EA82399FDC0006F482D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		02346EAA2399FE61006F482D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		02346EAF239B2088006F482D /* HomeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDelegate.swift; sourceTree = "<group>"; };
+		02346EB1239B2166006F482D /* FactCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCellDelegate.swift; sourceTree = "<group>"; };
 		024F7E55238CC8AF00616C45 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		024F7E57238CCA8F00616C45 /* FactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactResponse.swift; sourceTree = "<group>"; };
 		024F7E5E238CCCBB00616C45 /* ChuckFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				02E4DD5C2397508700A93DB0 /* Views */,
+				02346EAF239B2088006F482D /* HomeViewControllerDelegate.swift */,
 				02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */,
 				02B4B57A23972C990093C3E0 /* HomeViewModel.swift */,
 			);
@@ -374,6 +379,7 @@
 		02E4DD5C2397508700A93DB0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02346EB1239B2166006F482D /* FactCellDelegate.swift */,
 				02E4DD5E239750A400A93DB0 /* FactCell.swift */,
 			);
 			path = Views;
@@ -634,6 +640,7 @@
 				02346EAB2399FE61006F482D /* UIImage+Extension.swift in Sources */,
 				02E4DD5F239750A400A93DB0 /* FactCell.swift in Sources */,
 				020652352395D42D00856A39 /* Search.swift in Sources */,
+				02346EB2239B2166006F482D /* FactCellDelegate.swift in Sources */,
 				02E4DD672397543600A93DB0 /* UIButton+Extension.swift in Sources */,
 				02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */,
 				02DA7ECB23909D1F000BA7D7 /* Endpoint.swift in Sources */,
@@ -642,6 +649,7 @@
 				02018CC223989D30008E8F2F /* ServiceAssembly.swift in Sources */,
 				026E1A1B23974718006DB7D2 /* DataModel.xcdatamodel in Sources */,
 				02346EA72399F381006F482D /* UIView+Extension.swift in Sources */,
+				02346EB0239B2088006F482D /* HomeViewControllerDelegate.swift in Sources */,
 				02B4B57923972C760093C3E0 /* SearchViewController.swift in Sources */,
 				024F7E56238CC8AF00616C45 /* Fact.swift in Sources */,
 				02E4DD612397512100A93DB0 /* Guideline.swift in Sources */,
