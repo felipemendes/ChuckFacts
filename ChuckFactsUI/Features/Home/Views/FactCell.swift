@@ -19,7 +19,7 @@ class FactCell: UITableViewCell {
     private struct Metrics {
         static let cornerRadius: CGFloat = 8
         static let shadowOpacity: Float = 1
-        static let shadowRadius: CGFloat = 4
+        static let shadowRadius: CGFloat = 5
 
         static let containerTop: CGFloat = 16
         static let containerLeading: CGFloat = 16
@@ -117,9 +117,9 @@ class FactCell: UITableViewCell {
 
     private func cardSetup() {
         cardView.layer.shadowColor = UIColor.gray.withAlphaComponent(0.2).cgColor
-        cardView.layer.shadowOpacity = 1
+        cardView.layer.shadowOpacity = Metrics.shadowOpacity
         cardView.layer.shadowOffset = CGSize.zero
-        cardView.layer.shadowRadius = 5
+        cardView.layer.shadowRadius = Metrics.shadowRadius
         cardView.layer.cornerRadius = Metrics.cornerRadius
     }
 
