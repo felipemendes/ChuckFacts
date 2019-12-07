@@ -21,6 +21,9 @@
 		02346EAB2399FE61006F482D /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EAA2399FE61006F482D /* UIImage+Extension.swift */; };
 		02346EB0239B2088006F482D /* HomeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EAF239B2088006F482D /* HomeViewControllerDelegate.swift */; };
 		02346EB2239B2166006F482D /* FactCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EB1239B2166006F482D /* FactCellDelegate.swift */; };
+		02346EB5239B30BF006F482D /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EB4239B30BF006F482D /* HomeViewModelTests.swift */; };
+		02346EB8239B3745006F482D /* singleFactWithValueLenghtBiggerThan80.json in Resources */ = {isa = PBXBuildFile; fileRef = 02346EB6239B3516006F482D /* singleFactWithValueLenghtBiggerThan80.json */; };
+		02346EB9239B3747006F482D /* singleFactWithValueLenghtSmallerThan80.json in Resources */ = {isa = PBXBuildFile; fileRef = 02346EB7239B3581006F482D /* singleFactWithValueLenghtSmallerThan80.json */; };
 		024F7E56238CC8AF00616C45 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
 		024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
 		024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E60238CCCBB00616C45 /* BundleTests.swift */; };
@@ -85,6 +88,9 @@
 		02346EAA2399FE61006F482D /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		02346EAF239B2088006F482D /* HomeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDelegate.swift; sourceTree = "<group>"; };
 		02346EB1239B2166006F482D /* FactCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCellDelegate.swift; sourceTree = "<group>"; };
+		02346EB4239B30BF006F482D /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		02346EB6239B3516006F482D /* singleFactWithValueLenghtBiggerThan80.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = singleFactWithValueLenghtBiggerThan80.json; sourceTree = "<group>"; };
+		02346EB7239B3581006F482D /* singleFactWithValueLenghtSmallerThan80.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = singleFactWithValueLenghtSmallerThan80.json; sourceTree = "<group>"; };
 		024F7E55238CC8AF00616C45 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		024F7E57238CCA8F00616C45 /* FactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactResponse.swift; sourceTree = "<group>"; };
 		024F7E5E238CCCBB00616C45 /* ChuckFactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckFactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +211,7 @@
 				025F53042392DDF0007D3755 /* ServiceEndpointTests.swift */,
 				025F53062392E4A9007D3755 /* ServiceManagerTests.swift */,
 				02E032E12395DEE400F5915A /* StorageTests.swift */,
+				02346EB4239B30BF006F482D /* HomeViewModelTests.swift */,
 			);
 			path = ChuckFactsTests;
 			sourceTree = "<group>";
@@ -215,6 +222,8 @@
 				024F7E6B238CCF2000616C45 /* singleFact.json */,
 				02DA7EB6238E10EF000BA7D7 /* multipleFacts.json */,
 				02DA7EB8238E12B0000BA7D7 /* emptyFacts.json */,
+				02346EB6239B3516006F482D /* singleFactWithValueLenghtBiggerThan80.json */,
+				02346EB7239B3581006F482D /* singleFactWithValueLenghtSmallerThan80.json */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -491,8 +500,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02346EB8239B3745006F482D /* singleFactWithValueLenghtBiggerThan80.json in Resources */,
 				02DA7EB9238E12B0000BA7D7 /* emptyFacts.json in Resources */,
 				024F7E6C238CCFD700616C45 /* singleFact.json in Resources */,
+				02346EB9239B3747006F482D /* singleFactWithValueLenghtSmallerThan80.json in Resources */,
 				02DA7EB7238E1176000BA7D7 /* multipleFacts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,6 +628,7 @@
 				024F7E61238CCCBB00616C45 /* BundleTests.swift in Sources */,
 				02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */,
 				02E033022396061600F5915A /* FactResponse.swift in Sources */,
+				02346EB5239B30BF006F482D /* HomeViewModelTests.swift in Sources */,
 				025F53072392E4A9007D3755 /* ServiceManagerTests.swift in Sources */,
 				02E032E22395DEE400F5915A /* StorageTests.swift in Sources */,
 				02E033012396061600F5915A /* Fact.swift in Sources */,

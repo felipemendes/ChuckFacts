@@ -8,14 +8,14 @@
 
 import UIKit
 
-public struct Guideline {
+public struct Guideline: Equatable {
 
     /// Typograph constraints
     ///
     /// - title: Size of 20 points
     /// - subtitle: Size of 16 points
     /// - body: Size of 12 points
-    public enum Typography {
+    public enum Typography: Equatable {
         case title(weight: UIFont.CustomWeight)
         case subtitle(weight: UIFont.CustomWeight)
         case body(weight: UIFont.CustomWeight)
