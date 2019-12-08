@@ -45,6 +45,8 @@
 		02CBC134239D1D7200EF7C77 /* CloudTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC133239D1D7200EF7C77 /* CloudTagView.swift */; };
 		02CBC137239D220500EF7C77 /* CloudTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC136239D220500EF7C77 /* CloudTagCell.swift */; };
 		02CBC139239DA24F00EF7C77 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC138239DA24F00EF7C77 /* String+Extension.swift */; };
+		02CBC13D239DB6FE00EF7C77 /* CloudTagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC13C239DB6FE00EF7C77 /* CloudTagViewModel.swift */; };
+		02CBC13F239DB9B000EF7C77 /* ComponentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC13E239DB9B000EF7C77 /* ComponentAssembly.swift */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
 		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
 		02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */; };
@@ -122,6 +124,8 @@
 		02CBC133239D1D7200EF7C77 /* CloudTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTagView.swift; sourceTree = "<group>"; };
 		02CBC136239D220500EF7C77 /* CloudTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTagCell.swift; sourceTree = "<group>"; };
 		02CBC138239DA24F00EF7C77 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		02CBC13C239DB6FE00EF7C77 /* CloudTagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTagViewModel.swift; sourceTree = "<group>"; };
+		02CBC13E239DB9B000EF7C77 /* ComponentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAssembly.swift; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
@@ -346,8 +350,9 @@
 		02CBC135239D21F600EF7C77 /* CloudTag */ = {
 			isa = PBXGroup;
 			children = (
-				02CBC133239D1D7200EF7C77 /* CloudTagView.swift */,
 				02CBC136239D220500EF7C77 /* CloudTagCell.swift */,
+				02CBC133239D1D7200EF7C77 /* CloudTagView.swift */,
+				02CBC13C239DB6FE00EF7C77 /* CloudTagViewModel.swift */,
 			);
 			path = CloudTag;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				02199538238C9EFE0034B3EE /* DepedencyInjection.swift */,
 				02018CBD23989CF8008E8F2F /* FeatureAssembly.swift */,
 				02018CC123989D30008E8F2F /* ServiceAssembly.swift */,
+				02CBC13E239DB9B000EF7C77 /* ComponentAssembly.swift */,
 				0219953E238CA2F30034B3EE /* FactoryImplementation.swift */,
 			);
 			path = DependencyInjection;
@@ -645,6 +651,7 @@
 				02DA7ED62390AF31000BA7D7 /* Endpointable.swift in Sources */,
 				02346EC2239B45F8006F482D /* ViewLayoutable.swift in Sources */,
 				02E4DD632397520000A93DB0 /* UIFont+Extension.swift in Sources */,
+				02CBC13D239DB6FE00EF7C77 /* CloudTagViewModel.swift in Sources */,
 				02346EC4239B469E006F482D /* ViewState.swift in Sources */,
 				024F7E58238CCA8F00616C45 /* FactResponse.swift in Sources */,
 				02346EA32399EEB2006F482D /* UIColor+Extension.swift in Sources */,
@@ -672,6 +679,7 @@
 				02DA7ED02390A3B1000BA7D7 /* Environment.swift in Sources */,
 				020652372395D4D000856A39 /* SearchDataAccessProvider.swift in Sources */,
 				02018CBE23989CF8008E8F2F /* FeatureAssembly.swift in Sources */,
+				02CBC13F239DB9B000EF7C77 /* ComponentAssembly.swift in Sources */,
 				02B4B57B23972C990093C3E0 /* HomeViewModel.swift in Sources */,
 				02DA7ED82390AF88000BA7D7 /* Router.swift in Sources */,
 				02E4DD65239753DE00A93DB0 /* UILabel+Extension.swift in Sources */,

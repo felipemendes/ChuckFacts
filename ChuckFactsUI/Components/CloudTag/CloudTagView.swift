@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol CloudTagViewDelegate: AnyObject {
     func cloudTagView(_ cloudTagView: CloudTagView, didTappedIn keyword: String)
@@ -18,14 +19,16 @@ final class CloudTagView: UIControl {
 
     private struct Constants {
         static let cloudTagReuseIdentifier: String = "CloudTagCell"
-        static let fontSize: CGFloat = 12
+        static let fontSize: CGFloat = 16
         static let spacingWidth: CGFloat = 16
         static let spacingHeight: CGFloat = 8
     }
 
     // MARK: - PRIVATE PROPERTIES
 
-    private let items: [String]
+    private var disposeBag = DisposeBag()
+    private var items = [String]()
+    private let viewModel: CloudTagViewModel
 
     // MARK: - PUBLIC API
 
@@ -33,11 +36,13 @@ final class CloudTagView: UIControl {
 
     // MARK: - INITIALIZER
 
-    public init(items: [String]) {
-        self.items = items
+    public init(viewModel: CloudTagViewModel) {
+        self.viewModel = viewModel
         super.init(frame: .zero)
         setupView()
         constraintUI()
+        bindObservables()
+        reloadView()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -51,7 +56,22 @@ final class CloudTagView: UIControl {
         return UICollectionView(frame: self.bounds, collectionViewLayout: flowLayout)
     }()
 
+    // MARK: - BINDING
+
+    private func bindObservables() {
+        viewModel.categoryObservable.observeOn(MainScheduler.instance)
+            .subscribe(onNext: { categoryResponse in
+                self.items = categoryResponse
+                self.collectionView.reloadData()
+            }).disposed(by: disposeBag)
+    }
+
     // MARK: - SETUP
+
+    private func reloadView() {
+        viewModel.retrieveCategories()
+        bindObservables()
+    }
 
     private func setupView() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false

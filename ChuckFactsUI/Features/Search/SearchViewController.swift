@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 public class SearchViewController: UIViewController {
 
@@ -26,11 +27,14 @@ public class SearchViewController: UIViewController {
     // MARK: - PROPERTIES
 
     private let viewModel: SearchViewModel
+    private let cloudTagViewModel: CloudTagViewModel
 
     // MARK: - INITIALIZERS
 
-    public init(viewModel: SearchViewModel) {
+    public init(viewModel: SearchViewModel,
+                cloudTagViewModel: CloudTagViewModel) {
         self.viewModel = viewModel
+        self.cloudTagViewModel = cloudTagViewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -41,7 +45,7 @@ public class SearchViewController: UIViewController {
     // MARK: - UI
 
     private lazy var cloudTagView: CloudTagView = {
-        let cloudTagView = CloudTagView(items: ["Dev", "Animal"])
+        let cloudTagView = CloudTagView(viewModel: cloudTagViewModel)
         cloudTagView.translatesAutoresizingMaskIntoConstraints = false
         cloudTagView.delegate = self
         return cloudTagView

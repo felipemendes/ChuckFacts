@@ -35,7 +35,7 @@ class CloudTagCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 1
         label.textAlignment = .center
-        label.apply(typography: .body(weight: .semibold), with: .white)
+        label.apply(typography: .subtitle(weight: .semibold), with: .white)
         return label
     }()
 
