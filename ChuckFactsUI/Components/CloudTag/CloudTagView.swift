@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CloudTagViewDelegate: AnyObject {
-    func cloudTagView(_ cloudTagView: CloudTagView, didTappedIn keywork: String)
+    func cloudTagView(_ cloudTagView: CloudTagView, didTappedIn keyword: String)
 }
 
 final class CloudTagView: UIControl {
@@ -95,5 +95,9 @@ extension CloudTagView: UICollectionViewDataSource, UICollectionViewDelegateFlow
         let height = item.estimateSize(for: 14).height + Constants.spacingHeight
 
         return CGSize(width: width, height: height)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.cloudTagView(self, didTappedIn: items[indexPath.row])
     }
 }

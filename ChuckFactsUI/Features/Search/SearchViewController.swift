@@ -43,6 +43,7 @@ public class SearchViewController: UIViewController {
     private lazy var cloudTagView: CloudTagView = {
         let cloudTagView = CloudTagView(items: ["Dev", "Animal"])
         cloudTagView.translatesAutoresizingMaskIntoConstraints = false
+        cloudTagView.delegate = self
         return cloudTagView
     }()
 
@@ -68,5 +69,13 @@ public class SearchViewController: UIViewController {
                                                    constant: Metrics.cloudTagViewTrailing),
             cloudTagView.heightAnchor.constraint(equalToConstant: Metrics.cloudTagViewHeight)
         ])
+    }
+}
+
+// MARK: - CloudTagViewDelegate
+
+extension SearchViewController: CloudTagViewDelegate {
+    func cloudTagView(_ cloudTagView: CloudTagView, didTappedIn keyword: String) {
+        delegate?.searchViewControllerDelegate(self, didTapSearch: keyword)
     }
 }
