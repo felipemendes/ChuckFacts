@@ -42,6 +42,9 @@
 		02B4B57923972C760093C3E0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B4B57823972C760093C3E0 /* SearchViewController.swift */; };
 		02B4B57B23972C990093C3E0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B4B57A23972C990093C3E0 /* HomeViewModel.swift */; };
 		02CBC12B239C9B7E00EF7C77 /* SearchViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC12A239C9B7E00EF7C77 /* SearchViewControllerDelegate.swift */; };
+		02CBC134239D1D7200EF7C77 /* CloudTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC133239D1D7200EF7C77 /* CloudTagView.swift */; };
+		02CBC137239D220500EF7C77 /* CloudTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC136239D220500EF7C77 /* CloudTagCell.swift */; };
+		02CBC139239DA24F00EF7C77 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC138239DA24F00EF7C77 /* String+Extension.swift */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
 		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
 		02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */; };
@@ -116,6 +119,9 @@
 		02B4B57823972C760093C3E0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		02B4B57A23972C990093C3E0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		02CBC12A239C9B7E00EF7C77 /* SearchViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerDelegate.swift; sourceTree = "<group>"; };
+		02CBC133239D1D7200EF7C77 /* CloudTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTagView.swift; sourceTree = "<group>"; };
+		02CBC136239D220500EF7C77 /* CloudTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTagCell.swift; sourceTree = "<group>"; };
+		02CBC138239DA24F00EF7C77 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 		02346EBD239B447B006F482D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				02CBC135239D21F600EF7C77 /* CloudTag */,
 				02346EBE239B44AC006F482D /* PlaceholderView.swift */,
 			);
 			path = Components;
@@ -336,6 +343,15 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		02CBC135239D21F600EF7C77 /* CloudTag */ = {
+			isa = PBXGroup;
+			children = (
+				02CBC133239D1D7200EF7C77 /* CloudTagView.swift */,
+				02CBC136239D220500EF7C77 /* CloudTagCell.swift */,
+			);
+			path = CloudTag;
+			sourceTree = "<group>";
+		};
 		02D0BDE8238B5515006ABDF4 /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +420,7 @@
 				02346EA22399EEB2006F482D /* UIColor+Extension.swift */,
 				02346EA62399F381006F482D /* UIView+Extension.swift */,
 				02346EAA2399FE61006F482D /* UIImage+Extension.swift */,
+				02CBC138239DA24F00EF7C77 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -622,6 +639,7 @@
 				025F53012392C1CD007D3755 /* URLParameterEncoder.swift in Sources */,
 				02E032E42395F88100F5915A /* SearchViewModel.swift in Sources */,
 				0219953D238CA04E0034B3EE /* Factory.swift in Sources */,
+				02CBC134239D1D7200EF7C77 /* CloudTagView.swift in Sources */,
 				025F52FF2392C156007D3755 /* Encodable.swift in Sources */,
 				02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */,
 				02DA7ED62390AF31000BA7D7 /* Endpointable.swift in Sources */,
@@ -640,6 +658,7 @@
 				02DA7EDB2390B2F2000BA7D7 /* HTTPTask.swift in Sources */,
 				02DA7EDD2390B8B0000BA7D7 /* Routable.swift in Sources */,
 				02018CC223989D30008E8F2F /* ServiceAssembly.swift in Sources */,
+				02CBC139239DA24F00EF7C77 /* String+Extension.swift in Sources */,
 				026E1A1B23974718006DB7D2 /* DataModel.xcdatamodel in Sources */,
 				02346EA72399F381006F482D /* UIView+Extension.swift in Sources */,
 				02346EB0239B2088006F482D /* HomeViewControllerDelegate.swift in Sources */,
@@ -648,6 +667,7 @@
 				02E4DD612397512100A93DB0 /* Guideline.swift in Sources */,
 				0219953F238CA2F30034B3EE /* FactoryImplementation.swift in Sources */,
 				02346EBF239B44AC006F482D /* PlaceholderView.swift in Sources */,
+				02CBC137239D220500EF7C77 /* CloudTagCell.swift in Sources */,
 				02DA7ED32390AC31000BA7D7 /* ServiceManager.swift in Sources */,
 				02DA7ED02390A3B1000BA7D7 /* Environment.swift in Sources */,
 				020652372395D4D000856A39 /* SearchDataAccessProvider.swift in Sources */,
