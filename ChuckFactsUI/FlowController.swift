@@ -35,14 +35,14 @@ public class FlowController {
     }
 
     private func presentHome() {
-        let homeContainer = factory.makeHomeViewController()
-        homeContainer.delegate = self
+        let homeController = factory.makeHomeViewController()
+        homeController.delegate = self
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.navigationBar.tintColor = .black
         navigationController.navigationBar.barTintColor = .white
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.setValue(true, forKey: "hidesShadow")
-        navigationController.pushViewController(homeContainer, animated: true)
+        navigationController.pushViewController(homeController, animated: true)
     }
 
     private func presentShareSheet(with message: String) {
