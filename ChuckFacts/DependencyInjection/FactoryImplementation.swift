@@ -25,4 +25,8 @@ public class FactoryImplementation: Factory {
     public func makeHomeViewController() -> HomeViewController {
         return resolver.resolve(HomeViewController.self)!
     }
+
+    public func makeSearchViewController() -> SearchViewController {
+        return resolver.resolve(SearchViewController.self)!
+    }
 }

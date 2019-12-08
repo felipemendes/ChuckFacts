@@ -34,5 +34,19 @@ public class FeatureAssembly: Assembly {
             let viewModel = resolver.resolve(HomeViewModel.self)!
             return HomeViewController(viewModel: viewModel)
         }
+
+        // MARK: - SearchViewController
+
+        container.register(SearchViewModel.self) { resolver in
+            let serviceManager = resolver.resolve(ServiceManager.self)!
+            let searchDataAccessProvider = resolver.resolve(SearchDataAccessProvider.self)!
+            return SearchViewModel(serviceManager: serviceManager,
+                                   searchDataAccessProvider: searchDataAccessProvider)
+        }
+
+        container.register(SearchViewController.self) { resolver in
+            let viewModel = resolver.resolve(SearchViewModel.self)!
+            return SearchViewController(viewModel: viewModel)
+        }
     }
 }

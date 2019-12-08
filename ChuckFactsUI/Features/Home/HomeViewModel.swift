@@ -23,6 +23,8 @@ public class HomeViewModel {
     private let disposeBag = DisposeBag()
     private let serviceManager: ServiceManager
 
+    // MARK: - PUBLIC
+
     let factResponseObservable = PublishSubject<FactResponse>()
 
     // MARK: - INITIALIZERS
@@ -34,10 +36,10 @@ public class HomeViewModel {
     // MARK: - LIFE CYCLE
 
     public func viewDidLoad() {
-//        retrieveSearchFact(from: "Bruce Lee")
+        //retrieveSearchFact(from: "Bruce Lee")
     }
 
-    // MARK: - PUBLIC
+    // MARK: - PUBLIC API
 
     func retrieveCategoryName(for fact: Fact) -> String {
         guard let name = fact.categories.first else {

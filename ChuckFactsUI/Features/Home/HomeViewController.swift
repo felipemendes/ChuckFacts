@@ -67,12 +67,23 @@ public class HomeViewController: UIViewController, ViewLayoutable {
         viewModel.viewDidLoad()
     }
 
+    // MARK: - PUBLIC API
+
+    public func reloadData(with keyword: String) {
+        viewModel.retrieveSearchFact(from: keyword)
+        updateView(to: .content, above: tableView)
+        bindObservables()
+    }
+
     // MARK: - BINDING
 
     private func bindObservables() {
-        viewModel.factResponseObservable.subscribe(onNext: { factResponse in
-            self.factResponse = factResponse
-        }).disposed(by: disposeBag)
+        viewModel.factResponseObservable
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { factResponse in
+                self.factResponse = factResponse
+                self.tableView.reloadData()
+            }).disposed(by: disposeBag)
     }
 
     // MARK: - PRIVATE SETUP
@@ -104,9 +115,7 @@ public class HomeViewController: UIViewController, ViewLayoutable {
     // MARK: - HANDLERS
 
     @objc func showSearchBar() {
-        updateView(to: .content, above: tableView)
-        viewModel.retrieveSearchFact(from: "test")
-        tableView.reloadData()
+        delegate?.homeViewControllerDelegate(self, didTapSearch: nil)
     }
 }
 
