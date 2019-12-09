@@ -47,7 +47,10 @@ public class FeatureAssembly: Assembly {
         container.register(SearchViewController.self) { resolver in
             let viewModel = resolver.resolve(SearchViewModel.self)!
             let cloudTagViewModel = resolver.resolve(CloudTagViewModel.self)!
-            return SearchViewController(viewModel: viewModel, cloudTagViewModel: cloudTagViewModel)
+            let pastSearchesViewModel = resolver.resolve(PastSearchesViewModel.self)!
+            return SearchViewController(viewModel: viewModel,
+                                        cloudTagViewModel: cloudTagViewModel,
+                                        pastSearchesViewModel: pastSearchesViewModel)
         }
     }
 }

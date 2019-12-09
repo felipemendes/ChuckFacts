@@ -49,6 +49,9 @@
 		02CBC13F239DB9B000EF7C77 /* ComponentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC13E239DB9B000EF7C77 /* ComponentAssembly.swift */; };
 		02CBC144239DD31900EF7C77 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC143239DD31900EF7C77 /* Array+Extension.swift */; };
 		02CBC146239DD8CD00EF7C77 /* CloudTagViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC145239DD8CD00EF7C77 /* CloudTagViewModelTests.swift */; };
+		02CBC149239DE0F300EF7C77 /* PastSearchesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC148239DE0F300EF7C77 /* PastSearchesViewCell.swift */; };
+		02CBC14B239DE0FE00EF7C77 /* PastSearchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC14A239DE0FE00EF7C77 /* PastSearchesView.swift */; };
+		02CBC14D239DE11C00EF7C77 /* PastSearchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC14C239DE11C00EF7C77 /* PastSearchesViewModel.swift */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
 		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
 		02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */; };
@@ -131,6 +134,9 @@
 		02CBC13E239DB9B000EF7C77 /* ComponentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAssembly.swift; sourceTree = "<group>"; };
 		02CBC143239DD31900EF7C77 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		02CBC145239DD8CD00EF7C77 /* CloudTagViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTagViewModelTests.swift; sourceTree = "<group>"; };
+		02CBC148239DE0F300EF7C77 /* PastSearchesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearchesViewCell.swift; sourceTree = "<group>"; };
+		02CBC14A239DE0FE00EF7C77 /* PastSearchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearchesView.swift; sourceTree = "<group>"; };
+		02CBC14C239DE11C00EF7C77 /* PastSearchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearchesViewModel.swift; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 		02346EBD239B447B006F482D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				02CBC147239DE0C400EF7C77 /* PastSearches */,
 				02CBC135239D21F600EF7C77 /* CloudTag */,
 				02346EBE239B44AC006F482D /* PlaceholderView.swift */,
 			);
@@ -365,6 +372,16 @@
 				02CBC13C239DB6FE00EF7C77 /* CloudTagViewModel.swift */,
 			);
 			path = CloudTag;
+			sourceTree = "<group>";
+		};
+		02CBC147239DE0C400EF7C77 /* PastSearches */ = {
+			isa = PBXGroup;
+			children = (
+				02CBC148239DE0F300EF7C77 /* PastSearchesViewCell.swift */,
+				02CBC14A239DE0FE00EF7C77 /* PastSearchesView.swift */,
+				02CBC14C239DE11C00EF7C77 /* PastSearchesViewModel.swift */,
+			);
+			path = PastSearches;
 			sourceTree = "<group>";
 		};
 		02D0BDE8238B5515006ABDF4 /* DependencyInjection */ = {
@@ -683,6 +700,7 @@
 				025F53012392C1CD007D3755 /* URLParameterEncoder.swift in Sources */,
 				02E032E42395F88100F5915A /* SearchViewModel.swift in Sources */,
 				0219953D238CA04E0034B3EE /* Factory.swift in Sources */,
+				02CBC149239DE0F300EF7C77 /* PastSearchesViewCell.swift in Sources */,
 				02CBC134239D1D7200EF7C77 /* CloudTagView.swift in Sources */,
 				025F52FF2392C156007D3755 /* Encodable.swift in Sources */,
 				02199539238C9EFE0034B3EE /* DepedencyInjection.swift in Sources */,
@@ -719,6 +737,8 @@
 				020652372395D4D000856A39 /* SearchDataAccessProvider.swift in Sources */,
 				02018CBE23989CF8008E8F2F /* FeatureAssembly.swift in Sources */,
 				02CBC13F239DB9B000EF7C77 /* ComponentAssembly.swift in Sources */,
+				02CBC14D239DE11C00EF7C77 /* PastSearchesViewModel.swift in Sources */,
+				02CBC14B239DE0FE00EF7C77 /* PastSearchesView.swift in Sources */,
 				02B4B57B23972C990093C3E0 /* HomeViewModel.swift in Sources */,
 				02DA7ED82390AF88000BA7D7 /* Router.swift in Sources */,
 				02E4DD65239753DE00A93DB0 /* UILabel+Extension.swift in Sources */,

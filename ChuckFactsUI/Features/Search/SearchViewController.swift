@@ -18,6 +18,11 @@ public class SearchViewController: UIViewController {
         static let cloudTagViewTrailing: CGFloat = -8
         static let cloudTagViewTop: CGFloat = 8
         static let cloudTagViewHeight: CGFloat = 140
+
+        static let pastSearchesViewLeading: CGFloat = 8
+        static let pastSearchesViewTrailing: CGFloat = -8
+        static let pastSearchesViewTop: CGFloat = 8
+        static let pastSearchesViewBottom: CGFloat = -8
     }
 
     // MARK: - PUBLIC API
@@ -28,13 +33,16 @@ public class SearchViewController: UIViewController {
 
     private let viewModel: SearchViewModel
     private let cloudTagViewModel: CloudTagViewModel
+    private let pastSearchesViewModel: PastSearchesViewModel
 
     // MARK: - INITIALIZERS
 
     public init(viewModel: SearchViewModel,
-                cloudTagViewModel: CloudTagViewModel) {
+                cloudTagViewModel: CloudTagViewModel,
+                pastSearchesViewModel: PastSearchesViewModel) {
         self.viewModel = viewModel
         self.cloudTagViewModel = cloudTagViewModel
+        self.pastSearchesViewModel = pastSearchesViewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -51,6 +59,13 @@ public class SearchViewController: UIViewController {
         return cloudTagView
     }()
 
+    private lazy var pastSearchesView: PastSearchesView = {
+        let pastSearchesView = PastSearchesView(viewModel: pastSearchesViewModel)
+        pastSearchesView.translatesAutoresizingMaskIntoConstraints = false
+        pastSearchesView.delegate = self
+        return pastSearchesView
+    }()
+
     // MARK: - LIFE CYCLE
 
     override public func viewDidLoad() {
@@ -63,6 +78,7 @@ public class SearchViewController: UIViewController {
     private func layoutView() {
         view.backgroundColor = .white
         view.addSubview(cloudTagView)
+        view.addSubview(pastSearchesView)
 
         NSLayoutConstraint.activate([
             cloudTagView.topAnchor.constraint(equalTo: view.topAnchor,
@@ -71,7 +87,16 @@ public class SearchViewController: UIViewController {
                                                   constant: Metrics.cloudTagViewLeading),
             cloudTagView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
                                                    constant: Metrics.cloudTagViewTrailing),
-            cloudTagView.heightAnchor.constraint(equalToConstant: Metrics.cloudTagViewHeight)
+            cloudTagView.heightAnchor.constraint(equalToConstant: Metrics.cloudTagViewHeight),
+
+            pastSearchesView.topAnchor.constraint(equalTo: cloudTagView.bottomAnchor,
+                                              constant: Metrics.pastSearchesViewTop),
+            pastSearchesView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                                  constant: Metrics.pastSearchesViewLeading),
+            pastSearchesView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+                                                   constant: Metrics.pastSearchesViewTrailing),
+            pastSearchesView.bottomAnchor.constraint(equalTo: view.bottomAnchor,
+                                                     constant: Metrics.pastSearchesViewBottom)
         ])
     }
 }
@@ -80,6 +105,14 @@ public class SearchViewController: UIViewController {
 
 extension SearchViewController: CloudTagViewDelegate {
     func cloudTagView(_ cloudTagView: CloudTagView, didTappedIn keyword: String) {
+        delegate?.searchViewControllerDelegate(self, didTapSearch: keyword)
+    }
+}
+
+// MARK: - PastSearchesViewDelegate
+
+extension SearchViewController: PastSearchesViewDelegate {
+    func pastSearchesView(_ pastSearchesView: PastSearchesView, didTappedIn keyword: String) {
         delegate?.searchViewControllerDelegate(self, didTapSearch: keyword)
     }
 }

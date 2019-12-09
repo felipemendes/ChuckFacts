@@ -18,5 +18,12 @@ public class ComponentAssembly: Assembly {
             let serviceManager = resolver.resolve(ServiceManager.self)!
             return CloudTagViewModel(serviceManager: serviceManager)
         }
+
+        // MARK: - PastSearchesView
+
+        container.register(PastSearchesViewModel.self) { resolver in
+            let searchDataAccessProvider = resolver.resolve(SearchDataAccessProvider.self)!
+            return PastSearchesViewModel(searchDataAccessProvider: searchDataAccessProvider)
+        }
     }
 }
