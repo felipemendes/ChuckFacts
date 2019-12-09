@@ -17,7 +17,7 @@ public class SearchViewController: UIViewController {
         static let cloudTagViewLeading: CGFloat = 8
         static let cloudTagViewTrailing: CGFloat = -8
         static let cloudTagViewTop: CGFloat = 8
-        static let cloudTagViewHeight: CGFloat = 200
+        static let cloudTagViewHeight: CGFloat = 140
     }
 
     // MARK: - PUBLIC API

@@ -15,14 +15,21 @@ protocol CloudTagViewDelegate: AnyObject {
 
 final class CloudTagView: UIControl {
 
-    // MARK: - CONSTANTS
+    // MARK: - CONSTANTS AND METRICS
 
     private struct Constants {
         static let cloudTagReuseIdentifier: String = "CloudTagCell"
         static let fontSize: CGFloat = 16
+        static let title: String = "Suggestions"
         static let amountTagsToShow: Int = 8
+    }
+
+    private struct Metrics {
         static let spacingWidth: CGFloat = 16
         static let spacingHeight: CGFloat = 8
+
+        static let titleTop: CGFloat = 16
+        static let collectionTop: CGFloat = 16
     }
 
     // MARK: - PRIVATE PROPERTIES
@@ -51,6 +58,21 @@ final class CloudTagView: UIControl {
     }
 
     // MARK: - UI
+
+    private lazy var containerView: UIView = {
+        let view = UIView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 1
+        label.text = Constants.title
+        label.apply(typography: .title(weight: .semibold), with: .black)
+        return label
+    }()
 
     private lazy var collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
@@ -83,8 +105,24 @@ final class CloudTagView: UIControl {
     }
 
     private func constraintUI() {
-        addSubview(collectionView)
-        collectionView.constraintToSuperview()
+        addSubview(containerView)
+        containerView.addSubview(titleLabel)
+        containerView.addSubview(collectionView)
+
+        containerView.constraintToSuperview()
+
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: topAnchor,
+                                            constant: Metrics.titleTop),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+
+            collectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,
+                                                constant: Metrics.collectionTop),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
 }
 
@@ -112,8 +150,8 @@ extension CloudTagView: UICollectionViewDataSource, UICollectionViewDelegateFlow
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         let item = items[indexPath.row]
-        let width = item.estimateSize(for: Constants.fontSize).width + Constants.spacingWidth
-        let height = item.estimateSize(for: 14).height + Constants.spacingHeight
+        let width = item.estimateSize(for: Constants.fontSize).width + Metrics.spacingWidth
+        let height = item.estimateSize(for: 14).height + Metrics.spacingHeight
 
         return CGSize(width: width, height: height)
     }
