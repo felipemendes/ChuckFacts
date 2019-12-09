@@ -11,10 +11,13 @@ import XCTest
 
 class StorageTests: XCTestCase {
 
+    let serviceManager = ServiceManager()
+    let searchDataAccessProvider = SearchDataAccessProvider()
+
     func testAddNewSearchKeywordIntoDataModel() throws {
         let newKeyword = "Animal"
 
-        let searchViewModel = SearchViewModel()
+        let searchViewModel = SearchViewModel(serviceManager: serviceManager, searchDataAccessProvider: searchDataAccessProvider)
         searchViewModel.addSearch(keyword: newKeyword)
 
         let retrievedData = searchViewModel.retrieveSearches().value
@@ -28,7 +31,7 @@ class StorageTests: XCTestCase {
         let newKeyword = "Dev"
         let sameKeyword = "Dev"
 
-        let searchViewModel = SearchViewModel()
+        let searchViewModel = SearchViewModel(serviceManager: serviceManager, searchDataAccessProvider: searchDataAccessProvider)
 
         searchViewModel.addSearch(keyword: newKeyword)
         searchViewModel.addSearch(keyword: sameKeyword)

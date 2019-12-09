@@ -57,8 +57,10 @@ class ServiceEndpointTests: XCTestCase {
             return
         }
 
-        let expectedURL = "https://sampleurl?param1=sample%201&param2=test2"
-        XCTAssertEqual(fullURL.absoluteString, expectedURL)
+        let firstExpectedURL = "https://sampleurl?param1=sample%201&param2=test2"
+        let secondExpectedURL = "https://sampleurl?param2=test2&param1=sample%201"
+        let result = fullURL.absoluteString
+        XCTAssert(result.isEqual(firstExpectedURL) || result.isEqual(secondExpectedURL))
     }
 
 }
