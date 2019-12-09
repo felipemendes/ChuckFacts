@@ -20,6 +20,7 @@ final class CloudTagView: UIControl {
     private struct Constants {
         static let cloudTagReuseIdentifier: String = "CloudTagCell"
         static let fontSize: CGFloat = 16
+        static let amountTagsToShow: Int = 8
         static let spacingWidth: CGFloat = 16
         static let spacingHeight: CGFloat = 8
     }
@@ -69,7 +70,7 @@ final class CloudTagView: UIControl {
     // MARK: - SETUP
 
     private func reloadView() {
-        viewModel.retrieveCategories()
+        viewModel.retrieveCategories(by: Constants.amountTagsToShow, shuffled: true)
         bindObservables()
     }
 

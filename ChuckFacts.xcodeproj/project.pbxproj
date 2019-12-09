@@ -47,6 +47,7 @@
 		02CBC139239DA24F00EF7C77 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC138239DA24F00EF7C77 /* String+Extension.swift */; };
 		02CBC13D239DB6FE00EF7C77 /* CloudTagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC13C239DB6FE00EF7C77 /* CloudTagViewModel.swift */; };
 		02CBC13F239DB9B000EF7C77 /* ComponentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC13E239DB9B000EF7C77 /* ComponentAssembly.swift */; };
+		02CBC144239DD31900EF7C77 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC143239DD31900EF7C77 /* Array+Extension.swift */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
 		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
 		02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */; };
@@ -126,6 +127,7 @@
 		02CBC138239DA24F00EF7C77 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		02CBC13C239DB6FE00EF7C77 /* CloudTagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTagViewModel.swift; sourceTree = "<group>"; };
 		02CBC13E239DB9B000EF7C77 /* ComponentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAssembly.swift; sourceTree = "<group>"; };
+		02CBC143239DD31900EF7C77 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				02346EA62399F381006F482D /* UIView+Extension.swift */,
 				02346EAA2399FE61006F482D /* UIImage+Extension.swift */,
 				02CBC138239DA24F00EF7C77 /* String+Extension.swift */,
+				02CBC143239DD31900EF7C77 /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */,
 				02DA7ECB23909D1F000BA7D7 /* Endpoint.swift in Sources */,
 				02DA7EDB2390B2F2000BA7D7 /* HTTPTask.swift in Sources */,
+				02CBC144239DD31900EF7C77 /* Array+Extension.swift in Sources */,
 				02DA7EDD2390B8B0000BA7D7 /* Routable.swift in Sources */,
 				02018CC223989D30008E8F2F /* ServiceAssembly.swift in Sources */,
 				02CBC139239DA24F00EF7C77 /* String+Extension.swift in Sources */,

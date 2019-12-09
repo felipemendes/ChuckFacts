@@ -28,9 +28,9 @@ public class CloudTagViewModel {
 
     // MARK: - PUBLIC FUNCTIONS
 
-    public func retrieveCategories(by amount: Int = 8) {
+    public func retrieveCategories(by amount: Int? = nil, shuffled: Bool = false) {
         serviceManager.getCategories { response, error in
-            self.handleCategoryResponse(response, error)
+            self.handleCategoryResponse(response?.shuffled(by: amount), error)
         }
     }
 
