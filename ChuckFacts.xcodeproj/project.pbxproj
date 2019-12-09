@@ -48,6 +48,7 @@
 		02CBC13D239DB6FE00EF7C77 /* CloudTagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC13C239DB6FE00EF7C77 /* CloudTagViewModel.swift */; };
 		02CBC13F239DB9B000EF7C77 /* ComponentAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC13E239DB9B000EF7C77 /* ComponentAssembly.swift */; };
 		02CBC144239DD31900EF7C77 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC143239DD31900EF7C77 /* Array+Extension.swift */; };
+		02CBC146239DD8CD00EF7C77 /* CloudTagViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC145239DD8CD00EF7C77 /* CloudTagViewModelTests.swift */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
 		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
 		02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */; };
@@ -128,6 +129,7 @@
 		02CBC13C239DB6FE00EF7C77 /* CloudTagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTagViewModel.swift; sourceTree = "<group>"; };
 		02CBC13E239DB9B000EF7C77 /* ComponentAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAssembly.swift; sourceTree = "<group>"; };
 		02CBC143239DD31900EF7C77 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		02CBC145239DD8CD00EF7C77 /* CloudTagViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudTagViewModelTests.swift; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				025F53062392E4A9007D3755 /* ServiceManagerTests.swift */,
 				02E032E12395DEE400F5915A /* StorageTests.swift */,
 				02346EB4239B30BF006F482D /* HomeViewModelTests.swift */,
+				02CBC145239DD8CD00EF7C77 /* CloudTagViewModelTests.swift */,
 			);
 			path = ChuckFactsTests;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				025F53072392E4A9007D3755 /* ServiceManagerTests.swift in Sources */,
 				02E032E22395DEE400F5915A /* StorageTests.swift in Sources */,
 				02E033012396061600F5915A /* Fact.swift in Sources */,
+				02CBC146239DD8CD00EF7C77 /* CloudTagViewModelTests.swift in Sources */,
 				025F53052392DDF0007D3755 /* ServiceEndpointTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
