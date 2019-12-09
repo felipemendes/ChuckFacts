@@ -41,4 +41,18 @@ class StorageTests: XCTestCase {
 
         XCTAssertEqual(existence, true)
     }
+
+    func testIfLastItemAddedIsFirstToShow() throws {
+        let firstKeyword = "Brazil"
+        let secondKeyword = "Github"
+
+        let searchViewModel = SearchViewModel(serviceManager: serviceManager, searchDataAccessProvider: searchDataAccessProvider)
+
+        searchViewModel.addSearch(keyword: firstKeyword)
+        searchViewModel.addSearch(keyword: secondKeyword)
+
+        let retrieveFirstItem = searchViewModel.retrieveSearches().value.first
+
+        XCTAssertEqual(retrieveFirstItem?.keyword, secondKeyword)
+    }
 }

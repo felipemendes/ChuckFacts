@@ -44,7 +44,7 @@ public class SearchViewModel {
         searchDataAccessProvider.retrieveObservableData()
             .map { $0 }
             .subscribe(onNext: {
-                self.searchCoreData.value = $0
+                self.searchCoreData.value = $0.reversed()
             })
             .disposed(by: disposeBag)
     }
