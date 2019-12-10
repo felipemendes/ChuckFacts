@@ -36,7 +36,7 @@ final class PastSearchesView: UIControl {
     private var items = [Search]()
     private let viewModel: PastSearchesViewModel
 
-    // MARK: - PUBLIC API
+    // MARK: - PUBLIC PROPERTIES
 
     public weak var delegate: PastSearchesViewDelegate?
 
@@ -47,11 +47,17 @@ final class PastSearchesView: UIControl {
         super.init(frame: .zero)
         setupView()
         constraintUI()
-        reloadView()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: - PUBLIC API
+
+    public func reloadView() {
+        items = viewModel.retrieveSearches().value
+        collectionView.reloadData()
     }
 
     // MARK: - UI
@@ -77,11 +83,6 @@ final class PastSearchesView: UIControl {
     }()
 
     // MARK: - SETUP
-
-    private func reloadView() {
-        items = viewModel.retrieveSearches().value
-
-    }
 
     private func setupView() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false

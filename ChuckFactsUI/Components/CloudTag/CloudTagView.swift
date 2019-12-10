@@ -38,7 +38,7 @@ final class CloudTagView: UIControl {
     private var items = [String]()
     private let viewModel: CloudTagViewModel
 
-    // MARK: - PUBLIC API
+    // MARK: - PUBLIC PROPERTIES
 
     public weak var delegate: CloudTagViewDelegate?
 
@@ -50,11 +50,16 @@ final class CloudTagView: UIControl {
         setupView()
         constraintUI()
         bindObservables()
-        reloadView()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    public func reloadView() {
+        viewModel.retrieveCategories(by: Constants.amountTagsToShow, shuffled: true)
+        bindObservables()
+        collectionView.reloadData()
     }
 
     // MARK: - UI
@@ -90,11 +95,6 @@ final class CloudTagView: UIControl {
     }
 
     // MARK: - SETUP
-
-    private func reloadView() {
-        viewModel.retrieveCategories(by: Constants.amountTagsToShow, shuffled: true)
-        bindObservables()
-    }
 
     private func setupView() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false

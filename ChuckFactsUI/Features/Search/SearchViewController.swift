@@ -113,7 +113,17 @@ public class SearchViewController: UIViewController {
         layoutView()
     }
 
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadComponents()
+    }
+
     // MARK: - PRIVATE SETUP
+
+    private func reloadComponents() {
+        cloudTagView.reloadView()
+        pastSearchesView.reloadView()
+    }
 
     private func perform(search keyword: String, from: SearchType) {
         switch from {
