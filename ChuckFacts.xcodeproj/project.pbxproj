@@ -53,6 +53,8 @@
 		02CBC14B239DE0FE00EF7C77 /* PastSearchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC14A239DE0FE00EF7C77 /* PastSearchesView.swift */; };
 		02CBC14D239DE11C00EF7C77 /* PastSearchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC14C239DE11C00EF7C77 /* PastSearchesViewModel.swift */; };
 		02CBC14F239F231F00EF7C77 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC14E239F231F00EF7C77 /* SearchViewModelTests.swift */; };
+		02CBC151239F2ACE00EF7C77 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 02CBC150239F2ACE00EF7C77 /* Settings.bundle */; };
+		02CBC154239F2CC100EF7C77 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC153239F2CC100EF7C77 /* SettingsBundleHelper.swift */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
 		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
 		02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */; };
@@ -139,6 +141,8 @@
 		02CBC14A239DE0FE00EF7C77 /* PastSearchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearchesView.swift; sourceTree = "<group>"; };
 		02CBC14C239DE11C00EF7C77 /* PastSearchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearchesViewModel.swift; sourceTree = "<group>"; };
 		02CBC14E239F231F00EF7C77 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		02CBC150239F2ACE00EF7C77 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		02CBC153239F2CC100EF7C77 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
@@ -310,6 +314,7 @@
 				02DA7ECC23909DCE000BA7D7 /* ChuckFactsService */,
 				020652302395D1EA00856A39 /* ChuckFactsStorage */,
 				02DA7ECD2390A0C5000BA7D7 /* ChuckFactsUIKit */,
+				02CBC152239F2C9200EF7C77 /* ChuckFactsSettingsBundle */,
 				024F7E5F238CCCBB00616C45 /* ChuckFactsTests */,
 				027BC1B8238A171700F9DB85 /* Products */,
 				0854B1861F5AEA1F6123E6A2 /* Pods */,
@@ -385,6 +390,15 @@
 				02CBC14C239DE11C00EF7C77 /* PastSearchesViewModel.swift */,
 			);
 			path = PastSearches;
+			sourceTree = "<group>";
+		};
+		02CBC152239F2C9200EF7C77 /* ChuckFactsSettingsBundle */ = {
+			isa = PBXGroup;
+			children = (
+				02CBC150239F2ACE00EF7C77 /* Settings.bundle */,
+				02CBC153239F2CC100EF7C77 /* SettingsBundleHelper.swift */,
+			);
+			path = ChuckFactsSettingsBundle;
 			sourceTree = "<group>";
 		};
 		02D0BDE8238B5515006ABDF4 /* DependencyInjection */ = {
@@ -590,6 +604,7 @@
 			files = (
 				02346EA52399F000006F482D /* Colors.xcassets in Resources */,
 				02346EA92399FDC0006F482D /* Images.xcassets in Resources */,
+				02CBC151239F2ACE00EF7C77 /* Settings.bundle in Resources */,
 				027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */,
 				027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */,
 			);
@@ -743,6 +758,7 @@
 				02CBC13F239DB9B000EF7C77 /* ComponentAssembly.swift in Sources */,
 				02CBC14D239DE11C00EF7C77 /* PastSearchesViewModel.swift in Sources */,
 				02CBC14B239DE0FE00EF7C77 /* PastSearchesView.swift in Sources */,
+				02CBC154239F2CC100EF7C77 /* SettingsBundleHelper.swift in Sources */,
 				02B4B57B23972C990093C3E0 /* HomeViewModel.swift in Sources */,
 				02DA7ED82390AF88000BA7D7 /* Router.swift in Sources */,
 				02E4DD65239753DE00A93DB0 /* UILabel+Extension.swift in Sources */,
