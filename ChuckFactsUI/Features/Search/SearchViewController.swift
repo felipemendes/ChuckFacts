@@ -11,13 +11,33 @@ import RxSwift
 
 public class SearchViewController: UIViewController {
 
-    // MARK: - METRICS
+    // MARK: - ENUMS
+
+    enum SearchType {
+        case textInput
+        case cloudTag
+        case pastSearch
+    }
+
+    // MARK: - METRICS AND CONSTANTS
+
+    private struct Constants {
+        static let searchPlaceholder: String = "Enter your search term"
+        static let minKeywordMinLength: Int = 2
+    }
 
     private struct Metrics {
+        static let searchFieldLeading: CGFloat = 8
+        static let searchFieldTrailing: CGFloat = -8
+        static let searchFieldTop: CGFloat = 30
+        static let searchFieldHeight: CGFloat = 40
+
+        static let borderHeight: CGFloat = 2
+
         static let cloudTagViewLeading: CGFloat = 8
         static let cloudTagViewTrailing: CGFloat = -8
         static let cloudTagViewTop: CGFloat = 8
-        static let cloudTagViewHeight: CGFloat = 140
+        static let cloudTagViewHeight: CGFloat = 160
 
         static let pastSearchesViewLeading: CGFloat = 8
         static let pastSearchesViewTrailing: CGFloat = -8
@@ -52,6 +72,26 @@ public class SearchViewController: UIViewController {
 
     // MARK: - UI
 
+    private lazy var searchTextField: UITextField = {
+        let textField = UITextField(frame: .zero)
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = Constants.searchPlaceholder
+        textField.borderStyle = .roundedRect
+        textField.keyboardType = .default
+        textField.returnKeyType = .done
+        textField.clearButtonMode = .whileEditing
+        textField.borderStyle = .none
+        textField.delegate = self
+        return textField
+    }()
+
+    private lazy var border: UIView = {
+        let border = UIView()
+        border.translatesAutoresizingMaskIntoConstraints = false
+        border.backgroundColor = .gray
+        return border
+    }()
+
     private lazy var cloudTagView: CloudTagView = {
         let cloudTagView = CloudTagView(viewModel: cloudTagViewModel)
         cloudTagView.translatesAutoresizingMaskIntoConstraints = false
@@ -75,13 +115,43 @@ public class SearchViewController: UIViewController {
 
     // MARK: - PRIVATE SETUP
 
+    private func perform(search keyword: String, from: SearchType) {
+        switch from {
+        case .pastSearch, .cloudTag: ()
+        case .textInput:
+            if viewModel.check(minLength: Constants.minKeywordMinLength, for: keyword) {
+                return
+            }
+            viewModel.addSearch(keyword: keyword)
+
+            searchTextField.resignFirstResponder()
+            searchTextField.text = nil
+        }
+        delegate?.searchViewControllerDelegate(self, didTapSearch: keyword)
+    }
+
     private func layoutView() {
         view.backgroundColor = .white
+        view.addSubview(searchTextField)
+        view.addSubview(border)
         view.addSubview(cloudTagView)
         view.addSubview(pastSearchesView)
 
         NSLayoutConstraint.activate([
-            cloudTagView.topAnchor.constraint(equalTo: view.topAnchor,
+            searchTextField.topAnchor.constraint(equalTo: view.topAnchor,
+                                                 constant: Metrics.searchFieldTop),
+            searchTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                                     constant: Metrics.searchFieldLeading),
+            searchTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+                                                      constant: Metrics.searchFieldTrailing),
+            searchTextField.heightAnchor.constraint(equalToConstant: Metrics.searchFieldHeight),
+
+            border.bottomAnchor.constraint(equalTo: searchTextField.bottomAnchor),
+            border.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor),
+            border.trailingAnchor.constraint(equalTo: searchTextField.trailingAnchor),
+            border.heightAnchor.constraint(equalToConstant: Metrics.borderHeight),
+
+            cloudTagView.topAnchor.constraint(equalTo: searchTextField.bottomAnchor,
                                               constant: Metrics.cloudTagViewTop),
             cloudTagView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
                                                   constant: Metrics.cloudTagViewLeading),
@@ -105,7 +175,7 @@ public class SearchViewController: UIViewController {
 
 extension SearchViewController: CloudTagViewDelegate {
     func cloudTagView(_ cloudTagView: CloudTagView, didTappedIn keyword: String) {
-        delegate?.searchViewControllerDelegate(self, didTapSearch: keyword)
+        perform(search: keyword, from: .cloudTag)
     }
 }
 
@@ -113,6 +183,16 @@ extension SearchViewController: CloudTagViewDelegate {
 
 extension SearchViewController: PastSearchesViewDelegate {
     func pastSearchesView(_ pastSearchesView: PastSearchesView, didTappedIn keyword: String) {
-        delegate?.searchViewControllerDelegate(self, didTapSearch: keyword)
+        perform(search: keyword, from: .pastSearch)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+
+extension SearchViewController: UITextFieldDelegate {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let text = textField.text else { return false }
+        perform(search: text, from: .textInput)
+        return true
     }
 }

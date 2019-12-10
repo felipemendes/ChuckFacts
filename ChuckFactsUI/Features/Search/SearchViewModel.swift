@@ -38,6 +38,10 @@ public class SearchViewModel {
         searchDataAccessProvider.add(keyword)
     }
 
+    public func check(minLength length: Int, for keyword: String) -> Bool {
+        return keyword.count < length ? true : false
+    }
+
     // MARK: - PRIVATE FUNCTIONS
 
     private func fetchSearchAndUpdateObservables() {
