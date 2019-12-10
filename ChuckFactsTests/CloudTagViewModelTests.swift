@@ -14,7 +14,6 @@ class CloudTagViewModelTests: XCTestCase {
     func testShuffleAndRandomizeMultipleCollections() throws {
         let firstAmount = 8
         let secondAmount = 10
-        //let secondAmount = 10000
 
         let items = ["animal", "career", "celebrity", "dev", "explicit", "fashion", "food", "history", "money", "movie", "music", "political", "religion", "science", "sport", "travel"]
 

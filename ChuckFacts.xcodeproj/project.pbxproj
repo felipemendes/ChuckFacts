@@ -52,6 +52,7 @@
 		02CBC149239DE0F300EF7C77 /* PastSearchesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC148239DE0F300EF7C77 /* PastSearchesViewCell.swift */; };
 		02CBC14B239DE0FE00EF7C77 /* PastSearchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC14A239DE0FE00EF7C77 /* PastSearchesView.swift */; };
 		02CBC14D239DE11C00EF7C77 /* PastSearchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC14C239DE11C00EF7C77 /* PastSearchesViewModel.swift */; };
+		02CBC14F239F231F00EF7C77 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC14E239F231F00EF7C77 /* SearchViewModelTests.swift */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
 		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
 		02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */; };
@@ -137,6 +138,7 @@
 		02CBC148239DE0F300EF7C77 /* PastSearchesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearchesViewCell.swift; sourceTree = "<group>"; };
 		02CBC14A239DE0FE00EF7C77 /* PastSearchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearchesView.swift; sourceTree = "<group>"; };
 		02CBC14C239DE11C00EF7C77 /* PastSearchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastSearchesViewModel.swift; sourceTree = "<group>"; };
+		02CBC14E239F231F00EF7C77 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				02E032E12395DEE400F5915A /* StorageTests.swift */,
 				02346EB4239B30BF006F482D /* HomeViewModelTests.swift */,
 				02CBC145239DD8CD00EF7C77 /* CloudTagViewModelTests.swift */,
+				02CBC14E239F231F00EF7C77 /* SearchViewModelTests.swift */,
 			);
 			path = ChuckFactsTests;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */,
 				02E033022396061600F5915A /* FactResponse.swift in Sources */,
 				02346EB5239B30BF006F482D /* HomeViewModelTests.swift in Sources */,
+				02CBC14F239F231F00EF7C77 /* SearchViewModelTests.swift in Sources */,
 				025F53072392E4A9007D3755 /* ServiceManagerTests.swift in Sources */,
 				02E032E22395DEE400F5915A /* StorageTests.swift in Sources */,
 				02E033012396061600F5915A /* Fact.swift in Sources */,
