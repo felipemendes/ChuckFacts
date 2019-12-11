@@ -101,7 +101,7 @@ public class HomeViewController: UIViewController, ViewLayoutable {
 
     private func constraintUI() {
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.safeTopAnchor.constraint(equalTo: view.safeTopAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)

@@ -19,7 +19,7 @@ extension UIView {
         let bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: bottom)
 
         let constraints = [
-            topAnchor.constraint(equalTo: superview.topAnchor, constant: top),
+            safeTopAnchor.constraint(equalTo: superview.safeTopAnchor, constant: top),
             trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: trailing),
             leadingAnchor.constraint(equalTo: superview.leadingAnchor, constant: leading),
             bottomConstraint
@@ -27,5 +27,19 @@ extension UIView {
 
         bottomConstraint.priority = bottomPriority
         NSLayoutConstraint.activate(constraints)
+    }
+
+    var safeTopAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return self.safeAreaLayoutGuide.topAnchor
+        }
+        return self.topAnchor
+    }
+
+    var safeBottomAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return self.safeAreaLayoutGuide.bottomAnchor
+        }
+        return self.bottomAnchor
     }
 }
