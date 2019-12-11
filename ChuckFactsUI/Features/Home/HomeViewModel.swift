@@ -9,6 +9,8 @@
 import RxSwift
 import Foundation
 
+typealias FactResponseType = (factResponse: FactResponse?, error: String?)
+
 public class HomeViewModel {
 
     // MARK: - CONSTANTS
@@ -25,7 +27,7 @@ public class HomeViewModel {
 
     // MARK: - PUBLIC
 
-    let factResponseObservable = PublishSubject<FactResponse>()
+    let factResponseObservable = PublishSubject<FactResponseType>()
 
     // MARK: - INITIALIZERS
 
@@ -64,7 +66,6 @@ public class HomeViewModel {
     // MARK: - PRIVATE FUNCTIONS
 
     private func handleFactResponse(_ factResponse: FactResponse?, _ error: String?) {
-        guard let factResponse = factResponse else { return }
-        factResponseObservable.onNext(factResponse)
+        factResponseObservable.onNext((factResponse, error))
     }
 }
