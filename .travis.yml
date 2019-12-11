@@ -1,0 +1,8 @@
+language: objective-c
+
+osx_image: xcode10.1
+xcode_sdk: iphonesimulator10.0
+
+script:
+- set -o pipefail
+- travis_retry xcodebuild -project ChuckFacts.xcodeproj -scheme ChuckFacts -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty -c
