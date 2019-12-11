@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 protocol ViewLayoutable: class {
     var placeholderView: PlaceholderView { get }
+    var alertView: JGProgressHUD { get }
+
     func constraintLayout()
     func updateView(to state: ViewState, above mainView: UIView)
+    func updateAlert(to type: AlertType)
 }
 
 // MARK: - EXTENSIONS
@@ -22,12 +26,25 @@ extension ViewLayoutable where Self: UIViewController {
 
     func updateView(to state: ViewState, above mainView: UIView) {
         switch state {
-        case .loading:
+        case .empty:
             placeholderView.isHidden = false
             mainView.isHidden = true
         case .content:
             placeholderView.isHidden = true
             mainView.isHidden = false
+        }
+    }
+
+    func updateAlert(to type: AlertType) {
+        alertView.show(in: view, animated: true)
+
+        switch type {
+        case .loading:
+            alertView.textLabel.text = "Don't let Chuck Norris wait"
+        case .error(let message):
+            alertView.textLabel.text = "Error: \(message)"
+        case .dismiss:
+            alertView.dismiss(animated: true)
         }
     }
 
