@@ -9,6 +9,8 @@
 import RxSwift
 import Foundation
 
+typealias FactResponseType = (factResponse: FactResponse?, error: String?)
+
 public class HomeViewModel {
 
     // MARK: - CONSTANTS
@@ -23,7 +25,9 @@ public class HomeViewModel {
     private let disposeBag = DisposeBag()
     private let serviceManager: ServiceManager
 
-    let factResponseObservable = PublishSubject<FactResponse>()
+    // MARK: - PUBLIC
+
+    let factResponseObservable = PublishSubject<FactResponseType>()
 
     // MARK: - INITIALIZERS
 
@@ -34,10 +38,10 @@ public class HomeViewModel {
     // MARK: - LIFE CYCLE
 
     public func viewDidLoad() {
-//        retrieveSearchFact(from: "Bruce Lee")
+        //retrieveSearchFact(from: "Bruce Lee")
     }
 
-    // MARK: - PUBLIC
+    // MARK: - PUBLIC API
 
     func retrieveCategoryName(for fact: Fact) -> String {
         guard let name = fact.categories.first else {
@@ -62,7 +66,6 @@ public class HomeViewModel {
     // MARK: - PRIVATE FUNCTIONS
 
     private func handleFactResponse(_ factResponse: FactResponse?, _ error: String?) {
-        guard let factResponse = factResponse else { return }
-        factResponseObservable.onNext(factResponse)
+        factResponseObservable.onNext((factResponse, error))
     }
 }

@@ -12,4 +12,9 @@ public protocol Factory {
     ///
     /// - Returns: An instantiated HomeViewController
     func makeHomeViewController() -> HomeViewController
+
+    // Builds a SearchViewController
+    ///
+    /// - Returns: An instantiated SearchViewController
+    func makeSearchViewController() -> SearchViewController
 }

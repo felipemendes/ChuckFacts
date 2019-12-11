@@ -11,10 +11,12 @@ import XCTest
 
 class StorageTests: XCTestCase {
 
+    let searchDataAccessProvider = SearchDataAccessProvider()
+
     func testAddNewSearchKeywordIntoDataModel() throws {
         let newKeyword = "Animal"
 
-        let searchViewModel = SearchViewModel()
+        let searchViewModel = SearchViewModel(searchDataAccessProvider: searchDataAccessProvider)
         searchViewModel.addSearch(keyword: newKeyword)
 
         let retrievedData = searchViewModel.retrieveSearches().value
@@ -28,7 +30,7 @@ class StorageTests: XCTestCase {
         let newKeyword = "Dev"
         let sameKeyword = "Dev"
 
-        let searchViewModel = SearchViewModel()
+        let searchViewModel = SearchViewModel(searchDataAccessProvider: searchDataAccessProvider)
 
         searchViewModel.addSearch(keyword: newKeyword)
         searchViewModel.addSearch(keyword: sameKeyword)
@@ -37,5 +39,19 @@ class StorageTests: XCTestCase {
         let existence = retrievedData.map { $0.keyword == newKeyword }.count > 0
 
         XCTAssertEqual(existence, true)
+    }
+
+    func testIfLastItemAddedIsFirstToShow() throws {
+        let firstKeyword = "Brazil"
+        let secondKeyword = "Github"
+
+        let searchViewModel = SearchViewModel(searchDataAccessProvider: searchDataAccessProvider)
+
+        searchViewModel.addSearch(keyword: firstKeyword)
+        searchViewModel.addSearch(keyword: secondKeyword)
+
+        let retrieveFirstItem = searchViewModel.retrieveSearches().value.first
+
+        XCTAssertEqual(retrieveFirstItem?.keyword, secondKeyword)
     }
 }

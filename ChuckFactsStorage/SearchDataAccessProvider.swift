@@ -56,6 +56,19 @@ public class SearchDataAccessProvider {
         }
     }
 
+    public func deleteAll() {
+        _ = searchFromCoreData.value.map {
+            managedObjectContext.delete($0)
+        }
+
+        do {
+            try managedObjectContext.save()
+            searchFromCoreData.value = retrieveData()
+        } catch {
+            fatalError("Error on delete data")
+        }
+    }
+
     // MARK: - PRIVATE SETUP
 
     private func checkExistence(for keyword: String) -> Bool {

@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import JGProgressHUD
 
 public class HomeViewController: UIViewController, ViewLayoutable {
 
@@ -21,6 +22,7 @@ public class HomeViewController: UIViewController, ViewLayoutable {
 
     weak var delegate: HomeViewControllerDelegate?
     var placeholderView: PlaceholderView = PlaceholderView(placeholderType: .home)
+    var alertView: JGProgressHUD = JGProgressHUD(style: .light)
 
     // MARK: - PROPERTIES
 
@@ -63,16 +65,26 @@ public class HomeViewController: UIViewController, ViewLayoutable {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        updateView(to: .loading, above: tableView)
+        updateView(to: .empty, above: tableView)
         viewModel.viewDidLoad()
+    }
+
+    // MARK: - PUBLIC API
+
+    public func reloadData(with keyword: String) {
+        viewModel.retrieveSearchFact(from: keyword)
+        updateView(to: .content, above: tableView)
+        bindObservables()
     }
 
     // MARK: - BINDING
 
     private func bindObservables() {
-        viewModel.factResponseObservable.subscribe(onNext: { factResponse in
-            self.factResponse = factResponse
-        }).disposed(by: disposeBag)
+        viewModel.factResponseObservable
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { response in
+                self.performBindind(for: response)
+            }).disposed(by: disposeBag)
     }
 
     // MARK: - PRIVATE SETUP
@@ -96,17 +108,35 @@ public class HomeViewController: UIViewController, ViewLayoutable {
         ])
     }
 
+    // MARK: - PRIVATE FUNCTIONS
+
+    private func performBindind(for response: FactResponseType) {
+        if let error = response.error {
+            updateAlert(to: .error(message: error))
+            return
+        }
+
+        if response.factResponse?.result.count == 0 {
+            updateView(to: .empty, above: tableView)
+            updateAlert(to: .dismiss)
+            return
+        }
+
+        factResponse = response.factResponse
+        tableView.reloadData()
+        updateAlert(to: .dismiss)
+    }
+
     private func configureSearchBarButton() {
-        let searchItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showSearchBar))
+        let searchItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(showSearchView))
         navigationItem.rightBarButtonItem = searchItem
     }
 
     // MARK: - HANDLERS
 
-    @objc func showSearchBar() {
-        updateView(to: .content, above: tableView)
-        viewModel.retrieveSearchFact(from: "test")
-        tableView.reloadData()
+    @objc func showSearchView() {
+        updateAlert(to: .loading)
+        delegate?.homeViewControllerDelegate(self, didTapSearch: nil)
     }
 }
 

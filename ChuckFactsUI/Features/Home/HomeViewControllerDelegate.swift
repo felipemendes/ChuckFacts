@@ -10,4 +10,5 @@ import UIKit
 
 public protocol HomeViewControllerDelegate: AnyObject {
     func homeViewControllerDelegate(_ viewController: UIViewController, didTapShare message: String)
+    func homeViewControllerDelegate(_ viewController: UIViewController, didTapSearch search: UIView?)
 }

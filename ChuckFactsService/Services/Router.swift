@@ -32,10 +32,6 @@ class Router<Endpoint: Endpointable>: Routable {
         self.task?.resume()
     }
 
-    func cancel() {
-        self.task?.cancel()
-    }
-
     /// Converts Endpointable to URLRequest
     ///
     /// - Parameter endpoint: A Endpointable

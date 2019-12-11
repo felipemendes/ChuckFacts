@@ -13,5 +13,4 @@ public typealias RouterCompletion = (_ data: Data?, _ response: URLResponse?, _ 
 protocol Routable: class {
     associatedtype Endpoint: Endpointable
     func request(_ route: Endpoint, completion: @escaping RouterCompletion)
-    func cancel()
 }

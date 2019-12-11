@@ -1,8 +1,8 @@
 //
-//  HomeViewModel.swift
+//  PastSearchesViewModel.swift
 //  ChuckFacts
 //
-//  Created by Felipe Mendes on 02/12/19.
+//  Created by Felipe Mendes on 08/12/19.
 //  Copyright © 2019 Felipe Mendes. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import CoreData
 
-public class SearchViewModel {
+public class PastSearchesViewModel {
 
     // MARK: - PRIVATE PROPERTIES
 
@@ -33,10 +33,6 @@ public class SearchViewModel {
 
     public func addSearch(keyword: String) {
         searchDataAccessProvider.add(keyword)
-    }
-
-    public func check(minLength length: Int, for keyword: String) -> Bool {
-        return keyword.count < length ? true : false
     }
 
     // MARK: - PRIVATE FUNCTIONS

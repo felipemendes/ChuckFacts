@@ -14,6 +14,16 @@ public class FlowController {
 
     private let factory: Factory
 
+    private lazy var homeViewController: HomeViewController = {
+        let controller = factory.makeHomeViewController()
+        return controller
+    }()
+
+    private lazy var searchViewController: SearchViewController = {
+        let controller = factory.makeSearchViewController()
+        return controller
+    }()
+
     // MARK: - INITIALIZER
 
     public init(navigationController: UINavigationController,
@@ -35,14 +45,20 @@ public class FlowController {
     }
 
     private func presentHome() {
-        let homeContainer = factory.makeHomeViewController()
-        homeContainer.delegate = self
+        let home = homeViewController
+        home.delegate = self
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.navigationBar.tintColor = .black
         navigationController.navigationBar.barTintColor = .white
         navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.setValue(true, forKey: "hidesShadow")
-        navigationController.pushViewController(homeContainer, animated: true)
+        navigationController.pushViewController(home, animated: true)
+    }
+
+    private func presentSearch() {
+        let search = searchViewController
+        search.delegate = self
+        navigationController.present(search, animated: true, completion: nil)
     }
 
     private func presentShareSheet(with message: String) {
@@ -56,5 +72,18 @@ public class FlowController {
 extension FlowController: HomeViewControllerDelegate {
     public func homeViewControllerDelegate(_ viewController: UIViewController, didTapShare message: String) {
         presentShareSheet(with: message)
+    }
+
+    public func homeViewControllerDelegate(_ viewController: UIViewController, didTapSearch search: UIView?) {
+        presentSearch()
+    }
+}
+
+// MARK: - SearchViewControllerDelegate
+
+extension FlowController: SearchViewControllerDelegate {
+    public func searchViewControllerDelegate(_ viewController: UIViewController, didTapSearch keyword: String) {
+        navigationController.dismiss(animated: true, completion: nil)
+        homeViewController.reloadData(with: keyword)
     }
 }
