@@ -17,13 +17,10 @@ public class SearchViewModel {
     private var searchCoreData = Variable<[Search]>([])
     private var disposeBag = DisposeBag()
     private var searchDataAccessProvider: SearchDataAccessProvider
-    private let serviceManager: ServiceManager
 
     // MARK: - INITIALIZERS
 
-    public init(serviceManager: ServiceManager,
-                searchDataAccessProvider: SearchDataAccessProvider) {
-        self.serviceManager = serviceManager
+    public init(searchDataAccessProvider: SearchDataAccessProvider) {
         self.searchDataAccessProvider = searchDataAccessProvider
         fetchSearchAndUpdateObservables()
     }

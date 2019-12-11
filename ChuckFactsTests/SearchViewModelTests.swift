@@ -11,11 +11,10 @@ import XCTest
 
 class SearchViewModelTests: XCTestCase {
 
-    let serviceManger = ServiceManager()
     let searchDataAccessProvider = SearchDataAccessProvider()
 
     func testIfSearchKeywordLengthIsMinimum() throws {
-        let viewModel = SearchViewModel(serviceManager: serviceManger, searchDataAccessProvider: searchDataAccessProvider)
+        let viewModel = SearchViewModel(searchDataAccessProvider: searchDataAccessProvider)
 
         let minLength = 4
         let keyword = "Git"
@@ -26,7 +25,7 @@ class SearchViewModelTests: XCTestCase {
     }
 
     func testIfSearchKeywordLengthIsEnough() throws {
-        let viewModel = SearchViewModel(serviceManager: serviceManger, searchDataAccessProvider: searchDataAccessProvider)
+        let viewModel = SearchViewModel(searchDataAccessProvider: searchDataAccessProvider)
 
         let minLength = 4
         let keyword = "GitHub"

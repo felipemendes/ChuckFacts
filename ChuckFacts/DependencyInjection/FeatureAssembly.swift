@@ -38,10 +38,8 @@ public class FeatureAssembly: Assembly {
         // MARK: - SearchViewController
 
         container.register(SearchViewModel.self) { resolver in
-            let serviceManager = resolver.resolve(ServiceManager.self)!
             let searchDataAccessProvider = resolver.resolve(SearchDataAccessProvider.self)!
-            return SearchViewModel(serviceManager: serviceManager,
-                                   searchDataAccessProvider: searchDataAccessProvider)
+            return SearchViewModel(searchDataAccessProvider: searchDataAccessProvider)
         }
 
         container.register(SearchViewController.self) { resolver in
