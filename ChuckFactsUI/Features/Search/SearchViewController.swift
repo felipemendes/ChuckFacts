@@ -148,7 +148,7 @@ public class SearchViewController: UIViewController {
         view.addSubview(pastSearchesView)
 
         NSLayoutConstraint.activate([
-            searchTextField.topAnchor.constraint(equalTo: view.topAnchor,
+            searchTextField.safeTopAnchor.constraint(equalTo: view.safeTopAnchor,
                                                  constant: Metrics.searchFieldTop),
             searchTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor,
                                                      constant: Metrics.searchFieldLeading),
@@ -175,7 +175,7 @@ public class SearchViewController: UIViewController {
                                                   constant: Metrics.pastSearchesViewLeading),
             pastSearchesView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
                                                    constant: Metrics.pastSearchesViewTrailing),
-            pastSearchesView.bottomAnchor.constraint(equalTo: view.bottomAnchor,
+            pastSearchesView.safeBottomAnchor.constraint(equalTo: view.safeBottomAnchor,
                                                      constant: Metrics.pastSearchesViewBottom)
         ])
     }
