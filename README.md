@@ -1,4 +1,4 @@
-# Chuck Norris Facts
+# Chuck Facts
 
 This app provides a way to look for and share some Chuck Norris facts. Exploring the [chuck-api](https://api.chucknorris.io/).
 
@@ -24,8 +24,8 @@ This app provides a way to look for and share some Chuck Norris facts. Exploring
 - Dependency Injection with Swinject framework
 - Unit Testing
 - RxSwift
+- Protocol-Oriented Programming
 - MVVM Architecture
-- Continous Ingration with Travis CI
 - View code layout
 - Use of Git branches and PRs
 - SwiftLint 
