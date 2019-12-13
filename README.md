@@ -2,7 +2,7 @@
 
 This app provides a way to look for and share some Chuck Norris facts. Exploring the [chuck-api](https://api.chucknorris.io/).
 
-> More details [here (PT-BR)](http://felipemendes.netlify.com/pet-project-chuck-facts/pet-project-chuck-facts/) about how this project was made :)
+> More details [here (PT-BR)](https://felipemendes.netlify.com/pet-project/chuck-facts/) about how this project was made :)
 
 <div style="display:flex;">
     <img src="https://github.com/felipemendes/ChuckFacts/blob/development/Screenshots/home.png" width="30%">
