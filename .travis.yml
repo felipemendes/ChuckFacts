@@ -1,0 +1,10 @@
+language: objective-c
+osx_image: xcode9.4
+
+before_install:
+- gem install cocoapods
+- pod install
+
+script:
+- set -o pipefail
+- travis_retry xcodebuild clean build test -workspace ChuckFacts.xcworkspace -scheme ChuckFacts -sdk iphonesimulator -destination "platform=iOS Simulator,OS=12.1,name=iPhone X" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
