@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <!--Random Fact Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="RandomFactInterfaceController" customModule="ChuckFacts_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" alignment="center" text="Random Chuck Facts" textAlignment="center" numberOfLines="2" id="v0W-nF-Jbc">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <table alignment="left" id="cxk-0o-983">
+                            <items>
+                                <tableRow identifier="FactRowController" id="o3F-m5-9gI" customClass="FactRowController" customModule="ChuckFacts_WatchKit_App_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" animationDuration="0.5" layout="vertical" id="4gI-3W-ntF">
+                                        <items>
+                                            <label width="1" alignment="left" text="Category" id="adg-UC-Wyx">
+                                                <color key="textColor" name="primary"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                            </label>
+                                            <label width="1" alignment="left" text="Contet" id="Y8u-5d-XLz">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="4" right="4" top="4" bottom="4"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="category" destination="adg-UC-Wyx" id="L7K-FK-g7t"/>
+                                        <outlet property="fact" destination="Y8u-5d-XLz" id="kaf-k1-Cdi"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableViewFacts" destination="cxk-0o-983" id="WcX-1i-QPk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="344.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="primary">
+            <color red="0.039215686274509803" green="0.51764705882352946" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -56,6 +56,29 @@
 		02CBC14F239F231F00EF7C77 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC14E239F231F00EF7C77 /* SearchViewModelTests.swift */; };
 		02CBC151239F2ACE00EF7C77 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 02CBC150239F2ACE00EF7C77 /* Settings.bundle */; };
 		02CBC154239F2CC100EF7C77 /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBC153239F2CC100EF7C77 /* SettingsBundleHelper.swift */; };
+		02D0B2EF23A9917600CF5AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D0B2EE23A9917600CF5AB1 /* Assets.xcassets */; };
+		02D0B2F623A9917600CF5AB1 /* ChuckFacts WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 02D0B2F523A9917600CF5AB1 /* ChuckFacts WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		02D0B2FD23A9917600CF5AB1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0B2FC23A9917600CF5AB1 /* ExtensionDelegate.swift */; };
+		02D0B2FF23A9917600CF5AB1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0B2FE23A9917600CF5AB1 /* NotificationController.swift */; };
+		02D0B30123A9917700CF5AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D0B30023A9917700CF5AB1 /* Assets.xcassets */; };
+		02D0B30623A9917700CF5AB1 /* ChuckFacts WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 02D0B2E923A9917400CF5AB1 /* ChuckFacts WatchKit App.app */; };
+		02D0B30F23A9958300CF5AB1 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED22390AC31000BA7D7 /* ServiceManager.swift */; };
+		02D0B31023A9961100CF5AB1 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EDC2390B8B0000BA7D7 /* Routable.swift */; };
+		02D0B31123A9961100CF5AB1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED72390AF88000BA7D7 /* Router.swift */; };
+		02D0B31223A9961100CF5AB1 /* Endpointable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ED52390AF31000BA7D7 /* Endpointable.swift */; };
+		02D0B31323A9961100CF5AB1 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EDA2390B2F2000BA7D7 /* HTTPTask.swift */; };
+		02D0B31423A9961500CF5AB1 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ECA23909D1F000BA7D7 /* Endpoint.swift */; };
+		02D0B31523A9961500CF5AB1 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7ECF2390A3B1000BA7D7 /* Environment.swift */; };
+		02D0B31623A9961900CF5AB1 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F52FE2392C156007D3755 /* Encodable.swift */; };
+		02D0B31723A9961900CF5AB1 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F53002392C1CD007D3755 /* URLParameterEncoder.swift */; };
+		02D0B31823A9963000CF5AB1 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E55238CC8AF00616C45 /* Fact.swift */; };
+		02D0B31923A9963000CF5AB1 /* FactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024F7E57238CCA8F00616C45 /* FactResponse.swift */; };
+		02D0B31A23A9963000CF5AB1 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02346EC3239B469E006F482D /* ViewState.swift */; };
+		02D0B31B23A9963000CF5AB1 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023AFA1B23A0670000BFCBEE /* AlertType.swift */; };
+		02D0B31D23A9975A00CF5AB1 /* FactRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0B31C23A9975A00CF5AB1 /* FactRowController.swift */; };
+		02D0B31E23A9983500CF5AB1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D0B2EB23A9917400CF5AB1 /* Interface.storyboard */; };
+		02D0B32123A9A3A900CF5AB1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D0B2EB23A9917400CF5AB1 /* Interface.storyboard */; };
+		02D0B32323A9A54900CF5AB1 /* RandomFactInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0B32223A9A54900CF5AB1 /* RandomFactInterfaceController.swift */; };
 		02D0BDED238B5684006ABDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */; };
 		02D0BDF2238B56B7006ABDF4 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D0BDF1238B56B7006ABDF4 /* FlowController.swift */; };
 		02DA7EB3238DFE94000BA7D7 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */; };
@@ -89,7 +112,46 @@
 			remoteGlobalIDString = 027BC1B6238A171700F9DB85;
 			remoteInfo = ChuckFacts;
 		};
+		02D0B2F723A9917600CF5AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 027BC1AF238A171700F9DB85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02D0B2F423A9917600CF5AB1;
+			remoteInfo = "ChuckFacts WatchKit App Extension";
+		};
+		02D0B30423A9917700CF5AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 027BC1AF238A171700F9DB85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02D0B2E823A9917400CF5AB1;
+			remoteInfo = "ChuckFacts WatchKit App";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		02D0B30C23A9917700CF5AB1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				02D0B2F623A9917600CF5AB1 /* ChuckFacts WatchKit App Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02D0B30E23A9917700CF5AB1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				02D0B30623A9917700CF5AB1 /* ChuckFacts WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		02018CBD23989CF8008E8F2F /* FeatureAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureAssembly.swift; sourceTree = "<group>"; };
@@ -145,6 +207,18 @@
 		02CBC14E239F231F00EF7C77 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		02CBC150239F2ACE00EF7C77 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		02CBC153239F2CC100EF7C77 /* SettingsBundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBundleHelper.swift; sourceTree = "<group>"; };
+		02D0B2E923A9917400CF5AB1 /* ChuckFacts WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChuckFacts WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02D0B2EC23A9917400CF5AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		02D0B2EE23A9917600CF5AB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02D0B2F023A9917600CF5AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02D0B2F523A9917600CF5AB1 /* ChuckFacts WatchKit App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ChuckFacts WatchKit App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02D0B2FC23A9917600CF5AB1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		02D0B2FE23A9917600CF5AB1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		02D0B30023A9917700CF5AB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02D0B30223A9917700CF5AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02D0B30323A9917700CF5AB1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		02D0B31C23A9975A00CF5AB1 /* FactRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactRowController.swift; sourceTree = "<group>"; };
+		02D0B32223A9A54900CF5AB1 /* RandomFactInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFactInterfaceController.swift; sourceTree = "<group>"; };
 		02D0BDEC238B5684006ABDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		02D0BDF1238B56B7006ABDF4 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
 		02DA7EB2238DFE94000BA7D7 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
@@ -186,6 +260,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC7FC1C855D882BC860BB11F /* Pods_ChuckFacts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02D0B2F223A9917600CF5AB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +408,8 @@
 				02DA7ECD2390A0C5000BA7D7 /* ChuckFactsUIKit */,
 				02CBC152239F2C9200EF7C77 /* ChuckFactsSettingsBundle */,
 				024F7E5F238CCCBB00616C45 /* ChuckFactsTests */,
+				02D0B2EA23A9917400CF5AB1 /* ChuckFacts WatchKit App */,
+				02D0B2F923A9917600CF5AB1 /* ChuckFacts WatchKit App Extension */,
 				027BC1B8238A171700F9DB85 /* Products */,
 				0854B1861F5AEA1F6123E6A2 /* Pods */,
 				A68590F8338AEC7E5C36D8B6 /* Frameworks */,
@@ -338,6 +421,8 @@
 			children = (
 				027BC1B7238A171700F9DB85 /* ChuckFacts.app */,
 				024F7E5E238CCCBB00616C45 /* ChuckFactsTests.xctest */,
+				02D0B2E923A9917400CF5AB1 /* ChuckFacts WatchKit App.app */,
+				02D0B2F523A9917600CF5AB1 /* ChuckFacts WatchKit App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -410,6 +495,30 @@
 				02CBC153239F2CC100EF7C77 /* SettingsBundleHelper.swift */,
 			);
 			path = ChuckFactsSettingsBundle;
+			sourceTree = "<group>";
+		};
+		02D0B2EA23A9917400CF5AB1 /* ChuckFacts WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				02D0B2EB23A9917400CF5AB1 /* Interface.storyboard */,
+				02D0B2EE23A9917600CF5AB1 /* Assets.xcassets */,
+				02D0B2F023A9917600CF5AB1 /* Info.plist */,
+			);
+			path = "ChuckFacts WatchKit App";
+			sourceTree = "<group>";
+		};
+		02D0B2F923A9917600CF5AB1 /* ChuckFacts WatchKit App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				02D0B31C23A9975A00CF5AB1 /* FactRowController.swift */,
+				02D0B32223A9A54900CF5AB1 /* RandomFactInterfaceController.swift */,
+				02D0B2FC23A9917600CF5AB1 /* ExtensionDelegate.swift */,
+				02D0B2FE23A9917600CF5AB1 /* NotificationController.swift */,
+				02D0B30023A9917700CF5AB1 /* Assets.xcassets */,
+				02D0B30223A9917700CF5AB1 /* Info.plist */,
+				02D0B30323A9917700CF5AB1 /* PushNotificationPayload.apns */,
+			);
+			path = "ChuckFacts WatchKit App Extension";
 			sourceTree = "<group>";
 		};
 		02D0BDE8238B5515006ABDF4 /* DependencyInjection */ = {
@@ -548,15 +657,51 @@
 				027BC1B5238A171700F9DB85 /* Resources */,
 				025C290B238ADAD700C55BD8 /* Swift Lint */,
 				8CBB9BC3BB636A36A38D21E8 /* [CP] Embed Pods Frameworks */,
+				02D0B30E23A9917700CF5AB1 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				02D0B30523A9917700CF5AB1 /* PBXTargetDependency */,
 			);
 			name = ChuckFacts;
 			productName = ChuckFacts;
 			productReference = 027BC1B7238A171700F9DB85 /* ChuckFacts.app */;
 			productType = "com.apple.product-type.application";
+		};
+		02D0B2E823A9917400CF5AB1 /* ChuckFacts WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02D0B30D23A9917700CF5AB1 /* Build configuration list for PBXNativeTarget "ChuckFacts WatchKit App" */;
+			buildPhases = (
+				02D0B2E723A9917400CF5AB1 /* Resources */,
+				02D0B30C23A9917700CF5AB1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02D0B2F823A9917600CF5AB1 /* PBXTargetDependency */,
+			);
+			name = "ChuckFacts WatchKit App";
+			productName = "ChuckFacts WatchKit App";
+			productReference = 02D0B2E923A9917400CF5AB1 /* ChuckFacts WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		02D0B2F423A9917600CF5AB1 /* ChuckFacts WatchKit App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02D0B30B23A9917700CF5AB1 /* Build configuration list for PBXNativeTarget "ChuckFacts WatchKit App Extension" */;
+			buildPhases = (
+				02D0B2F123A9917600CF5AB1 /* Sources */,
+				02D0B2F223A9917600CF5AB1 /* Frameworks */,
+				02D0B2F323A9917600CF5AB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ChuckFacts WatchKit App Extension";
+			productName = "ChuckFacts WatchKit App Extension";
+			productReference = 02D0B2F523A9917600CF5AB1 /* ChuckFacts WatchKit App Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -573,6 +718,12 @@
 						TestTargetID = 027BC1B6238A171700F9DB85;
 					};
 					027BC1B6238A171700F9DB85 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					02D0B2E823A9917400CF5AB1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					02D0B2F423A9917600CF5AB1 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -592,6 +743,8 @@
 			targets = (
 				027BC1B6238A171700F9DB85 /* ChuckFacts */,
 				024F7E5D238CCCBB00616C45 /* ChuckFactsTests */,
+				02D0B2E823A9917400CF5AB1 /* ChuckFacts WatchKit App */,
+				02D0B2F423A9917600CF5AB1 /* ChuckFacts WatchKit App Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -618,6 +771,24 @@
 				02CBC151239F2ACE00EF7C77 /* Settings.bundle in Resources */,
 				027BC1C5238A171800F9DB85 /* LaunchScreen.storyboard in Resources */,
 				027BC1C2238A171800F9DB85 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02D0B2E723A9917400CF5AB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02D0B32123A9A3A900CF5AB1 /* Interface.storyboard in Resources */,
+				02D0B2EF23A9917600CF5AB1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02D0B2F323A9917600CF5AB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02D0B31E23A9983500CF5AB1 /* Interface.storyboard in Resources */,
+				02D0B30123A9917700CF5AB1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +951,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02D0B2F123A9917600CF5AB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02D0B31D23A9975A00CF5AB1 /* FactRowController.swift in Sources */,
+				02D0B31823A9963000CF5AB1 /* Fact.swift in Sources */,
+				02D0B2FF23A9917600CF5AB1 /* NotificationController.swift in Sources */,
+				02D0B31A23A9963000CF5AB1 /* ViewState.swift in Sources */,
+				02D0B31423A9961500CF5AB1 /* Endpoint.swift in Sources */,
+				02D0B31B23A9963000CF5AB1 /* AlertType.swift in Sources */,
+				02D0B2FD23A9917600CF5AB1 /* ExtensionDelegate.swift in Sources */,
+				02D0B30F23A9958300CF5AB1 /* ServiceManager.swift in Sources */,
+				02D0B31323A9961100CF5AB1 /* HTTPTask.swift in Sources */,
+				02D0B31123A9961100CF5AB1 /* Router.swift in Sources */,
+				02D0B32323A9A54900CF5AB1 /* RandomFactInterfaceController.swift in Sources */,
+				02D0B31923A9963000CF5AB1 /* FactResponse.swift in Sources */,
+				02D0B31023A9961100CF5AB1 /* Routable.swift in Sources */,
+				02D0B31723A9961900CF5AB1 /* URLParameterEncoder.swift in Sources */,
+				02D0B31223A9961100CF5AB1 /* Endpointable.swift in Sources */,
+				02D0B31523A9961500CF5AB1 /* Environment.swift in Sources */,
+				02D0B31623A9961900CF5AB1 /* Encodable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -787,6 +982,16 @@
 			isa = PBXTargetDependency;
 			target = 027BC1B6238A171700F9DB85 /* ChuckFacts */;
 			targetProxy = 024F7E63238CCCBB00616C45 /* PBXContainerItemProxy */;
+		};
+		02D0B2F823A9917600CF5AB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02D0B2F423A9917600CF5AB1 /* ChuckFacts WatchKit App Extension */;
+			targetProxy = 02D0B2F723A9917600CF5AB1 /* PBXContainerItemProxy */;
+		};
+		02D0B30523A9917700CF5AB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02D0B2E823A9917400CF5AB1 /* ChuckFacts WatchKit App */;
+			targetProxy = 02D0B30423A9917700CF5AB1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -797,6 +1002,14 @@
 				027BC1C4238A171800F9DB85 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		02D0B2EB23A9917400CF5AB1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02D0B2EC23A9917400CF5AB1 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1000,6 +1213,88 @@
 			};
 			name = Release;
 		};
+		02D0B30723A9917700CF5AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = ChuckFacts_WatchKit_App_Extension;
+				INFOPLIST_FILE = "ChuckFacts WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.felipemendes.ChuckFacts.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		02D0B30823A9917700CF5AB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = ChuckFacts_WatchKit_App_Extension;
+				INFOPLIST_FILE = "ChuckFacts WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.felipemendes.ChuckFacts.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		02D0B30923A9917700CF5AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H3EUG783L;
+				INFOPLIST_FILE = "ChuckFacts WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.felipemendes.ChuckFacts.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		02D0B30A23A9917700CF5AB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H3EUG783L;
+				INFOPLIST_FILE = "ChuckFacts WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.felipemendes.ChuckFacts.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1026,6 +1321,24 @@
 			buildConfigurations = (
 				027BC1CA238A171800F9DB85 /* Debug */,
 				027BC1CB238A171800F9DB85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02D0B30B23A9917700CF5AB1 /* Build configuration list for PBXNativeTarget "ChuckFacts WatchKit App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02D0B30923A9917700CF5AB1 /* Debug */,
+				02D0B30A23A9917700CF5AB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02D0B30D23A9917700CF5AB1 /* Build configuration list for PBXNativeTarget "ChuckFacts WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02D0B30723A9917700CF5AB1 /* Debug */,
+				02D0B30823A9917700CF5AB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
