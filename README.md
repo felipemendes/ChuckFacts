@@ -1,4 +1,4 @@
-# Chuck Facts
+# Chuck Facts ![Bitrise](https://app.bitrise.io/app/3dcd639aae47e725/status.svg?token=Boex9UMq8QoUtvvL2zqHTQ&branch=master)
 
 This app provides a way to look for and share some Chuck Norris facts. Exploring the [chuck-api](https://api.chucknorris.io/).
 
