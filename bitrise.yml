@@ -2,11 +2,20 @@
 format_version: '8'
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: ios
+
+app:
+  envs:
+    - BITRISE_PROJECT_PATH: ChuckFacts.xcworkspace
+    - BITRISE_SCHEME: ChuckFacts
+    - BITRISE_EXPORT_METHOD: development
+    - BITRISE_IOS_DEVICE: iPhone 12
+
 trigger_map:
 - push_branch: "*"
-  workflow: primary
+  workflow: ios
 - pull_request_source_branch: "*"
-  workflow: primary
+  workflow: ios
+
 workflows:
   deploy:
     steps:
@@ -29,7 +38,9 @@ workflows:
         - export_method: "$BITRISE_EXPORT_METHOD"
     - deploy-to-bitrise-io@1: {}
     - cache-push@2: {}
-  primary:
+
+  ios:
+    title: Runs iOS tests
     steps:
     - activate-ssh-key@4:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
@@ -42,17 +53,8 @@ workflows:
     - xcode-test@2:
         inputs:
         - project_path: "$BITRISE_PROJECT_PATH"
+        - simulator_platform: iOS Simulator
+        - simulator_device: "$BITRISE_IOS_DEVICE"
         - scheme: "$BITRISE_SCHEME"
     - deploy-to-bitrise-io@1: {}
     - cache-push@2: {}
-app:
-  envs:
-  - opts:
-      is_expand: false
-    BITRISE_PROJECT_PATH: ChuckFacts.xcworkspace
-  - opts:
-      is_expand: false
-    BITRISE_SCHEME: ChuckFacts
-  - opts:
-      is_expand: false
-    BITRISE_EXPORT_METHOD: development
