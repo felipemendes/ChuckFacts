@@ -5,56 +5,39 @@ project_type: ios
 
 app:
   envs:
-    - BITRISE_PROJECT_PATH: ChuckFacts.xcworkspace
-    - BITRISE_SCHEME: ChuckFacts
-    - BITRISE_EXPORT_METHOD: development
-    - BITRISE_IOS_DEVICE: iPhone 12
+  - BITRISE_PROJECT_PATH: ChuckFacts.xcworkspace
+  - BITRISE_SCHEME: ChuckFacts
+  - BITRISE_EXPORT_METHOD: development
+  - BITRISE_IOS_DEVICE: iPhone 12
 
 trigger_map:
 - push_branch: "*"
-  workflow: ios
+  workflow: ci
 - pull_request_source_branch: "*"
-  workflow: ios
+  workflow: ci
 
 workflows:
-  deploy:
+  ci:
+    title: Runs iOS pipeline
+    description: Runs default's pipeline for iOS environment
     steps:
-    - activate-ssh-key@4:
+    - activate-ssh-key:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-    - git-clone@4: {}
-    - cache-pull@2: {}
-    - script@1:
-        title: Do anything with Script step
-    - certificate-and-profile-installer@1: {}
-    - cocoapods-install@1: {}
-    - xcode-test@2:
+    - git-clone: {}
+    - cache-pull: {}
+    - script:
+        title: Install dependencies
         inputs:
-        - project_path: "$BITRISE_PROJECT_PATH"
-        - scheme: "$BITRISE_SCHEME"
-    - xcode-archive@3:
-        inputs:
-        - project_path: "$BITRISE_PROJECT_PATH"
-        - scheme: "$BITRISE_SCHEME"
-        - export_method: "$BITRISE_EXPORT_METHOD"
-    - deploy-to-bitrise-io@1: {}
-    - cache-push@2: {}
-
-  ios:
-    title: Runs iOS tests
-    steps:
-    - activate-ssh-key@4:
-        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-    - git-clone@4: {}
-    - cache-pull@2: {}
-    - script@1:
-        title: Do anything with Script step
-    - certificate-and-profile-installer@1: {}
-    - cocoapods-install@1: {}
-    - xcode-test@2:
+        - content: pod install
+    - xcode-test:
         inputs:
         - project_path: "$BITRISE_PROJECT_PATH"
         - simulator_platform: iOS Simulator
         - simulator_device: "$BITRISE_IOS_DEVICE"
         - scheme: "$BITRISE_SCHEME"
-    - deploy-to-bitrise-io@1: {}
-    - cache-push@2: {}
+    - deploy-to-bitrise-io:
+        inputs:
+        - is_enable_public_page: 'false'
+    - cache-push:
+        inputs:
+        - cache_paths: "./Pods -> ./Podfile.lock"
