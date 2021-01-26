@@ -26,7 +26,7 @@ This app provides a way to look for and share some Chuck Norris facts. Exploring
 - RxSwift
 - Protocol-Oriented Programming
 - MVVM Architecture
-- View code layout
+- ViewCode layout
 - Use of Git branches and PRs
 - SwiftLint 
 - [GitHub Project](https://github.com/felipemendes/ChuckFacts/projects/1) as board
