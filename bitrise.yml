@@ -8,7 +8,7 @@ app:
   - BITRISE_PROJECT_PATH: ChuckFacts.xcworkspace
   - BITRISE_SCHEME: ChuckFacts
   - BITRISE_EXPORT_METHOD: development
-  - BITRISE_IOS_DEVICE: iPhone 12
+  - BITRISE_IOS_DEVICE: iPhone SE
 
 trigger_map:
 - push_branch: "*"
