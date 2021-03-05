@@ -13,8 +13,6 @@ app:
 trigger_map:
 - push_branch: "*"
   workflow: ci
-- pull_request_source_branch: "*"
-  workflow: ci
 
 workflows:
   ci:
