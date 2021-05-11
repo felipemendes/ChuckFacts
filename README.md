@@ -28,8 +28,7 @@ This app provides a way to look for and share some Chuck Norris facts. Exploring
 - MVVM Architecture
 - View code layout
 - Use of Git branches and PRs
-- SwiftLint
-- Danger
+- SwiftLint 
 - [GitHub Project](https://github.com/felipemendes/ChuckFacts/projects/1) as board
 
 ## Requirements
