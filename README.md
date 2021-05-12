@@ -28,8 +28,8 @@ This app provides a way to look for and share some Chuck Norris facts. Exploring
 - MVVM Architecture
 - View code layout
 - Use of Git branches and PRs
-- SwiftLint Fixed
-- Danger
+- SwiftLint
+- Danger with Ruby
 - [GitHub Project](https://github.com/felipemendes/ChuckFacts/projects/1) as board
 
 ## Requirements
