@@ -29,7 +29,7 @@ This app provides a way to look for and share some Chuck Norris facts. Exploring
 - View code layout
 - Use of Git branches and PRs
 - SwiftLint
-- Danger
+- Danger with Ruby
 - [GitHub Project](https://github.com/felipemendes/ChuckFacts/projects/1) as board
 
 ## Requirements
