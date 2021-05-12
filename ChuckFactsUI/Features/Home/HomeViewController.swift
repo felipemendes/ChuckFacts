@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import JGProgressHUD
 
+
 public class HomeViewController: UIViewController, ViewLayoutable {
 
     // MARK: - CONSTANTS
