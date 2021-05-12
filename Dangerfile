@@ -1,2 +1,2 @@
-message("Hello, this worked")
-# swiftlint.lint_files
+#  Lint added and modified files
+swiftlint.lint_files
