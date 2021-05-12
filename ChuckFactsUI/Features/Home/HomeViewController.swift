@@ -14,6 +14,7 @@ public class HomeViewController: UIViewController, ViewLayoutable {
 
     // MARK: - CONSTANTS
 
+    
     private struct Constants {
         static let factReuseIdentifier = "FactCell"
     }
