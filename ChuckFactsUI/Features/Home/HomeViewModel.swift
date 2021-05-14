@@ -14,6 +14,8 @@ typealias FactResponseType = (factResponse: FactResponse?, error: String?)
 public class HomeViewModel {
 
     // MARK: - CONSTANTS
+    
+    
 
     private struct Constants {
         static let maxFontSize: Int = 80
