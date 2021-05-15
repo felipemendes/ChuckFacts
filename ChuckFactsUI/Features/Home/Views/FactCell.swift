@@ -9,6 +9,8 @@
 import UIKit
 
 class FactCell: UITableViewCell {
+    
+    
 
     // MARK: - CONSTANTS AND METRICS
 
