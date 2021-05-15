@@ -32,6 +32,7 @@ This app provides a way to look for and share some Chuck Norris facts. Exploring
 - Danger 1
 - Danger 2
 - Danger 3
+- Danger 4
 - [GitHub Project](https://github.com/felipemendes/ChuckFacts/projects/1) as board
 
 ## Requirements
