@@ -15,6 +15,8 @@ public class HomeViewModel {
 
     // MARK: - CONSTANTS
 
+    
+
     private struct Constants {
         static let maxFontSize: Int = 80
         static let defaultCategoryName: String = "UNCATEGORIZED"
