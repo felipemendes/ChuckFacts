@@ -9,9 +9,9 @@ warn "PR is a Work In Progress and shouldn't be merged yet" if github.pr_title.i
 # Warn when there is a big PR
 warn "Big PR, consider splitting into smaller" if git.lines_of_code > 600
 
-# Warn to add a CHANGELOG entry for app changes on MASTER
+# Warn to add a CHANGELOG entry for app changes on MAIN
 changelogIsEmpty = git.modified_files.grep(/CHANGELOG/).empty?
-baseBranchIsMaster = github.branch_for_base == "master"
+baseBranchIsMaster = github.branch_for_base == "main"
 
 if changelogIsEmpty && baseBranchIsMaster
     warn "Add a changelog entry for your changes."
@@ -23,9 +23,4 @@ testFilesHasChanges = git.modified_files.include? "*Tests.swift" # false
 
 if swiftFilesHasChanges && !testFilesHasChanges && git.lines_of_code > 40
     warn "You forgot to add tests for these changes"
-end
-
-# Warn to add Jira task link in the description
-if !github.pr_body.include? "globo.atlassian.net"
-    warn "Please provide a Jira task link in the Pull Request description"
 end
