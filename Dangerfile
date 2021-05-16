@@ -11,7 +11,7 @@ warn "Big PR, consider splitting into smaller" if git.lines_of_code > 600
 
 # Add a CHANGELOG entry for app changes on MASTER
 changelogIsEmpty = git.modified_files.grep(/CHANGELOG/).empty?
-baseBranchIsMaster = github.branch_for_base == "master"
+baseBranchIsMaster = github.branch_for_base == "feature/danger"
 
 if changelogIsEmpty && baseBranchIsMaster
     warn "Please add a changelog entry for your changes."
