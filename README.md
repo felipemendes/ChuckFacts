@@ -1,4 +1,4 @@
-# Chuck Norris Facts
+# Chuck Norris Facts 2
 > iOS project app builded natively w/ Clean Architecture, MVVM and RxSwift
 
 This app provides a way to look for and share some Chuck Norris facts. Exploring the [chuck-api](https://api.chucknorris.io/).
