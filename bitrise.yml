@@ -2,18 +2,12 @@
 format_version: '8'
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: ios
-
 app:
   envs:
   - BITRISE_PROJECT_PATH: ChuckFacts.xcworkspace
   - BITRISE_SCHEME: ChuckFacts
   - BITRISE_EXPORT_METHOD: development
   - BITRISE_IOS_DEVICE: iPhone 12
-
-trigger_map:
-- push_branch: "*"
-  workflow: ci
-
 workflows:
   ci:
     title: Runs iOS pipeline
@@ -22,20 +16,19 @@ workflows:
     - activate-ssh-key:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
     - git-clone: {}
-    - cache-pull: {}
-    - script:
-        title: Install dependencies
+    - cocoapods-install@2: {}
+    - script@1:
         inputs:
-        - content: pod install
-    - xcode-test:
+        - content: |-
+            brew install swiftlint
+            bundle install
+        title: Setup
+    - script@1:
         inputs:
-        - project_path: "$BITRISE_PROJECT_PATH"
-        - simulator_platform: iOS Simulator
-        - simulator_device: "$BITRISE_IOS_DEVICE"
-        - scheme: "$BITRISE_SCHEME"
-    - deploy-to-bitrise-io:
-        inputs:
-        - is_enable_public_page: 'false'
-    - cache-push:
-        inputs:
-        - cache_paths: "./Pods -> ./Podfile.lock"
+        - content: bundle exec danger
+        title: Danger
+trigger_map:
+- push_branch: "*"
+  workflow: ci
+- pull_request_source_branch: "*"
+  workflow: ci
