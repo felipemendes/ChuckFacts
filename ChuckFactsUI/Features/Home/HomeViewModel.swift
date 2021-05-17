@@ -19,6 +19,9 @@ public class HomeViewModel {
         static let maxFontSize: Int = 80
         static let defaultCategoryName: String = "UNCATEGORIZED"
     }
+    
+    
+    
 
     // MARK: - PRIVATE PROPERTIES
 
