@@ -1,8 +1,8 @@
-# Chuck Norris Facts
+# Chuck Facts [![Build Status](https://app.bitrise.io/app/81917c2d3d7c7573/status.svg?token=gYp76flA4Ge1ar2UPXTFtA&branch=master)](https://app.bitrise.io/app/81917c2d3d7c7573)
 
 This app provides a way to look for and share some Chuck Norris facts. Exploring the [chuck-api](https://api.chucknorris.io/).
 
-> More details [here (PT-BR)](http://felipemendes.netlify.com/pet-project-chuck-facts/pet-project-chuck-facts/) about how this project was made :)
+> More details [here (PT-BR)](https://felipemendes.github.io/chuck-facts/) about how this project was made :)
 
 <div style="display:flex;">
     <img src="https://github.com/felipemendes/ChuckFacts/blob/development/Screenshots/home.png" width="30%">
@@ -24,11 +24,12 @@ This app provides a way to look for and share some Chuck Norris facts. Exploring
 - Dependency Injection with Swinject framework
 - Unit Testing
 - RxSwift
+- Protocol-Oriented Programming
 - MVVM Architecture
-- Continous Ingration with Travis CI
 - View code layout
 - Use of Git branches and PRs
-- SwiftLint 
+- SwiftLint
+- Danger
 - [GitHub Project](https://github.com/felipemendes/ChuckFacts/projects/1) as board
 
 ## Requirements
