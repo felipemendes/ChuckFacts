@@ -24,6 +24,8 @@ public class HomeViewModel {
 
     private let disposeBag = DisposeBag()
     private let serviceManager: ServiceManager
+    
+    
 
     // MARK: - PUBLIC
 
